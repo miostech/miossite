@@ -1,0 +1,58 @@
+name: Generate blog post
+
+on:
+  # Every Monday at 09:00 UTC. Adjust the cron as needed.
+  schedule:
+    - cron: "0 9 * * 1"
+  # Allows running it manually from the GitHub Actions tab.
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate post
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          # Optional overrides:
+          # OPENAI_MODEL: gpt-4o
+        run: npm run generate:post
+
+      - name: Commit and push new post
+        id: commit
+        run: |
+          if [ -z "$(git status --porcelain content/blog)" ]; then
+            echo "No new post generated; nothing to commit."
+            echo "created=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git config user.name "mios-blog-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add content/blog
+          git commit -m "content: add auto-generated blog post"
+          git push
+          echo "created=true" >> "$GITHUB_OUTPUT"
+
+      - name: Notify newsletter subscribers
+        if: steps.commit.outputs.created == 'true'
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          RESEND_AUDIENCE_ID: ${{ secrets.RESEND_AUDIENCE_ID }}
+          NEWSLETTER_FROM: ${{ secrets.NEWSLETTER_FROM }}
+          SITE_URL: https://www.mios.pt
+        run: npm run notify:subscribers

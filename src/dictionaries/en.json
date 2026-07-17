@@ -1,0 +1,457 @@
+{
+  "meta": {
+    "title": "Mios Tech · Software house for software, mobile & AI",
+    "description": "Mios Tech is a software house for product and engineering, building software, mobile and AI for companies across the US, Europe and Brazil.",
+    "ogAlt": "Mios Tech"
+  },
+  "nav": {
+    "services": "Services",
+    "about": "About us",
+    "presence": "Where we work",
+    "contact": "Contact",
+    "cta": "Start a project",
+    "menu": "Menu",
+    "close": "Close"
+  },
+  "hero": {
+    "badge": "Software house",
+    "title": "We build the software that moves ambitious companies.",
+    "subtitle": "We're a software house specialized in product and engineering. We design, develop and scale web, mobile and artificial intelligence solutions, with a senior team that embeds into your operation as part of your team.",
+    "ctaPrimary": "Start a project",
+    "ctaSecondary": "See what we do",
+    "trust": "Working across the US, Europe and Brazil",
+    "metaLabel": "Taking on new projects",
+    "since": "Building since 2021"
+  },
+  "capabilities": [
+    "Product engineering",
+    "Web platforms",
+    "iOS & Android",
+    "Cloud & DevOps",
+    "Applied AI",
+    "Automation",
+    "Fintech",
+    "System integration"
+  ],
+  "services": {
+    "eyebrow": "Services",
+    "title": "From first commit to scale.",
+    "subtitle": "Five ways we plug into your team and ship real products.",
+    "learnMore": "Learn more",
+    "items": {
+      "outsourcing": {
+        "slug": "outsourcing",
+        "name": "Dedicated Teams",
+        "tagline": "Senior squads, embedded in yours",
+        "short": "Add senior engineers and designers who work as part of your team, not a distant vendor.",
+        "description": "Scale your capacity with a cross-functional squad that plugs into your process, tools and timezone. We handle hiring and retention; you get momentum.",
+        "features": [
+          "Cross-functional senior squads",
+          "Embedded in your workflow",
+          "Scale up or down as needed",
+          "Aligned to your timezone"
+        ]
+      },
+      "software-development": {
+        "slug": "software-development",
+        "name": "Software Development",
+        "tagline": "Platforms built to last",
+        "short": "Custom web platforms and complex systems, engineered to be secure and easy to evolve.",
+        "description": "We design and build web platforms and internal systems end to end (architecture, cloud and delivery) on modern, proven stacks.",
+        "features": [
+          "Web platforms & internal tools",
+          "Cloud-native architecture",
+          "Security & compliance built in",
+          "Clean, maintainable code"
+        ]
+      },
+      "mobile-development": {
+        "slug": "mobile-development",
+        "name": "Mobile Development",
+        "tagline": "Apps people keep using",
+        "short": "High-performance iOS and Android apps, from fintech to urban mobility.",
+        "description": "We ship native and cross-platform mobile products, with deep experience in fintech, mobility, retail and connected devices.",
+        "features": [
+          "iOS & Android",
+          "Fintech & payments",
+          "Offline-first & real-time",
+          "Store submission & releases"
+        ]
+      },
+      "business-automation": {
+        "slug": "business-automation",
+        "name": "Business Automation",
+        "tagline": "Cut the busywork",
+        "short": "Connect your tools and automate the manual work slowing your team down.",
+        "description": "We map your processes and automate them end to end, integrating systems, orchestrating workflows and giving your team their time back.",
+        "features": [
+          "Process mapping",
+          "Systems & API integration",
+          "Workflow orchestration",
+          "Dashboards & reporting"
+        ]
+      },
+      "ai-development": {
+        "slug": "ai-development",
+        "name": "AI Development",
+        "tagline": "AI that ships",
+        "short": "Assistants, agents and custom models built into your product and operations.",
+        "description": "We design and deploy AI that creates real value: assistants, agents, RAG and custom models integrated safely into your stack.",
+        "features": [
+          "Assistants & agents",
+          "RAG & knowledge systems",
+          "Custom model integration",
+          "Safe, monitored deployment"
+        ]
+      }
+    }
+  },
+  "partners": {
+    "eyebrow": "Partners",
+    "title": "Trusted by teams that ship.",
+    "subtitle": "A few of the companies we've built and shipped with."
+  },
+  "differentiators": {
+    "eyebrow": "Approach",
+    "title": "We work like your team, not a vendor.",
+    "subtitle": "Senior people, clear communication, and code you can build on.",
+    "items": [
+      {
+        "title": "Senior engineers only",
+        "description": "You work directly with the people writing the code, no handoffs, no juniors learning on your budget."
+      },
+      {
+        "title": "Security and reliability",
+        "description": "We build to the standards of regulated industries, so your systems stay safe and stable as they grow."
+      },
+      {
+        "title": "Ship every week",
+        "description": "Short cycles and honest updates. You see working software, not status decks."
+      },
+      {
+        "title": "Owned outcomes",
+        "description": "We start from your goals and stay accountable to them, not just to a list of tickets."
+      }
+    ]
+  },
+  "process": {
+    "eyebrow": "Process",
+    "title": "How we work",
+    "steps": [
+      {
+        "title": "Discover",
+        "description": "We learn your business, users and constraints before writing a line of code."
+      },
+      {
+        "title": "Design",
+        "description": "We shape the architecture and the experience around real goals."
+      },
+      {
+        "title": "Build",
+        "description": "Senior squads ship in weekly cycles with continuous testing."
+      },
+      {
+        "title": "Scale",
+        "description": "We monitor, refine and grow the product alongside your business."
+      }
+    ]
+  },
+  "stats": {
+    "title": "In numbers",
+    "items": [
+      { "value": "4", "label": "Countries we operate in" },
+      { "value": "70+", "label": "Partners we've shipped with" },
+      { "value": "1,600+", "label": "Products in production" },
+      { "value": "3", "label": "Continents" }
+    ]
+  },
+  "presence": {
+    "eyebrow": "Footprint",
+    "title": "One team, three markets.",
+    "subtitle": "We collaborate across time zones and ship together, and we're expanding.",
+    "countries": [
+      { "name": "United States", "status": "Florida" },
+      { "name": "Europe", "status": "Lisbon" },
+      { "name": "Brazil", "status": "São Paulo" }
+    ],
+    "comingSoon": "Coming soon"
+  },
+  "about": {
+    "eyebrow": "Who we are",
+    "title": "About Mios",
+    "paragraphs": [
+      "We're a team of engineers and designers who like hard problems and clean execution, building software that companies actually run their business on.",
+      "Mios Tech started in 2021 and now works with companies across the US, Europe and Brazil.",
+      "Whether you need a squad to accelerate or a partner to build from zero, we bring senior craft and a bias for shipping."
+    ]
+  },
+  "vision": {
+    "eyebrow": "Vision",
+    "title": "About us",
+    "intro": "We have years of experience across every sector of technology, always focused on quality and client satisfaction.",
+    "storyTitle": "Our story",
+    "story": [
+      "We were born from the dream of making technology accessible, connecting people with the world.",
+      "We're a software house headquartered in Lisbon, dedicated to building technology solutions for companies across every sector.",
+      "We specialize in mobile app development for Android and iOS, as well as web and desktop applications. Native and cross-platform solutions are part of our skill set. Our know-how is driven by what matters to us: delivering smart, fitting solutions for the people and companies that need technology.",
+      "We know that building cutting-edge, secure products is a challenging exercise. That's why we get involved with concept, wireframes and layouts, development and product launch. This is what guarantees the quality and success of the applications, because they are supported at every stage.",
+      "Today we offer a range of services centered on delivering the best experience to your users, transforming companies and bringing brands into the digital technology era.",
+      "Here, we're passionate about technology."
+    ],
+    "principlesTitle": "Our principles",
+    "principlesIntro": "All of our work is guided by the following principles:",
+    "principles": [
+      {
+        "title": "Care",
+        "description": "We commit to meeting the demands of your company's project. The roadmap is our priority: we take on the work and your company keeps the result."
+      },
+      {
+        "title": "Teamwork",
+        "description": "All of our work is organized by project managers. This team ensures continuous delivery and keeps development within budget."
+      },
+      {
+        "title": "Reinvent",
+        "description": "We never stop looking for new technologies that ensure the quality of our products. We spare no effort to rebuild a project when we see a better solution."
+      },
+      {
+        "title": "Be straightforward",
+        "description": "We value and practice transparency in our relationships. We bet on efficient communication to avoid harmful bottlenecks."
+      },
+      {
+        "title": "Add up",
+        "description": "Our team is handpicked, because we want to bring together capable people who share the dream of connecting futures through technology. They are always encouraged to pursue the specialization and qualification that fits the market's demands — that is, your company's."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Let's build your next product.",
+    "subtitle": "Tell us what you're working on. We'll reply within one business day.",
+    "button": "Start a project",
+    "secondary": "Message us on WhatsApp"
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Let's talk.",
+    "subtitle": "Tell us about your project and we'll get back within one business day.",
+    "form": {
+      "name": "Full name",
+      "email": "Work email",
+      "company": "Company",
+      "message": "What are you building?",
+      "submit": "Send message",
+      "note": "Opens your email client. Prefer to talk? Reach us by email or WhatsApp."
+    },
+    "channels": {
+      "email": "Email",
+      "whatsapp": "WhatsApp",
+      "emailValue": "hello@mios.pt"
+    }
+  },
+  "blog": {
+    "eyebrow": "Blog",
+    "title": "Notes on technology, engineering and delivery.",
+    "subtitle": "Grounded takes on AI, software, mobile and how great teams ship, backed by reputable sources.",
+    "readingTime": "min read",
+    "backToBlog": "Back to the blog",
+    "sourcesTitle": "Sources",
+    "relatedTitle": "Keep reading",
+    "ctaTitle": "Have a project in mind?",
+    "ctaButton": "Start a project",
+    "categories": {
+      "ai": "AI",
+      "engineering": "Engineering",
+      "teams": "Teams",
+      "operations": "Operations",
+      "mobile": "Mobile"
+    }
+  },
+  "newsletter": {
+    "title": "Subscribe to our newsletter",
+    "subtitle": "Get an email whenever we publish something new on the blog.",
+    "placeholder": "Your email",
+    "button": "Subscribe",
+    "success": "You're in! Check your inbox.",
+    "error": "Something went wrong. Please try again.",
+    "invalid": "Enter a valid email."
+  },
+  "portfolio": {
+    "eyebrow": "Portfolio",
+    "title": "See our portfolio",
+    "subtitle": "Explore prototypes of some of the products we've designed and built.",
+    "gateTitle": "Unlock the portfolio",
+    "gateSubtitle": "Enter your details to view the prototypes of our work.",
+    "form": {
+      "name": "Name",
+      "company": "Company",
+      "email": "Email",
+      "phone": "Phone",
+      "submit": "Get access",
+      "note": "We only use your details to reach out about projects. No spam."
+    },
+    "view": "View prototype",
+    "error": "We couldn't grant access. Please try again.",
+    "invalidEmail": "Enter a valid email.",
+    "required": "Please fill in all fields."
+  },
+  "cookieConsent": {
+    "message": "We use cookies to improve your browsing experience, analyze traffic and personalize content. By continuing to browse, you agree to our use of cookies.",
+    "accept": "Accept",
+    "decline": "Decline",
+    "learnMore": "Learn more"
+  },
+  "legal": {
+    "commitment": {
+      "title": "User commitment",
+      "intro": "The user agrees to make proper use of the content and information that Mios offers on the site, including but not limited to:",
+      "items": [
+        "Not to engage in activities that are illegal or contrary to good faith and public order;",
+        "Not to spread content or propaganda of a racist or xenophobic nature, online gambling, illegal pornography, in support of terrorism or against human rights;",
+        "Not to cause damage to the physical (hardware) and logical (software) systems of Mios, its suppliers or third parties, nor to introduce or spread computer viruses or any other hardware or software systems capable of causing the aforementioned damage."
+      ]
+    },
+    "moreInfo": {
+      "title": "More information",
+      "body": [
+        "We hope this is clear, and as mentioned above, if there is something you are not sure whether you need or not, it is usually safer to leave cookies enabled in case they interact with one of the features you use on our site. This policy is effective as of December 2020."
+      ]
+    },
+    "termsTitle": "Terms of service",
+    "terms": [
+      {
+        "title": "1. Terms",
+        "body": [
+          "By accessing the Mios site, you agree to comply with these terms of service, all applicable laws and regulations, and you agree that you are responsible for compliance with all applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing this site. The materials contained in this site are protected by applicable copyright and trademark law."
+        ]
+      },
+      {
+        "title": "2. Use license",
+        "body": [
+          "Permission is granted to temporarily download one copy of the materials (information or software) on the Mios site, for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:"
+        ],
+        "items": [
+          "modify or copy the materials;",
+          "use the materials for any commercial purpose or for any public display (commercial or non-commercial);",
+          "attempt to decompile or reverse engineer any software contained on the Mios site;",
+          "remove any copyright or other proprietary notations from the materials; or",
+          "transfer the materials to another person or mirror the materials on any other server.",
+          "This license shall automatically terminate if you violate any of these restrictions and may be terminated by Mios at any time. Upon terminating your viewing of these materials or upon the termination of this license, you must delete any downloaded materials in your possession, whether in electronic or printed format."
+        ]
+      },
+      {
+        "title": "3. Disclaimer",
+        "items": [
+          "The materials on the Mios site are provided as is. Mios makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties, including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.",
+          "Further, Mios does not warrant or make any representations concerning the accuracy, likely results, or reliability of the use of the materials on its site or otherwise relating to such materials or on any sites linked to this site."
+        ]
+      },
+      {
+        "title": "4. Limitations",
+        "body": [
+          "In no event shall Mios or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Mios, even if Mios or a Mios authorized representative has been notified orally or in writing of the possibility of such damage. Because some jurisdictions do not allow limitations on implied warranties, or limitations of liability for consequential or incidental damages, these limitations may not apply to you."
+        ]
+      },
+      {
+        "title": "5. Accuracy of materials",
+        "body": [
+          "The materials appearing on the Mios site could include technical, typographical, or photographic errors. Mios does not warrant that any of the materials on its site are accurate, complete or current. Mios may make changes to the materials contained on its site at any time without notice. However, Mios does not make any commitment to update the materials."
+        ]
+      },
+      {
+        "title": "6. Links",
+        "body": [
+          "Mios has not reviewed all of the sites linked to its site and is not responsible for the contents of any such linked site. The inclusion of any link does not imply endorsement by Mios of the site. Use of any such linked site is at the user's own risk."
+        ]
+      },
+      {
+        "title": "Modifications",
+        "body": [
+          "Mios may revise these terms of service for its site at any time without notice. By using this site you are agreeing to be bound by the then current version of these terms of service."
+        ]
+      },
+      {
+        "title": "Governing law",
+        "body": [
+          "These terms and conditions are governed by and construed in accordance with the applicable laws, and you irrevocably submit to the exclusive jurisdiction of the competent courts."
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "eyebrow": "Legal",
+    "title": "Privacy Policy",
+    "updated": "Effective as of December 2020",
+    "lead": "Your privacy is important to us.",
+    "intro": [
+      "It is Mios' policy to respect your privacy regarding any information we may collect on the Mios site and other sites we own and operate.",
+      "We only request personal information when we truly need it to provide a service to you. We do so by fair and lawful means, with your knowledge and consent. We also let you know why we are collecting it and how it will be used.",
+      "We only retain collected information for as long as necessary to provide the requested service. When we store data, we protect it within commercially acceptable means to prevent loss and theft, as well as unauthorized access, disclosure, copying, use or modification.",
+      "We do not share personally identifying information publicly or with third parties, except when required to by law.",
+      "Our site may have links to external sites not operated by us. Please be aware that we have no control over the content and practices of these sites, and cannot accept responsibility for their respective privacy policies.",
+      "You are free to refuse our request for your personal information, with the understanding that we may be unable to provide you with some of your desired services.",
+      "Your continued use of our site will be regarded as acceptance of our practices around privacy and personal information. If you have any questions about how we handle user data and personal information, feel free to contact us."
+    ]
+  },
+  "cookies": {
+    "eyebrow": "Legal",
+    "title": "Cookie Policy",
+    "updated": "Effective as of December 2020",
+    "sections": [
+      {
+        "title": "What are cookies?",
+        "body": [
+          "As is common practice with almost all professional websites, this site uses cookies, which are tiny files downloaded to your computer, to improve your experience. This page describes what information they gather, how we use it and why we sometimes need to store these cookies. We will also share how you can prevent these cookies from being stored, however this may downgrade or break certain elements of the site's functionality."
+        ]
+      },
+      {
+        "title": "How we use cookies",
+        "body": [
+          "We use cookies for a variety of reasons detailed below. Unfortunately, in most cases there are no industry standard options for disabling cookies without completely disabling the functionality and features they add to this site. It is recommended that you leave on all cookies if you are not sure whether you need them or not, in case they are used to provide a service that you use."
+        ]
+      },
+      {
+        "title": "Disabling cookies",
+        "body": [
+          "You can prevent the setting of cookies by adjusting the settings on your browser (see your browser Help for how to do this). Be aware that disabling cookies will affect the functionality of this and many other websites that you visit. Disabling cookies will usually result in also disabling certain functionality and features of this site. Therefore it is recommended that you do not disable cookies."
+        ]
+      },
+      {
+        "title": "Cookies we set",
+        "items": [
+          "Email newsletter related cookies: this site offers newsletter or email subscription services and cookies may be used to remember if you are already registered and whether to show certain notifications.",
+          "Forms related cookies: when you submit data through a form such as those found on contact pages, cookies may be set to remember your user details for future correspondence.",
+          "Site preferences cookies: to remember your preferences for how this site runs, we need to set cookies so that this information can be called whenever you interact with a page affected by your preferences."
+        ]
+      },
+      {
+        "title": "Third-party cookies",
+        "body": [
+          "In some special cases we also use cookies provided by trusted third parties. The following section details which third-party cookies you might encounter through this site."
+        ],
+        "items": [
+          "This site uses Google Analytics, one of the most widespread and trusted analytics solutions on the web, to help us understand how you use the site and ways that we can improve your experience. These cookies may track things such as how long you spend on the site and the pages that you visit.",
+          "Third-party analytics are used to track and measure usage of this site so that we can continue to produce engaging content."
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "A software house for product and engineering, building software, mobile and AI.",
+    "servicesTitle": "Services",
+    "companyTitle": "Company",
+    "companyLinks": {
+      "about": "About us",
+      "presence": "Where we work",
+      "contact": "Contact"
+    },
+    "resourcesTitle": "Resources",
+    "resourceLinks": {
+      "blog": "Blog"
+    },
+    "groupTitle": "Mios Group",
+    "groupSubtitle": "Our sites",
+    "rights": "All rights reserved.",
+    "madeWith": "Engineered by Mios Tech",
+    "privacy": "Privacy Policy",
+    "cookies": "Cookie Policy"
+  }
+}

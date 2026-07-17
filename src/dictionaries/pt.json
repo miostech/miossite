@@ -1,0 +1,457 @@
+{
+  "meta": {
+    "title": "Mios Tech · Software house de software, mobile e IA",
+    "description": "A Mios Tech é uma software house de produto e engenharia que constrói software, mobile e IA para empresas nos EUA, Europa e Brasil.",
+    "ogAlt": "Mios Tech"
+  },
+  "nav": {
+    "services": "Serviços",
+    "about": "Quem somos",
+    "presence": "Onde atuamos",
+    "contact": "Contato",
+    "cta": "Iniciar um projeto",
+    "menu": "Menu",
+    "close": "Fechar"
+  },
+  "hero": {
+    "badge": "Software house",
+    "title": "Construímos o software que move empresas ambiciosas.",
+    "subtitle": "Somos uma software house especializada em produto e engenharia. Projetamos, desenvolvemos e escalamos soluções web, mobile e de inteligência artificial, com um time sênior que se integra à sua operação como parte da sua equipe.",
+    "ctaPrimary": "Iniciar um projeto",
+    "ctaSecondary": "Ver o que fazemos",
+    "trust": "Atuando nos EUA, Europa e Brasil",
+    "metaLabel": "Aceitando novos projetos",
+    "since": "Construindo desde 2021"
+  },
+  "capabilities": [
+    "Engenharia de produto",
+    "Plataformas web",
+    "iOS & Android",
+    "Cloud & DevOps",
+    "IA aplicada",
+    "Automação",
+    "Fintech",
+    "Integração de sistemas"
+  ],
+  "services": {
+    "eyebrow": "Serviços",
+    "title": "Do primeiro commit à escala.",
+    "subtitle": "Cinco formas de integrar ao seu time e entregar produtos de verdade.",
+    "learnMore": "Saiba mais",
+    "items": {
+      "outsourcing": {
+        "slug": "outsourcing",
+        "name": "Times Dedicados",
+        "tagline": "Squads sênior, dentro do seu time",
+        "short": "Some engenheiros e designers sênior que trabalham como parte do seu time, não como um fornecedor distante.",
+        "description": "Amplie sua capacidade com um squad multidisciplinar que se integra ao seu processo, ferramentas e fuso. Cuidamos de contratação e retenção; você ganha ritmo.",
+        "features": [
+          "Squads sênior multidisciplinares",
+          "Integrados ao seu fluxo de trabalho",
+          "Escala para cima ou para baixo",
+          "Alinhados ao seu fuso horário"
+        ]
+      },
+      "software-development": {
+        "slug": "software-development",
+        "name": "Desenvolvimento de Software",
+        "tagline": "Plataformas feitas para durar",
+        "short": "Plataformas web e sistemas complexos sob medida, seguros e fáceis de evoluir.",
+        "description": "Projetamos e construímos plataformas web e sistemas internos de ponta a ponta (arquitetura, cloud e entrega) em stacks modernas e comprovadas.",
+        "features": [
+          "Plataformas web e ferramentas internas",
+          "Arquitetura cloud-native",
+          "Segurança e conformidade integradas",
+          "Código limpo e sustentável"
+        ]
+      },
+      "mobile-development": {
+        "slug": "mobile-development",
+        "name": "Desenvolvimento Mobile",
+        "tagline": "Apps que as pessoas continuam usando",
+        "short": "Aplicativos iOS e Android de alta performance, de fintech à mobilidade urbana.",
+        "description": "Entregamos produtos mobile nativos e cross-platform, com profunda experiência em fintech, mobilidade, varejo e dispositivos conectados.",
+        "features": [
+          "iOS & Android",
+          "Fintech e pagamentos",
+          "Offline-first e tempo real",
+          "Publicação e releases nas lojas"
+        ]
+      },
+      "business-automation": {
+        "slug": "business-automation",
+        "name": "Automação Empresarial",
+        "tagline": "Menos trabalho repetitivo",
+        "short": "Conecte suas ferramentas e automatize o trabalho manual que trava o seu time.",
+        "description": "Mapeamos seus processos e os automatizamos de ponta a ponta, integrando sistemas, orquestrando fluxos e devolvendo tempo ao seu time.",
+        "features": [
+          "Mapeamento de processos",
+          "Integração de sistemas e APIs",
+          "Orquestração de fluxos",
+          "Dashboards e relatórios"
+        ]
+      },
+      "ai-development": {
+        "slug": "ai-development",
+        "name": "Desenvolvimento de IA",
+        "tagline": "IA que entra em produção",
+        "short": "Assistentes, agentes e modelos customizados dentro do seu produto e das suas operações.",
+        "description": "Projetamos e implantamos IA que gera valor real: assistentes, agentes, RAG e modelos customizados integrados com segurança à sua stack.",
+        "features": [
+          "Assistentes e agentes",
+          "Sistemas RAG e de conhecimento",
+          "Integração de modelos customizados",
+          "Implantação segura e monitorada"
+        ]
+      }
+    }
+  },
+  "partners": {
+    "eyebrow": "Parceiros",
+    "title": "A confiança de quem entrega.",
+    "subtitle": "Algumas das empresas com quem construímos e entregamos."
+  },
+  "differentiators": {
+    "eyebrow": "Abordagem",
+    "title": "Trabalhamos como seu time, não como fornecedor.",
+    "subtitle": "Gente sênior, comunicação clara e um código no qual dá para construir.",
+    "items": [
+      {
+        "title": "Só engenheiros sênior",
+        "description": "Você fala direto com quem escreve o código, sem intermediários, sem júnior aprendendo às suas custas."
+      },
+      {
+        "title": "Segurança e confiabilidade",
+        "description": "Construímos no padrão de setores regulados, para seus sistemas seguirem seguros e estáveis conforme crescem."
+      },
+      {
+        "title": "Entrega toda semana",
+        "description": "Ciclos curtos e updates honestos. Você vê software funcionando, não slides de status."
+      },
+      {
+        "title": "Responsáveis pelo resultado",
+        "description": "Partimos dos seus objetivos e nos mantemos responsáveis por eles, não só por uma lista de tarefas."
+      }
+    ]
+  },
+  "process": {
+    "eyebrow": "Processo",
+    "title": "Como trabalhamos",
+    "steps": [
+      {
+        "title": "Descobrir",
+        "description": "Entendemos seu negócio, usuários e restrições antes de escrever uma linha de código."
+      },
+      {
+        "title": "Desenhar",
+        "description": "Modelamos a arquitetura e a experiência em torno de objetivos reais."
+      },
+      {
+        "title": "Construir",
+        "description": "Squads sênior entregam em ciclos semanais com testes contínuos."
+      },
+      {
+        "title": "Escalar",
+        "description": "Monitoramos, refinamos e crescemos o produto junto com o seu negócio."
+      }
+    ]
+  },
+  "stats": {
+    "title": "Em números",
+    "items": [
+      { "value": "4", "label": "Países onde atuamos" },
+      { "value": "70+", "label": "Parceiros com quem já entregamos" },
+      { "value": "1.600+", "label": "Produtos em produção" },
+      { "value": "3", "label": "Continentes" }
+    ]
+  },
+  "presence": {
+    "eyebrow": "Presença",
+    "title": "Um time, três mercados.",
+    "subtitle": "Colaboramos entre fusos e entregamos juntos, e estamos expandindo.",
+    "countries": [
+      { "name": "Estados Unidos", "status": "Flórida" },
+      { "name": "Europa", "status": "Lisboa" },
+      { "name": "Brasil", "status": "São Paulo" }
+    ],
+    "comingSoon": "Em breve"
+  },
+  "about": {
+    "eyebrow": "Quem somos",
+    "title": "Sobre a Mios",
+    "paragraphs": [
+      "Somos um time de engenheiros e designers que gosta de problemas difíceis e execução impecável construindo o software que as empresas de fato usam para tocar o negócio.",
+      "A Mios Tech nasceu em 2023 e hoje atua com empresas nos EUA, Europa e Brasil.",
+      "Seja um squad para acelerar ou um parceiro para construir do zero, trazemos craft sênior e vontade de entregar."
+    ]
+  },
+  "vision": {
+    "eyebrow": "Visão",
+    "title": "Quem somos",
+    "intro": "Nós temos anos de experiência na área de desenvolvimento em todos os setores da tecnologia, focando sempre na qualidade e satisfação do cliente.",
+    "storyTitle": "Nossa história",
+    "story": [
+      "Nascemos do sonho de levar a tecnologia acessível, conectando pessoas com o mundo.",
+      "Somos uma software house de tecnologia com sede em Lisboa, voltada para a criação de soluções tecnológicas para empresas de todos os setores.",
+      "Somos especialistas no desenvolvimento de aplicativos mobile para Android e iOS e aplicações web e desktop. As soluções nativas e cross-platform fazem parte do nosso perfil de habilidades. Nosso know-how é orientado ao que nos importa: oferecer soluções inteligentes e adequadas para pessoas e empresas que precisam de tecnologia.",
+      "Sabemos que a criação de produtos de ponta e seguros é um exercício desafiador. Por isso nos envolvemos com a concepção, wireframes e layouts, desenvolvimento e publicação dos produtos. Isso é o que garante a qualidade e o sucesso das aplicações, pois são assistidas em todas as etapas.",
+      "Atualmente oferecemos uma gama de serviços que giram em torno de oferecer a melhor experiência aos seus usuários, transformando empresas e trazendo marcas para a era da tecnologia digital.",
+      "Aqui somos apaixonados por tecnologia."
+    ],
+    "principlesTitle": "Nossos princípios",
+    "principlesIntro": "Todas as nossas atividades são guiadas pelos seguintes princípios:",
+    "principles": [
+      {
+        "title": "Cuidar",
+        "description": "Nos prontificamos a atender às exigências do projeto da sua empresa. O roadmap é a nossa prioridade: ficamos com o trabalho e sua empresa com o resultado."
+      },
+      {
+        "title": "Trabalhar em equipe",
+        "description": "Todo o nosso trabalho é organizado por gestores de projetos. Este time garante as entregas contínuas e que o desenvolvimento se mantenha dentro do orçamento."
+      },
+      {
+        "title": "Reinventar",
+        "description": "Nunca paramos de buscar novas tecnologias que garantam a qualidade dos nossos produtos. Não medimos esforços para reformular um projeto quando vemos que existe uma solução melhor."
+      },
+      {
+        "title": "Ser franco",
+        "description": "Valorizamos e praticamos a transparência em nossas relações. Apostamos numa comunicação eficiente para evitar gargalos prejudiciais."
+      },
+      {
+        "title": "Somar",
+        "description": "Nosso time é escolhido a dedo, pois queremos reunir pessoas capacitadas que compartilham do sonho de conectar futuros através da tecnologia. A elas é sempre garantido o incentivo à busca pela especialização e qualificação que se adeque às exigências do mercado, ou seja, as da sua empresa."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Vamos construir o seu próximo produto.",
+    "subtitle": "Conte o que você está construindo. Respondemos em até um dia útil.",
+    "button": "Iniciar um projeto",
+    "secondary": "Falar no WhatsApp"
+  },
+  "contact": {
+    "eyebrow": "Contato",
+    "title": "Vamos conversar.",
+    "subtitle": "Conte sobre o seu projeto e retornamos em até um dia útil.",
+    "form": {
+      "name": "Nome completo",
+      "email": "E-mail corporativo",
+      "company": "Empresa",
+      "message": "O que você está construindo?",
+      "submit": "Enviar mensagem",
+      "note": "Abre o seu cliente de e-mail. Prefere conversar? Fale por e-mail ou WhatsApp."
+    },
+    "channels": {
+      "email": "E-mail",
+      "whatsapp": "WhatsApp",
+      "emailValue": "hello@mios.pt"
+    }
+  },
+  "blog": {
+    "eyebrow": "Blog",
+    "title": "Notas sobre tecnologia, engenharia e entrega.",
+    "subtitle": "Análises pé no chão sobre IA, software, mobile e como bons times entregam, embasadas em fontes confiáveis.",
+    "readingTime": "min de leitura",
+    "backToBlog": "Voltar ao blog",
+    "sourcesTitle": "Fontes",
+    "relatedTitle": "Continue lendo",
+    "ctaTitle": "Tem um projeto em mente?",
+    "ctaButton": "Iniciar um projeto",
+    "categories": {
+      "ai": "IA",
+      "engineering": "Engenharia",
+      "teams": "Times",
+      "operations": "Operações",
+      "mobile": "Mobile"
+    }
+  },
+  "newsletter": {
+    "title": "Assine nossa newsletter",
+    "subtitle": "Receba um e-mail sempre que publicarmos algo novo no blog.",
+    "placeholder": "Seu e-mail",
+    "button": "Assinar",
+    "success": "Pronto! Você está inscrito.",
+    "error": "Não foi possível inscrever. Tente novamente.",
+    "invalid": "Digite um e-mail válido."
+  },
+  "portfolio": {
+    "eyebrow": "Portfólio",
+    "title": "Conheça nosso portfólio",
+    "subtitle": "Veja protótipos de alguns produtos que projetamos e construímos.",
+    "gateTitle": "Desbloqueie o portfólio",
+    "gateSubtitle": "Preencha seus dados para visualizar os protótipos dos nossos trabalhos.",
+    "form": {
+      "name": "Nome",
+      "company": "Empresa",
+      "email": "E-mail",
+      "phone": "Telefone",
+      "submit": "Liberar acesso",
+      "note": "Usamos seus dados apenas para entrar em contato sobre projetos. Nada de spam."
+    },
+    "view": "Ver protótipo",
+    "error": "Não foi possível liberar o acesso. Tente novamente.",
+    "invalidEmail": "Digite um e-mail válido.",
+    "required": "Preencha todos os campos."
+  },
+  "cookieConsent": {
+    "message": "Usamos cookies para melhorar a sua experiência de navegação, analisar o tráfego e personalizar conteúdo. Ao continuar navegando, você concorda com o uso de cookies.",
+    "accept": "Aceitar",
+    "decline": "Recusar",
+    "learnMore": "Saiba mais"
+  },
+  "legal": {
+    "commitment": {
+      "title": "Compromisso do usuário",
+      "intro": "O usuário se compromete a fazer uso adequado dos conteúdos e da informação que a Mios oferece no site, com caráter enunciativo, mas não limitativo:",
+      "items": [
+        "Não se envolver em atividades que sejam ilegais ou contrárias à boa fé e à ordem pública;",
+        "Não divulgar conteúdo ou propaganda de natureza racista, xenofóbica, apostas online, pornografia ilegal, de apologia ao terrorismo ou contra os direitos humanos;",
+        "Não causar danos aos sistemas físicos (hardwares) e lógicos (softwares) da Mios, de seus fornecedores ou terceiros, nem introduzir ou disseminar vírus informáticos ou quaisquer outros sistemas de hardware ou software capazes de causar os danos anteriormente mencionados."
+      ]
+    },
+    "moreInfo": {
+      "title": "Mais informações",
+      "body": [
+        "Esperamos que esteja esclarecido e, como mencionado anteriormente, se houver algo que você não tem certeza se precisa ou não, geralmente é mais seguro deixar os cookies ativados, caso interaja com um dos recursos que você usa em nosso site. Esta política é efetiva a partir de dezembro de 2020."
+      ]
+    },
+    "termsTitle": "Termos de serviço",
+    "terms": [
+      {
+        "title": "1. Termos",
+        "body": [
+          "Ao acessar o site da Mios, você concorda em cumprir estes termos de serviço, todas as leis e regulamentos aplicáveis e concorda que é responsável pelo cumprimento de todas as leis locais aplicáveis. Se você não concordar com algum desses termos, está proibido de usar ou acessar este site. Os materiais contidos neste site são protegidos pelas leis de direitos autorais e marcas comerciais aplicáveis."
+        ]
+      },
+      {
+        "title": "2. Uso de licença",
+        "body": [
+          "É concedida permissão para baixar temporariamente uma cópia dos materiais (informações ou software) no site da Mios, apenas para visualização transitória pessoal e não comercial. Esta é a concessão de uma licença, não uma transferência de título e, sob esta licença, você não pode:"
+        ],
+        "items": [
+          "modificar ou copiar os materiais;",
+          "usar os materiais para qualquer finalidade comercial ou para exibição pública (comercial ou não comercial);",
+          "tentar descompilar ou fazer engenharia reversa de qualquer software contido no site da Mios;",
+          "remover quaisquer direitos autorais ou outras notações de propriedade dos materiais; ou",
+          "transferir os materiais para outra pessoa ou espelhar os materiais em qualquer outro servidor.",
+          "Esta licença será automaticamente rescindida se você violar alguma dessas restrições e poderá ser rescindida pela Mios a qualquer momento. Ao encerrar a visualização desses materiais ou após o término desta licença, você deve apagar todos os materiais baixados em sua posse, seja em formato eletrônico ou impresso."
+        ]
+      },
+      {
+        "title": "3. Isenção de responsabilidade",
+        "items": [
+          "Os materiais no site da Mios são fornecidos como estão. A Mios não oferece garantias, expressas ou implícitas, e, por este meio, isenta e nega todas as outras garantias, incluindo, sem limitação, garantias implícitas ou condições de comercialização, adequação a um fim específico ou não violação de propriedade intelectual ou outra violação de direitos.",
+          "Além disso, a Mios não garante nem faz qualquer representação relativa à precisão, aos resultados prováveis ou à confiabilidade do uso dos materiais em seu site ou de outra forma relacionada a esses materiais ou em sites vinculados a este site."
+        ]
+      },
+      {
+        "title": "4. Limitações",
+        "body": [
+          "Em nenhum caso a Mios ou seus fornecedores serão responsáveis por quaisquer danos (incluindo, sem limitação, danos por perda de dados ou lucro ou devido a interrupção dos negócios) decorrentes do uso ou da incapacidade de usar os materiais na Mios, mesmo que a Mios ou um representante autorizado tenha sido notificado oralmente ou por escrito da possibilidade de tais danos. Como algumas jurisdições não permitem limitações em garantias implícitas, ou limitações de responsabilidade por danos consequentes ou incidentais, essas limitações podem não se aplicar a você."
+        ]
+      },
+      {
+        "title": "5. Precisão dos materiais",
+        "body": [
+          "Os materiais exibidos no site da Mios podem incluir erros técnicos, tipográficos ou fotográficos. A Mios não garante que qualquer material em seu site seja preciso, completo ou atual. A Mios pode fazer alterações nos materiais contidos em seu site a qualquer momento, sem aviso prévio. No entanto, a Mios não se compromete a atualizar os materiais."
+        ]
+      },
+      {
+        "title": "6. Links",
+        "body": [
+          "A Mios não analisou todos os sites vinculados ao seu site e não é responsável pelo conteúdo de nenhum site vinculado. A inclusão de qualquer link não implica endosso pela Mios do site. O uso de qualquer site vinculado é por conta e risco do usuário."
+        ]
+      },
+      {
+        "title": "Modificações",
+        "body": [
+          "A Mios pode revisar estes termos de serviço do site a qualquer momento, sem aviso prévio. Ao usar este site, você concorda em ficar vinculado à versão atual desses termos de serviço."
+        ]
+      },
+      {
+        "title": "Lei aplicável",
+        "body": [
+          "Estes termos e condições são regidos e interpretados de acordo com as leis aplicáveis, e você se submete irrevogavelmente à jurisdição exclusiva dos tribunais competentes."
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "eyebrow": "Legal",
+    "title": "Política de Privacidade",
+    "updated": "Vigente desde dezembro de 2020",
+    "lead": "A sua privacidade é importante para nós.",
+    "intro": [
+      "É política da Mios respeitar a sua privacidade em relação a qualquer informação sua que possamos coletar no site da Mios e em outros sites que possuímos e operamos.",
+      "Solicitamos informações pessoais apenas quando realmente precisamos delas para lhe fornecer um serviço. Fazemo-lo por meios justos e legais, com o seu conhecimento e consentimento. Também informamos por que estamos coletando e como será usado.",
+      "Apenas retemos as informações coletadas pelo tempo necessário para fornecer o serviço solicitado. Quando armazenamos dados, protegemos dentro de meios comercialmente aceitáveis para evitar perdas e roubos, bem como acesso, divulgação, cópia, uso ou modificação não autorizados.",
+      "Não compartilhamos informações de identificação pessoal publicamente ou com terceiros, exceto quando exigido por lei.",
+      "O nosso site pode ter links para sites externos que não são operados por nós. Esteja ciente de que não temos controle sobre o conteúdo e as práticas desses sites e não podemos aceitar responsabilidade por suas respectivas políticas de privacidade.",
+      "Você é livre para recusar a nossa solicitação de informações pessoais, entendendo que talvez não possamos fornecer alguns dos serviços desejados.",
+      "O uso continuado de nosso site será considerado como aceitação de nossas práticas em torno de privacidade e informações pessoais. Se você tiver alguma dúvida sobre como lidamos com dados do usuário e informações pessoais, entre em contato conosco."
+    ]
+  },
+  "cookies": {
+    "eyebrow": "Legal",
+    "title": "Política de Cookies",
+    "updated": "Vigente desde dezembro de 2020",
+    "sections": [
+      {
+        "title": "O que são cookies?",
+        "body": [
+          "Como é prática comum em quase todos os sites profissionais, este site usa cookies, que são pequenos arquivos baixados no seu computador, para melhorar sua experiência. Esta página descreve quais informações eles coletam, como as usamos e por que às vezes precisamos armazenar esses cookies. Também compartilharemos como você pode impedir que esses cookies sejam armazenados, no entanto, isso pode fazer o downgrade ou quebrar certos elementos da funcionalidade do site."
+        ]
+      },
+      {
+        "title": "Como usamos os cookies?",
+        "body": [
+          "Utilizamos cookies por vários motivos, detalhados abaixo. Infelizmente, na maioria dos casos, não existem opções padrão do setor para desativar os cookies sem desativar completamente a funcionalidade e os recursos que eles adicionam a este site. É recomendável que você deixe todos os cookies se não tiver certeza se precisa ou não deles, caso sejam usados para fornecer um serviço que você usa."
+        ]
+      },
+      {
+        "title": "Desativar cookies",
+        "body": [
+          "Você pode impedir a configuração de cookies ajustando as configurações do seu navegador (consulte a Ajuda do navegador para saber como fazer isso). Esteja ciente de que a desativação de cookies afetará a funcionalidade deste e de muitos outros sites que você visita. A desativação de cookies geralmente resultará na desativação de determinadas funcionalidades e recursos deste site. Portanto, é recomendável que você não desative os cookies."
+        ]
+      },
+      {
+        "title": "Cookies que definimos",
+        "items": [
+          "Cookies relacionados a boletins por e-mail: este site oferece serviços de assinatura de boletim informativo ou e-mail e os cookies podem ser usados para lembrar se você já está registrado e se deve mostrar determinadas notificações.",
+          "Cookies relacionados a formulários: quando você envia dados por meio de um formulário, como os encontrados nas páginas de contato, os cookies podem ser configurados para lembrar os detalhes do usuário para correspondência futura.",
+          "Cookies de preferências do site: para lembrar suas preferências de como este site é executado, precisamos definir cookies para que essas informações possam ser chamadas sempre que você interagir com uma página afetada por suas preferências."
+        ]
+      },
+      {
+        "title": "Cookies de terceiros",
+        "body": [
+          "Em alguns casos especiais, também usamos cookies fornecidos por terceiros confiáveis. A seção a seguir detalha quais cookies de terceiros você pode encontrar através deste site."
+        ],
+        "items": [
+          "Este site usa o Google Analytics, uma das soluções de análise mais difundidas e confiáveis da web, para nos ajudar a entender como você usa o site e como podemos melhorar sua experiência. Esses cookies podem rastrear itens como quanto tempo você gasta no site e as páginas visitadas.",
+          "As análises de terceiros são usadas para rastrear e medir o uso deste site, para que possamos continuar produzindo conteúdo atrativo."
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "Uma software house de produto e engenharia que constrói software, mobile e IA.",
+    "servicesTitle": "Serviços",
+    "companyTitle": "Empresa",
+    "companyLinks": {
+      "about": "Quem somos",
+      "presence": "Onde atuamos",
+      "contact": "Contato"
+    },
+    "resourcesTitle": "Recursos",
+    "resourceLinks": {
+      "blog": "Blog"
+    },
+    "groupTitle": "Mios Group",
+    "groupSubtitle": "Nossos sites",
+    "rights": "Todos os direitos reservados.",
+    "madeWith": "Desenvolvido pela Mios Tech",
+    "privacy": "Política de Privacidade",
+    "cookies": "Política de Cookies"
+  }
+}
