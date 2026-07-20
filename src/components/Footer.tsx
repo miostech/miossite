@@ -14,6 +14,7 @@ export function Footer({ lang, dict }: { lang: Locale; dict: Dictionary }) {
       label: dict.footer.companyLinks.presence,
       href: `${localePath(lang)}#presence`,
     },
+    { label: dict.footer.companyLinks.careers, href: localePath(lang, "careers") },
     { label: dict.footer.companyLinks.contact, href: localePath(lang, "contact") },
   ];
 

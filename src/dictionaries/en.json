@@ -244,7 +244,7 @@
     "channels": {
       "email": "Email",
       "whatsapp": "WhatsApp",
-      "emailValue": "hello@mios.pt"
+      "emailValue": "hello@miostec.com"
     }
   },
   "blog": {
@@ -434,6 +434,119 @@
       }
     ]
   },
+  "careers": {
+    "eyebrow": "Work with us",
+    "title": "Build products that matter, alongside people who care.",
+    "intro": "We're a product and engineering software house. Here you work close to the real client problem, with the autonomy to decide and ownership over what you ship. If you love doing things well, this is your place.",
+    "cultureTitle": "How we work",
+    "cultureIntro": "Few rules, lots of ownership. We favour small teams, short cycles and honest feedback.",
+    "values": [
+      {
+        "title": "Own the outcome",
+        "description": "Everyone owns a problem end to end, from discovery to shipping in production."
+      },
+      {
+        "title": "Quality without drama",
+        "description": "We write code we're proud to maintain. Simplicity, tests and review are part of the everyday."
+      },
+      {
+        "title": "Truly remote",
+        "description": "Distributed work, flexible hours and a focus on delivery — not hours in a chair."
+      },
+      {
+        "title": "Always learning",
+        "description": "New technical challenges every project and real room to grow with the team."
+      }
+    ],
+    "openingsTitle": "Open positions",
+    "openingsIntro": "These are the roles we're hiring for right now. Don't see yours? Send a spontaneous application.",
+    "openings": [
+      {
+        "role": "Senior Software Engineer",
+        "type": "Full-time",
+        "location": "Remote",
+        "description": "Technical leadership on product projects, from architecture design to delivery. Solid experience in web and/or mobile development.",
+        "responsibilities": [
+          "Drive architecture decisions and define the team's technical standards.",
+          "Build features end to end, from discovery to shipping in production.",
+          "Review code and raise the technical quality of the project.",
+          "Mentor mid-level and junior engineers day to day."
+        ],
+        "requirements": [
+          "5+ years of software development experience.",
+          "Strong command of at least one modern web and/or mobile stack.",
+          "Experience with testing, CI/CD and engineering best practices.",
+          "Clear communication and autonomy to own complex problems."
+        ]
+      },
+      {
+        "role": "Mid-level Software Engineer",
+        "type": "Full-time",
+        "location": "Remote",
+        "description": "End-to-end feature development in product teams, with autonomy and mentorship from seniors.",
+        "responsibilities": [
+          "Implement complete features within product teams.",
+          "Collaborate on the technical design of solutions.",
+          "Write tests and take part in code reviews.",
+          "Contribute to the continuous evolution of the codebase."
+        ],
+        "requirements": [
+          "3+ years of software development experience.",
+          "Solid foundation in a web and/or mobile stack.",
+          "Familiarity with version control, testing and code review.",
+          "Eagerness to learn and a sense of ownership."
+        ]
+      },
+      {
+        "role": "AI Engineer",
+        "type": "Full-time",
+        "location": "Remote",
+        "description": "Building solutions with LLMs, automation and AI integration into real client products.",
+        "responsibilities": [
+          "Design and build solutions with LLMs and automation.",
+          "Integrate AI models into real client products.",
+          "Evaluate quality, cost and performance of solutions.",
+          "Prototype quickly and take ideas to production."
+        ],
+        "requirements": [
+          "Experience with software development and APIs.",
+          "Hands-on knowledge of LLMs, embeddings and prompt engineering.",
+          "Familiarity with Python and/or TypeScript.",
+          "Curiosity and the ability to keep up with a fast-moving field."
+        ]
+      },
+      {
+        "role": "QA / Test Engineer",
+        "type": "Full-time",
+        "location": "Remote",
+        "description": "Quality assurance across product projects, with manual and automated testing, plus defining test strategies and acceptance criteria with the teams.",
+        "responsibilities": [
+          "Plan and run manual and automated tests.",
+          "Define test strategies and acceptance criteria with the teams.",
+          "Identify, document and track defects through to resolution.",
+          "Help build and maintain automated test suites."
+        ],
+        "requirements": [
+          "Experience with manual QA and some test automation.",
+          "Knowledge of testing methodologies and best practices.",
+          "Attention to detail and a quality-driven mindset.",
+          "Good communication to work closely with the product team."
+        ]
+      }
+    ],
+    "applyRole": "Apply",
+    "detailsLabel": "View full role",
+    "responsibilitiesTitle": "Responsibilities",
+    "requirementsTitle": "Requirements",
+    "close": "Close",
+    "emailSubject": "Application",
+    "emptyTitle": "No open positions right now",
+    "emptyBody": "We still love meeting great people. Send a spontaneous application and we'll reach out when the right opportunity comes up.",
+    "applyTitle": "Spontaneous application",
+    "applyBody": "Tell us a bit about yourself, what you do best and the kind of challenge you're looking for. Attach your CV or portfolio.",
+    "applyButton": "Send application",
+    "applyNote": "We reply to every application. Send it to our email with the subject “Application”."
+  },
   "footer": {
     "tagline": "A software house for product and engineering, building software, mobile and AI.",
     "servicesTitle": "Services",
@@ -441,6 +554,7 @@
     "companyLinks": {
       "about": "About us",
       "presence": "Where we work",
+      "careers": "Work with us",
       "contact": "Contact"
     },
     "resourcesTitle": "Resources",

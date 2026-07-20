@@ -26,7 +26,7 @@ export async function POST(request: Request) {
   const apiKey = process.env.RESEND_API_KEY;
   const from = process.env.NEWSLETTER_FROM;
   const to =
-    process.env.PORTFOLIO_LEADS_TO ?? process.env.CONTACT_TO ?? "hello@mios.pt";
+    process.env.PORTFOLIO_LEADS_TO ?? process.env.CONTACT_TO ?? "hello@miostec.com";
   const audienceId = process.env.RESEND_AUDIENCE_ID;
 
   console.log("Portfolio lead:", { name, company, email, phone, lang });

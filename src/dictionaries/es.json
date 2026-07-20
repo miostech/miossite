@@ -244,7 +244,7 @@
     "channels": {
       "email": "Correo",
       "whatsapp": "WhatsApp",
-      "emailValue": "hello@mios.pt"
+      "emailValue": "hello@miostec.com"
     }
   },
   "blog": {
@@ -434,6 +434,119 @@
       }
     ]
   },
+  "careers": {
+    "eyebrow": "Trabaja con nosotros",
+    "title": "Construye productos que importan, junto a gente exigente.",
+    "intro": "Somos una software house de producto e ingeniería. Aquí trabajas cerca del problema real del cliente, con autonomía para decidir y responsabilidad sobre lo que entregas. Si te gusta hacer las cosas bien, este es tu lugar.",
+    "cultureTitle": "Cómo trabajamos",
+    "cultureIntro": "Pocas reglas, mucho sentido de dueño. Preferimos equipos pequeños, ciclos cortos y feedback honesto.",
+    "values": [
+      {
+        "title": "Dueño del resultado",
+        "description": "Cada persona es responsable de un problema de principio a fin, del discovery a la entrega en producción."
+      },
+      {
+        "title": "Calidad sin drama",
+        "description": "Escribimos código que da orgullo mantener. Simplicidad, tests y revisión son parte del día a día."
+      },
+      {
+        "title": "Remoto de verdad",
+        "description": "Trabajo distribuido, horarios flexibles y foco en la entrega — no en horas en la silla."
+      },
+      {
+        "title": "Aprendizaje continuo",
+        "description": "Nuevos desafíos técnicos en cada proyecto y espacio real para crecer con el equipo."
+      }
+    ],
+    "openingsTitle": "Vacantes abiertas",
+    "openingsIntro": "Estas son las posiciones que buscamos ahora. ¿No encuentras la tuya? Envía una candidatura espontánea.",
+    "openings": [
+      {
+        "role": "Ingeniero(a) de Software Senior",
+        "type": "Tiempo completo",
+        "location": "Remoto",
+        "description": "Liderazgo técnico en proyectos de producto, del diseño de arquitectura a la entrega. Experiencia sólida en desarrollo web y/o mobile.",
+        "responsibilities": [
+          "Liderar decisiones de arquitectura y definir los estándares técnicos del equipo.",
+          "Desarrollar features de principio a fin, del discovery a la entrega en producción.",
+          "Revisar código y elevar la calidad técnica del proyecto.",
+          "Mentorear a personas semi senior y junior en el día a día."
+        ],
+        "requirements": [
+          "5+ años de experiencia en desarrollo de software.",
+          "Dominio de al menos un stack web y/o mobile moderno.",
+          "Experiencia con testing, CI/CD y buenas prácticas de ingeniería.",
+          "Comunicación clara y autonomía para resolver problemas complejos."
+        ]
+      },
+      {
+        "role": "Ingeniero(a) de Software Semi Senior",
+        "type": "Tiempo completo",
+        "location": "Remoto",
+        "description": "Desarrollo de features de principio a fin en equipos de producto, con autonomía y mentoría de seniors.",
+        "responsibilities": [
+          "Implementar features completas en equipos de producto.",
+          "Colaborar en el diseño técnico de las soluciones.",
+          "Escribir pruebas y participar en revisiones de código.",
+          "Contribuir a la evolución continua de la base de código."
+        ],
+        "requirements": [
+          "3+ años de experiencia en desarrollo de software.",
+          "Buena base en un stack web y/o mobile.",
+          "Familiaridad con control de versiones, pruebas y code review.",
+          "Ganas de aprender y sentido de dueño."
+        ]
+      },
+      {
+        "role": "Ingeniero(a) de IA",
+        "type": "Tiempo completo",
+        "location": "Remoto",
+        "description": "Construcción de soluciones con LLMs, automatización e integración de IA en productos reales de clientes.",
+        "responsibilities": [
+          "Diseñar y construir soluciones con LLMs y automatización.",
+          "Integrar modelos de IA en productos reales de clientes.",
+          "Evaluar calidad, costo y rendimiento de las soluciones.",
+          "Prototipar rápido y llevar ideas a producción."
+        ],
+        "requirements": [
+          "Experiencia con desarrollo de software y APIs.",
+          "Conocimiento práctico de LLMs, embeddings y prompt engineering.",
+          "Familiaridad con Python y/o TypeScript.",
+          "Curiosidad y capacidad de seguir un campo en rápida evolución."
+        ]
+      },
+      {
+        "role": "Analista de QA / Testing",
+        "type": "Tiempo completo",
+        "location": "Remoto",
+        "description": "Aseguramiento de calidad en proyectos de producto, con pruebas manuales y automatizadas, además de la definición de estrategias y criterios de aceptación junto a los equipos.",
+        "responsibilities": [
+          "Planificar y ejecutar pruebas manuales y automatizadas.",
+          "Definir estrategias de prueba y criterios de aceptación con los equipos.",
+          "Identificar, documentar y dar seguimiento a los defectos hasta su resolución.",
+          "Ayudar a construir y mantener suites de pruebas automatizadas."
+        ],
+        "requirements": [
+          "Experiencia con QA manual y nociones de automatización de pruebas.",
+          "Conocimiento de metodologías y buenas prácticas de testing.",
+          "Atención al detalle y mentalidad orientada a la calidad.",
+          "Buena comunicación para trabajar junto al equipo de producto."
+        ]
+      }
+    ],
+    "applyRole": "Postular",
+    "detailsLabel": "Ver vacante completa",
+    "responsibilitiesTitle": "Responsabilidades",
+    "requirementsTitle": "Requisitos",
+    "close": "Cerrar",
+    "emailSubject": "Candidatura",
+    "emptyTitle": "Sin vacantes abiertas por ahora",
+    "emptyBody": "Aun así, nos encanta conocer buena gente. Envía tu candidatura espontánea y te contactamos cuando surja la oportunidad correcta.",
+    "applyTitle": "Candidatura espontánea",
+    "applyBody": "Cuéntanos un poco sobre ti, lo que haces mejor y el tipo de desafío que buscas. Adjunta tu CV o portafolio.",
+    "applyButton": "Enviar candidatura",
+    "applyNote": "Respondemos todas las candidaturas. Envíala a nuestro correo con el asunto “Candidatura”."
+  },
   "footer": {
     "tagline": "Una software house de producto e ingeniería que construye software, mobile e IA.",
     "servicesTitle": "Servicios",
@@ -441,6 +554,7 @@
     "companyLinks": {
       "about": "Nosotros",
       "presence": "Dónde trabajamos",
+      "careers": "Trabaja con nosotros",
       "contact": "Contacto"
     },
     "resourcesTitle": "Recursos",

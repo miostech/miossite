@@ -1,7 +1,7 @@
 export const site = {
   name: "Mios Tech",
   url: "https://www.mios.pt",
-  email: "hello@mios.pt",
+  email: "hello@miostec.com",
   whatsapp: "14074295155",
   whatsappDisplay: "+1 407 429 5155",
   social: {
