@@ -38,6 +38,10 @@
     "title": "Do primeiro commit à escala.",
     "subtitle": "Cinco formas de integrar ao seu time e entregar produtos de verdade.",
     "learnMore": "Saiba mais",
+    "overviewTitle": "Visão geral",
+    "capabilitiesTitle": "O que fazemos",
+    "outcomesTitle": "O que você ganha",
+    "useCasesTitle": "Casos de uso",
     "items": {
       "outsourcing": {
         "slug": "outsourcing",
@@ -50,6 +54,22 @@
           "Integrados ao seu fluxo de trabalho",
           "Escala para cima ou para baixo",
           "Alinhados ao seu fuso horário"
+        ],
+        "overview": [
+          "Um time dedicado é um squad sênior que se integra à sua empresa e trabalha como uma extensão dela, não como um fornecedor de fora. Você mantém o controle do roadmap e das prioridades; nós trazemos as pessoas, o ritmo e a disciplina de engenharia para acelerar.",
+          "Cuidamos de seleção, onboarding e retenção para você não perder tração em ciclos de contratação. O squad entra nas suas dailies, nas suas ferramentas e na sua definição de pronto, e engrena em semanas, não em meses."
+        ],
+        "outcomes": [
+          "Entregar mais rápido sem um processo de contratação longo e arriscado.",
+          "Gente sênior que assume o resultado, não só o ticket.",
+          "Flexibilidade para aumentar ou reduzir o time conforme a necessidade.",
+          "Conhecimento que fica no seu produto, graças à baixa rotatividade."
+        ],
+        "useCases": [
+          "Você precisa acelerar um roadmap que ficou grande demais para o time atual.",
+          "Você quer lançar uma nova frente sem headcount permanente.",
+          "Você precisa de especialistas escassos (cloud, dados, IA) por uma fase definida.",
+          "Você quer cobrir uma lacuna de entrega enquanto contrata internamente."
         ]
       },
       "software-development": {
@@ -63,6 +83,22 @@
           "Arquitetura cloud-native",
           "Segurança e conformidade integradas",
           "Código limpo e sustentável"
+        ],
+        "overview": [
+          "Projetamos e construímos plataformas web e sistemas internos de ponta a ponta, da arquitetura e cloud à entrega e suporte. O objetivo é um software seguro hoje e fácil de evoluir por anos.",
+          "Trabalhamos em stacks modernas e comprovadas e mantemos a base de código limpa, testada e documentada, para o seu time seguir construindo sobre ela muito depois da entrega."
+        ],
+        "outcomes": [
+          "Uma plataforma arquitetada para escalar com o negócio.",
+          "Menos incidentes, graças a testes e observabilidade desde o dia um.",
+          "Menor custo de mudança à medida que o produto cresce.",
+          "Propriedade total: código limpo, documentação e transição tranquila."
+        ],
+        "useCases": [
+          "Substituir um sistema legado que trava o negócio.",
+          "Construir uma plataforma ou portal voltado ao cliente.",
+          "Ferramentas internas que automatizam uma operação central.",
+          "Um produto do zero que precisa de uma base sólida."
         ]
       },
       "mobile-development": {
@@ -76,6 +112,22 @@
           "Fintech e pagamentos",
           "Offline-first e tempo real",
           "Publicação e releases nas lojas"
+        ],
+        "overview": [
+          "Construímos apps nativos e cross-platform que as pessoas mantêm na tela inicial, com experiência profunda em fintech, mobilidade, varejo e dispositivos conectados.",
+          "Da arquitetura e dados offline-first ao envio para as lojas e à gestão de releases, cuidamos de todo o ciclo mobile, e tratamos performance e confiabilidade como recursos, não como detalhes."
+        ],
+        "outcomes": [
+          "Apps que parecem rápidos e confiáveis em aparelhos e redes reais.",
+          "Uma base de código única onde faz sentido, nativo onde importa.",
+          "Releases tranquilos e previsíveis na App Store e no Google Play.",
+          "Analytics e relatório de falhas para guiar a próxima iteração."
+        ],
+        "useCases": [
+          "Um app de fintech com pagamentos, KYC e forte necessidade de segurança.",
+          "Um app de mobilidade ou logística que precisa funcionar offline e em tempo real.",
+          "Um app de consumo em que design e performance sustentam a retenção.",
+          "Apps companheiros de dispositivos conectados ou IoT."
         ]
       },
       "business-automation": {
@@ -89,6 +141,22 @@
           "Integração de sistemas e APIs",
           "Orquestração de fluxos",
           "Dashboards e relatórios"
+        ],
+        "overview": [
+          "Mapeamos como o trabalho realmente flui pela sua empresa e então automatizamos de ponta a ponta as etapas manuais e repetitivas, conectando os sistemas que você já usa em vez de substituí-los.",
+          "Toda automação é instrumentada, para você enxergar o que ela economizou e confiar que segue funcionando conforme você escala."
+        ],
+        "outcomes": [
+          "Horas de trabalho manual devolvidas ao time toda semana.",
+          "Menos erros e retrabalho em processos críticos.",
+          "Sistemas que finalmente conversam entre si.",
+          "Dashboards claros que comprovam que a automação funciona."
+        ],
+        "useCases": [
+          "Conciliar dados entre ferramentas que não se integram.",
+          "Automatizar fluxos de onboarding, cobrança ou aprovação.",
+          "Gerar relatórios que hoje alguém monta à mão.",
+          "Orquestrar um processo que passa por várias áreas."
         ]
       },
       "ai-development": {
@@ -102,6 +170,22 @@
           "Sistemas RAG e de conhecimento",
           "Integração de modelos customizados",
           "Implantação segura e monitorada"
+        ],
+        "overview": [
+          "Projetamos e implantamos IA que chega à produção e se paga: assistentes, agentes, sistemas RAG e modelos customizados integrados com segurança ao seu produto e às suas operações.",
+          "Começamos estreito, instrumentamos tudo e só expandimos quando o sistema conquista confiança, para você ter valor real em vez de um demo impressionante que nunca sobe."
+        ],
+        "outcomes": [
+          "Recursos de IA em que seus usuários e seu time realmente confiam.",
+          "Proteções, avaliação e monitoramento embutidos desde o início.",
+          "Seus dados tratados com segurança, em infraestrutura que você controla.",
+          "Um caminho claro do piloto à produção."
+        ],
+        "useCases": [
+          "Um assistente de suporte ou conhecimento baseado no seu próprio conteúdo.",
+          "Um agente que automatiza um fluxo interno de várias etapas.",
+          "Busca RAG sobre documentos, tickets ou uma base de conhecimento.",
+          "Um modelo ou integração customizada para o seu domínio."
         ]
       }
     }

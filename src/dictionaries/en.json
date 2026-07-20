@@ -38,6 +38,10 @@
     "title": "From first commit to scale.",
     "subtitle": "Five ways we plug into your team and ship real products.",
     "learnMore": "Learn more",
+    "overviewTitle": "Overview",
+    "capabilitiesTitle": "What we do",
+    "outcomesTitle": "What you get",
+    "useCasesTitle": "Use cases",
     "items": {
       "outsourcing": {
         "slug": "outsourcing",
@@ -50,6 +54,22 @@
           "Embedded in your workflow",
           "Scale up or down as needed",
           "Aligned to your timezone"
+        ],
+        "overview": [
+          "A dedicated team is a senior squad that plugs into your company and works as an extension of it, not as an outside vendor. You keep ownership of the roadmap and priorities; we bring the people, the rhythm and the engineering discipline to move faster.",
+          "We handle sourcing, onboarding and retention so you don't lose momentum to hiring cycles. The squad joins your standups, your tools and your definition of done, and ramps up in weeks rather than months."
+        ],
+        "outcomes": [
+          "Ship faster without a long, risky hiring process.",
+          "Senior people who own outcomes, not just tickets.",
+          "Flexibility to scale the team up or down as needs change.",
+          "Knowledge that stays with your product, thanks to low turnover."
+        ],
+        "useCases": [
+          "You need to accelerate a roadmap that outgrew your current team.",
+          "You want to launch a new product line without permanent headcount.",
+          "You need scarce specialists (cloud, data, AI) for a defined phase.",
+          "You want to cover a delivery gap while you hire in-house."
         ]
       },
       "software-development": {
@@ -63,6 +83,22 @@
           "Cloud-native architecture",
           "Security & compliance built in",
           "Clean, maintainable code"
+        ],
+        "overview": [
+          "We design and build web platforms and internal systems end to end, from architecture and cloud to delivery and support. The goal is software that is secure today and easy to evolve for years.",
+          "We work in modern, proven stacks and keep the codebase clean, tested and documented, so your team can build on it long after we hand it over."
+        ],
+        "outcomes": [
+          "A platform architected to scale with your business.",
+          "Fewer incidents, thanks to tests and observability from day one.",
+          "Lower cost of change as the product grows.",
+          "Full ownership: clean code, docs and a smooth handover."
+        ],
+        "useCases": [
+          "Replacing a legacy system that slows the business down.",
+          "Building a customer-facing platform or portal.",
+          "Internal tools that automate a core operation.",
+          "A greenfield product that needs a solid foundation."
         ]
       },
       "mobile-development": {
@@ -76,6 +112,22 @@
           "Fintech & payments",
           "Offline-first & real-time",
           "Store submission & releases"
+        ],
+        "overview": [
+          "We build native and cross-platform apps that people keep on their home screen, with deep experience in fintech, mobility, retail and connected devices.",
+          "From architecture and offline-first data to store submission and release management, we own the full mobile lifecycle, and we treat performance and reliability as features, not afterthoughts."
+        ],
+        "outcomes": [
+          "Apps that feel fast and reliable on real devices and networks.",
+          "A single codebase where it makes sense, native where it matters.",
+          "Smooth, predictable releases on the App Store and Google Play.",
+          "Analytics and crash reporting to guide the next iteration."
+        ],
+        "useCases": [
+          "A fintech app with payments, KYC and strong security needs.",
+          "A mobility or logistics app that must work offline and in real time.",
+          "A consumer app where design and performance drive retention.",
+          "Connected-device or IoT companion apps."
         ]
       },
       "business-automation": {
@@ -89,6 +141,22 @@
           "Systems & API integration",
           "Workflow orchestration",
           "Dashboards & reporting"
+        ],
+        "overview": [
+          "We map how work actually flows through your company, then automate the manual, repetitive steps end to end, connecting the systems you already run instead of replacing them.",
+          "Every automation is instrumented, so you can see what it saved and trust that it keeps working as you scale."
+        ],
+        "outcomes": [
+          "Hours of manual work returned to your team every week.",
+          "Fewer errors and less rework in critical processes.",
+          "Systems that finally talk to each other.",
+          "Clear dashboards that prove the automation is working."
+        ],
+        "useCases": [
+          "Reconciling data between tools that don't integrate.",
+          "Automating onboarding, billing or approval flows.",
+          "Generating reports that someone assembles by hand today.",
+          "Orchestrating a process that spans several departments."
         ]
       },
       "ai-development": {
@@ -102,6 +170,22 @@
           "RAG & knowledge systems",
           "Custom model integration",
           "Safe, monitored deployment"
+        ],
+        "overview": [
+          "We design and deploy AI that reaches production and earns its keep: assistants, agents, RAG systems and custom models integrated securely into your product and operations.",
+          "We start narrow, instrument everything and expand only once the system has earned trust, so you get real value instead of an impressive demo that never ships."
+        ],
+        "outcomes": [
+          "AI features your users and team actually rely on.",
+          "Guardrails, evaluation and monitoring built in from the start.",
+          "Your data handled securely, on infrastructure you control.",
+          "A clear path from pilot to production."
+        ],
+        "useCases": [
+          "A support or knowledge assistant grounded in your own content.",
+          "An agent that automates a multi-step internal workflow.",
+          "RAG search over documents, tickets or a knowledge base.",
+          "A custom model or integration tailored to your domain."
         ]
       }
     }

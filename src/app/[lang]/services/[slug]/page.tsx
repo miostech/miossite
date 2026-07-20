@@ -78,43 +78,95 @@ export default async function ServiceDetailPage({
         </div>
       </section>
 
-      <section className="py-20 sm:py-28">
-        <div className="container-x">
-          <div className="grid gap-8 lg:grid-cols-12">
-            <div className="lg:col-span-4">
-              <span className="label">/ {dict.services.eyebrow}</span>
-            </div>
-            <ul className="border-t border-line lg:col-span-8">
-              {service.features.map((feature, i) => (
+      <section className="mt-20 border-t border-line py-20 sm:mt-24 sm:py-28">
+        <div className="container-x grid gap-8 lg:grid-cols-12">
+          <div className="lg:col-span-4">
+            <span className="label">/ {dict.services.overviewTitle}</span>
+          </div>
+          <div className="max-w-2xl space-y-5 lg:col-span-8">
+            {service.overview.map((paragraph, i) => (
+              <p key={i} className="text-lg leading-relaxed text-muted">
+                {paragraph}
+              </p>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-line py-20 sm:py-28">
+        <div className="container-x grid gap-8 lg:grid-cols-12">
+          <div className="lg:col-span-4">
+            <span className="label">/ {dict.services.capabilitiesTitle}</span>
+          </div>
+          <ul className="border-t border-line lg:col-span-8">
+            {service.features.map((feature, i) => (
+              <li
+                key={feature}
+                className="grid grid-cols-[auto_1fr] items-baseline gap-6 border-b border-line py-6"
+              >
+                <span className="font-mono text-xs text-accent">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <span className="text-lg text-ink">{feature}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section className="border-t border-line py-20 sm:py-28">
+        <div className="container-x grid gap-8 lg:grid-cols-12">
+          <div className="lg:col-span-4">
+            <span className="label">/ {dict.services.outcomesTitle}</span>
+          </div>
+          <ul className="lg:col-span-8">
+            {service.outcomes.map((outcome) => (
+              <li
+                key={outcome}
+                className="flex gap-4 border-b border-line py-6 text-lg leading-relaxed text-ink"
+              >
+                <span aria-hidden className="mt-2 h-1.5 w-1.5 shrink-0 bg-accent" />
+                {outcome}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section className="border-t border-line py-20 sm:py-28">
+        <div className="container-x grid gap-8 lg:grid-cols-12">
+          <div className="lg:col-span-4">
+            <span className="label">/ {dict.services.useCasesTitle}</span>
+          </div>
+          <div className="lg:col-span-8">
+            <ul className="grid gap-px border border-line bg-line sm:grid-cols-2">
+              {service.useCases.map((useCase) => (
                 <li
-                  key={feature}
-                  className="grid grid-cols-[auto_1fr] items-baseline gap-6 border-b border-line py-6"
+                  key={useCase}
+                  className="bg-paper p-6 text-base leading-relaxed text-muted"
                 >
-                  <span className="font-mono text-xs text-accent">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <span className="text-lg text-ink">{feature}</span>
+                  {useCase}
                 </li>
               ))}
             </ul>
-          </div>
 
-          <div className="mt-12 flex flex-col gap-4 sm:flex-row lg:pl-[33.333%]">
-            <Link
-              href={localePath(lang, "contact")}
-              className="inline-flex items-center justify-center gap-2 bg-ink px-6 py-3.5 text-sm font-medium text-paper transition-colors hover:bg-accent"
-            >
-              {dict.cta.button}
-              <span aria-hidden>&rarr;</span>
-            </Link>
-            <a
-              href={whatsappLink()}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="link-underline inline-flex items-center gap-2 py-3.5 text-sm font-medium text-ink"
-            >
-              {dict.cta.secondary}
-            </a>
+            <div className="mt-12 flex flex-col gap-4 sm:flex-row">
+              <Link
+                href={localePath(lang, "contact")}
+                className="inline-flex items-center justify-center gap-2 bg-ink px-6 py-3.5 text-sm font-medium text-paper transition-colors hover:bg-accent"
+              >
+                {dict.cta.button}
+                <span aria-hidden>&rarr;</span>
+              </Link>
+              <a
+                href={whatsappLink()}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="link-underline inline-flex items-center gap-2 py-3.5 text-sm font-medium text-ink"
+              >
+                {dict.cta.secondary}
+              </a>
+            </div>
           </div>
         </div>
       </section>
