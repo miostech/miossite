@@ -1,0 +1,147 @@
+{
+  "slug": "technical-debt-ai-generated-code",
+  "date": "2026-07-20",
+  "readingMinutes": 6,
+  "category": "engineering",
+  "sources": [
+    {
+      "label": "Martin Fowler, Technical Debt",
+      "url": "https://martinfowler.com/bliki/TechnicalDebt.html"
+    },
+    {
+      "label": "Stack Overflow Developer Survey 2025",
+      "url": "https://survey.stackoverflow.co/2025/"
+    }
+  ],
+  "content": {
+    "en": {
+      "title": "Technical debt in the age of AI-generated code",
+      "excerpt": "AI lets teams produce more code than ever, faster than ever. But code is a liability as much as an asset, and technical debt doesn't disappear with AI, it compounds faster.",
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Writing code has never been cheaper. With an AI assistant, a developer can turn a vague description into a working function in seconds. The catch is that shipping software was never mostly about typing. The real cost lives in understanding, reviewing, and maintaining what you build, and that cost does not go down just because the first draft was free."
+        },
+        {
+          "type": "heading",
+          "text": "More code, same understanding"
+        },
+        {
+          "type": "paragraph",
+          "text": "Martin Fowler described technical debt as the gap between the code you have and the code you would have written if you fully understood the problem. AI tends to widen that gap: it generates plausible code from partial context, so teams merge solutions they do not fully understand. The volume of code goes up while the shared mental model of the system stays flat, or even shrinks."
+        },
+        {
+          "type": "heading",
+          "text": "Where AI-era debt accumulates"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Duplicated logic the model regenerated instead of reusing what already existed.",
+            "Tests that cover the happy path and little else.",
+            "Dependencies added casually and never audited.",
+            "Code that is almost right, passes a quick review, and quietly hides edge cases."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Keeping velocity without drowning in debt"
+        },
+        {
+          "type": "paragraph",
+          "text": "The answer is not less AI, it is stronger engineering discipline around it. Treat AI output as a first draft, not a final answer. Keep a human accountable for every merge. Invest in tests, types, and clear module boundaries so the codebase stays legible as it grows. And refactor continuously, instead of scheduling a mythical cleanup sprint that never arrives. The Stack Overflow 2025 survey captured the tension well: adoption of AI tools keeps climbing, but trust in their output is falling, and experienced engineers are the most cautious of all."
+        },
+        {
+          "type": "paragraph",
+          "text": "At Mios Tech we let AI accelerate the first draft and keep senior engineers accountable for what ships. Review, tests, and refactoring are part of every cycle, so the speed we gain today does not turn into a tax we pay tomorrow."
+        }
+      ]
+    },
+    "pt": {
+      "title": "Dívida técnica na era do código gerado por IA",
+      "excerpt": "A IA permite produzir mais código do que nunca, e mais rápido do que nunca. Mas código é tanto passivo quanto ativo, e a dívida técnica não desaparece com a IA: ela se acumula mais rápido.",
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Escrever código nunca foi tão barato. Com um assistente de IA, um desenvolvedor transforma uma descrição vaga em uma função funcional em segundos. O problema é que entregar software nunca foi, na maior parte, sobre digitar. O custo real está em entender, revisar e manter o que se constrói, e esse custo não cai só porque o primeiro rascunho saiu de graça."
+        },
+        {
+          "type": "heading",
+          "text": "Mais código, o mesmo entendimento"
+        },
+        {
+          "type": "paragraph",
+          "text": "Martin Fowler descreveu dívida técnica como a distância entre o código que você tem e o código que teria escrito se entendesse plenamente o problema. A IA tende a alargar essa distância: ela gera código plausível a partir de um contexto parcial, então os times integram soluções que não entendem por completo. O volume de código sobe enquanto o modelo mental compartilhado do sistema fica parado, ou até encolhe."
+        },
+        {
+          "type": "heading",
+          "text": "Onde a dívida da era da IA se acumula"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Lógica duplicada que o modelo regerou em vez de reaproveitar o que já existia.",
+            "Testes que cobrem o caminho feliz e pouco mais.",
+            "Dependências adicionadas sem critério e nunca auditadas.",
+            "Código que está quase certo, passa por uma revisão rápida e esconde casos de borda."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Manter a velocidade sem afundar em dívida"
+        },
+        {
+          "type": "paragraph",
+          "text": "A resposta não é usar menos IA, e sim ter mais disciplina de engenharia em torno dela. Trate a saída da IA como um primeiro rascunho, não como resposta final. Mantenha um humano responsável por cada merge. Invista em testes, tipos e fronteiras claras entre módulos, para a base de código seguir legível à medida que cresce. E refatore continuamente, em vez de agendar um mítico sprint de limpeza que nunca chega. A pesquisa Stack Overflow 2025 resume bem a tensão: a adoção de ferramentas de IA continua subindo, mas a confiança na saída delas está caindo, e os engenheiros experientes são os mais cautelosos de todos."
+        },
+        {
+          "type": "paragraph",
+          "text": "Na Mios Tech deixamos a IA acelerar o primeiro rascunho e mantemos engenheiros sêniores responsáveis pelo que vai para produção. Revisão, testes e refatoração fazem parte de cada ciclo, para que a velocidade que ganhamos hoje não vire um imposto que pagamos amanhã."
+        }
+      ]
+    },
+    "es": {
+      "title": "Deuda técnica en la era del código generado por IA",
+      "excerpt": "La IA permite producir más código que nunca, y más rápido que nunca. Pero el código es tanto un pasivo como un activo, y la deuda técnica no desaparece con la IA: se acumula más rápido.",
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Escribir código nunca fue tan barato. Con un asistente de IA, una persona desarrolladora convierte una descripción vaga en una función que funciona en segundos. El detalle es que entregar software nunca se trató, en su mayor parte, de teclear. El costo real está en entender, revisar y mantener lo que se construye, y ese costo no baja solo porque el primer borrador salió gratis."
+        },
+        {
+          "type": "heading",
+          "text": "Más código, el mismo entendimiento"
+        },
+        {
+          "type": "paragraph",
+          "text": "Martin Fowler describió la deuda técnica como la distancia entre el código que tienes y el código que habrías escrito si entendieras del todo el problema. La IA tiende a ampliar esa distancia: genera código plausible a partir de un contexto parcial, así que los equipos integran soluciones que no comprenden por completo. El volumen de código sube mientras el modelo mental compartido del sistema se queda igual, o incluso se reduce."
+        },
+        {
+          "type": "heading",
+          "text": "Dónde se acumula la deuda de la era de la IA"
+        },
+        {
+          "type": "list",
+          "items": [
+            "Lógica duplicada que el modelo regeneró en lugar de reutilizar lo que ya existía.",
+            "Pruebas que cubren el camino feliz y poco más.",
+            "Dependencias agregadas sin criterio y nunca auditadas.",
+            "Código que está casi bien, pasa una revisión rápida y esconde casos límite."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Mantener la velocidad sin ahogarse en deuda"
+        },
+        {
+          "type": "paragraph",
+          "text": "La respuesta no es usar menos IA, sino tener más disciplina de ingeniería a su alrededor. Trata la salida de la IA como un primer borrador, no como una respuesta final. Mantén a una persona responsable de cada merge. Invierte en pruebas, tipos y fronteras claras entre módulos, para que la base de código siga siendo legible a medida que crece. Y refactoriza de forma continua, en lugar de programar un mítico sprint de limpieza que nunca llega. La encuesta Stack Overflow 2025 resume bien la tensión: la adopción de herramientas de IA sigue subiendo, pero la confianza en su salida está cayendo, y los ingenieros con más experiencia son los más cautelosos de todos."
+        },
+        {
+          "type": "paragraph",
+          "text": "En Mios Tech dejamos que la IA acelere el primer borrador y mantenemos a ingenieros sénior responsables de lo que se publica. La revisión, las pruebas y la refactorización son parte de cada ciclo, para que la velocidad que ganamos hoy no se convierta en un impuesto que pagamos mañana."
+        }
+      ]
+    }
+  }
+}

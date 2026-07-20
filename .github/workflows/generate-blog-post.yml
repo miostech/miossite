@@ -1,10 +1,11 @@
 name: Generate blog post
 
 on:
-  # Every Monday at 09:00 UTC. Adjust the cron as needed.
-  schedule:
-    - cron: "0 9 * * 1"
-  # Allows running it manually from the GitHub Actions tab.
+  # Scheduled runs are disabled (no OpenAI key / avoid paid usage).
+  # To re-enable weekly automation, uncomment the schedule block below.
+  # schedule:
+  #   - cron: "0 9 * * 1"
+  # Manual trigger from the GitHub Actions tab stays available.
   workflow_dispatch:
 
 permissions:
