@@ -338,7 +338,9 @@
       "note": "Respondemos en un día hábil. ¿Prefieres hablar? Escríbenos por correo o WhatsApp.",
       "sending": "Enviando...",
       "success": "Mensaje recibido. Respondemos en un día hábil.",
-      "error": "No se pudo enviar. Inténtalo de nuevo o escribe a hello@miostec.com."
+      "error": "No se pudo enviar. Inténtalo de nuevo en un momento.",
+      "errorInvalid": "Revisa los campos e inténtalo de nuevo.",
+      "errorUnavailable": "El envío no está disponible ahora. Escribe a hello@miostec.com o contáctanos por WhatsApp."
     },
     "channels": {
       "email": "Correo",

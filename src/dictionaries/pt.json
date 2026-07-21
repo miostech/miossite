@@ -338,7 +338,9 @@
       "note": "Respondemos em até um dia útil. Prefere conversar? Fale por e-mail ou WhatsApp.",
       "sending": "Enviando...",
       "success": "Mensagem recebida. Respondemos em até um dia útil.",
-      "error": "Não foi possível enviar. Tente novamente ou escreva para hello@miostec.com."
+      "error": "Não foi possível enviar. Tente novamente em instantes.",
+      "errorInvalid": "Confira os campos e tente novamente.",
+      "errorUnavailable": "O envio está indisponível no momento. Escreva para hello@miostec.com ou chame no WhatsApp."
     },
     "channels": {
       "email": "E-mail",

@@ -338,7 +338,9 @@
       "note": "We reply within one business day. Prefer to talk? Reach us by email or WhatsApp.",
       "sending": "Sending...",
       "success": "Message received. We'll reply within one business day.",
-      "error": "Couldn't send. Try again or write to hello@miostec.com."
+      "error": "Couldn't send. Please try again in a moment.",
+      "errorInvalid": "Check the fields and try again.",
+      "errorUnavailable": "Sending is unavailable right now. Write to hello@miostec.com or reach us on WhatsApp."
     },
     "channels": {
       "email": "Email",
