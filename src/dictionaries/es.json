@@ -252,7 +252,7 @@
   "presence": {
     "eyebrow": "Presencia",
     "title": "Un equipo, tres mercados.",
-    "subtitle": "Trabajamos entre zonas horarias como un solo equipo — y seguimos expandiéndonos.",
+    "subtitle": "Trabajamos entre zonas horarias como un solo equipo, y seguimos expandiéndonos.",
     "countries": [
       {
         "name": "Estados Unidos",
@@ -287,10 +287,10 @@
     "intro": "Nacimos en 2022 con una idea simple: el buen software no debería ser un privilegio de quien tiene un equipo de ingeniería en casa.",
     "storyTitle": "Nuestra historia",
     "story": [
-      "Mios empezó del deseo de hacer la tecnología accesible — conectar a personas y empresas con un software que solas no podrían construir.",
+      "Mios empezó del deseo de hacer la tecnología accesible: conectar a personas y empresas con un software que solas no podrían construir.",
       "Hoy somos una software house con sede en Lisboa y equipos en Brasil y Estados Unidos, trabajando con empresas de sectores muy distintos entre sí.",
       "Construimos aplicaciones móviles para iOS y Android, plataformas web y sistemas de escritorio, en soluciones nativas o cross-platform. El stack es consecuencia del problema, nunca de la moda.",
-      "Entramos temprano y nos quedamos hasta el final: concepción, wireframes, diseño, desarrollo y publicación. Eso es lo que sostiene la calidad — ninguna etapa avanza sin alguien responsable por ella.",
+      "Entramos temprano y nos quedamos hasta el final: concepción, wireframes, diseño, desarrollo y publicación. Eso es lo que sostiene la calidad: ninguna etapa avanza sin alguien responsable por ella.",
       "El objetivo es siempre el mismo: la mejor experiencia posible para quien usa tu producto.",
       "En el fondo es simple: nos gusta hacer esto."
     ],
@@ -303,7 +303,7 @@
       },
       {
         "title": "Trabajar en equipo",
-        "description": "Cada proyecto tiene un PM dedicado que organiza equipo, plazo y presupuesto — y es tu punto de contacto de principio a fin."
+        "description": "Cada proyecto tiene un PM dedicado que organiza equipo, plazo y presupuesto, y es tu punto de contacto de principio a fin."
       },
       {
         "title": "Reinventar",
@@ -550,7 +550,7 @@
       },
       {
         "title": "Remoto de verdad",
-        "description": "Trabajo distribuido, horarios flexibles y foco en la entrega — no en horas en la silla."
+        "description": "Trabajo distribuido, horarios flexibles y foco en la entrega, no en horas en la silla."
       },
       {
         "title": "Aprendizaje continuo",

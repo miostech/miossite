@@ -252,7 +252,7 @@
   "presence": {
     "eyebrow": "Presença",
     "title": "Um time, três mercados.",
-    "subtitle": "Trabalhamos entre fusos como um time só — e continuamos expandindo.",
+    "subtitle": "Trabalhamos entre fusos como um time só, e continuamos expandindo.",
     "countries": [
       {
         "name": "Estados Unidos",
@@ -287,10 +287,10 @@
     "intro": "Nascemos em 2022 com uma ideia simples: software de qualidade não deveria ser privilégio de quem tem um time de engenharia dentro de casa.",
     "storyTitle": "Nossa história",
     "story": [
-      "A Mios começou do desejo de tornar a tecnologia acessível — conectar pessoas e empresas a um software que, sozinhas, elas não conseguiriam construir.",
+      "A Mios começou do desejo de tornar a tecnologia acessível: conectar pessoas e empresas a um software que, sozinhas, elas não conseguiriam construir.",
       "Hoje somos uma software house com sede em Lisboa e times no Brasil e nos Estados Unidos, trabalhando com empresas de setores muito diferentes entre si.",
       "Construímos aplicações mobile para iOS e Android, plataformas web e sistemas desktop, em soluções nativas ou cross-platform. A stack é consequência do problema, nunca de moda.",
-      "Entramos cedo e ficamos até o fim: concepção, wireframes, layout, desenvolvimento e publicação. É isso que sustenta a qualidade — nenhuma etapa avança sem alguém responsável por ela.",
+      "Entramos cedo e ficamos até o fim: concepção, wireframes, layout, desenvolvimento e publicação. É isso que sustenta a qualidade: nenhuma etapa avança sem alguém responsável por ela.",
       "O objetivo é sempre o mesmo: a melhor experiência possível para quem usa o seu produto.",
       "No fundo é simples: gostamos de fazer isso."
     ],
@@ -303,7 +303,7 @@
       },
       {
         "title": "Trabalhar em equipe",
-        "description": "Cada projeto tem um PM dedicado que organiza time, prazo e orçamento — e é o seu ponto de contato do começo ao fim."
+        "description": "Cada projeto tem um PM dedicado que organiza time, prazo e orçamento, e é o seu ponto de contato do começo ao fim."
       },
       {
         "title": "Reinventar",

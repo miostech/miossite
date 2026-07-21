@@ -252,7 +252,7 @@
   "presence": {
     "eyebrow": "Footprint",
     "title": "One team, three markets.",
-    "subtitle": "We work across time zones as one team — and we keep expanding.",
+    "subtitle": "We work across time zones as one team, and we keep expanding.",
     "countries": [
       {
         "name": "United States",
@@ -287,10 +287,10 @@
     "intro": "We started in 2022 with a simple idea: good software shouldn't be a privilege of companies with an in-house engineering team.",
     "storyTitle": "Our story",
     "story": [
-      "Mios began from the desire to make technology accessible — connecting people and companies to software they couldn't build on their own.",
+      "Mios began from the desire to make technology accessible: connecting people and companies to software they couldn't build on their own.",
       "Today we're a software house headquartered in Lisbon, with teams in Brazil and the United States, working with companies across very different industries.",
       "We build mobile apps for iOS and Android, web platforms and desktop systems, native or cross-platform. The stack follows the problem, never the trend.",
-      "We come in early and stay to the end: concept, wireframes, design, development and release. That's what holds quality up — no stage moves forward without someone accountable for it.",
+      "We come in early and stay to the end: concept, wireframes, design, development and release. That's what holds quality up: no stage moves forward without someone accountable for it.",
       "The goal is always the same: the best possible experience for the people using your product.",
       "It's simple, really: we like doing this."
     ],
@@ -303,7 +303,7 @@
       },
       {
         "title": "Work as a team",
-        "description": "Every project has a dedicated PM who organises team, timeline and budget — and stays your point of contact throughout."
+        "description": "Every project has a dedicated PM who organises team, timeline and budget, and stays your point of contact throughout."
       },
       {
         "title": "Reinvent",
@@ -550,7 +550,7 @@
       },
       {
         "title": "Truly remote",
-        "description": "Distributed work, flexible hours and a focus on delivery — not hours in a chair."
+        "description": "Distributed work, flexible hours and a focus on delivery, not hours in a chair."
       },
       {
         "title": "Always learning",
