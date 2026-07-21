@@ -254,9 +254,21 @@
     "title": "One team, three markets.",
     "subtitle": "We collaborate across time zones and ship together, and we're expanding.",
     "countries": [
-      { "name": "United States", "status": "Florida" },
-      { "name": "Europe", "status": "Lisbon" },
-      { "name": "Brazil", "status": "São Paulo" }
+      {
+        "name": "United States",
+        "status": "Florida",
+        "address": "255 S Orange Avenue\nSuite 104\nOrlando, FL 32801\nUnited States"
+      },
+      {
+        "name": "Europe",
+        "status": "Lisbon",
+        "address": "Pç do Marquês de Pombal 14\n1250-162 Lisboa"
+      },
+      {
+        "name": "Brazil",
+        "status": "São Paulo",
+        "address": "Alameda Rio Negro 503, blc 2020\nAlphaville\n06454-000"
+      }
     ],
     "comingSoon": "Coming soon"
   },

@@ -254,9 +254,21 @@
     "title": "Um time, três mercados.",
     "subtitle": "Colaboramos entre fusos e entregamos juntos, e estamos expandindo.",
     "countries": [
-      { "name": "Estados Unidos", "status": "Flórida" },
-      { "name": "Europa", "status": "Lisboa" },
-      { "name": "Brasil", "status": "São Paulo" }
+      {
+        "name": "Estados Unidos",
+        "status": "Flórida",
+        "address": "255 S Orange Avenue\nSuite 104\nOrlando, FL 32801\nUnited States"
+      },
+      {
+        "name": "Europa",
+        "status": "Lisboa",
+        "address": "Pç do Marquês de Pombal 14\n1250-162 Lisboa"
+      },
+      {
+        "name": "Brasil",
+        "status": "São Paulo",
+        "address": "Alameda Rio Negro 503, blc 2020\nAlphaville\n06454-000"
+      }
     ],
     "comingSoon": "Em breve"
   },
