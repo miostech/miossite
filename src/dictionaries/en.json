@@ -335,7 +335,10 @@
       "company": "Company",
       "message": "What are you building?",
       "submit": "Send message",
-      "note": "Opens your email client. Prefer to talk? Reach us by email or WhatsApp."
+      "note": "We reply within one business day. Prefer to talk? Reach us by email or WhatsApp.",
+      "sending": "Sending...",
+      "success": "Message received. We'll reply within one business day.",
+      "error": "Couldn't send. Try again or write to hello@miostec.com."
     },
     "channels": {
       "email": "Email",

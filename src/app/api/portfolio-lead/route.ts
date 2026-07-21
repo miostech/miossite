@@ -8,6 +8,7 @@ export async function POST(request: Request) {
   let email = "";
   let phone = "";
   let lang = "";
+  let trap = "";
   try {
     const body = await request.json();
     name = String(body?.name ?? "").trim();
@@ -15,8 +16,15 @@ export async function POST(request: Request) {
     email = String(body?.email ?? "").trim().toLowerCase();
     phone = String(body?.phone ?? "").trim();
     lang = String(body?.lang ?? "").trim();
+    trap = String(body?.website ?? "").trim();
   } catch {
     return NextResponse.json({ ok: false, error: "bad_request" }, { status: 400 });
+  }
+
+  // Honeypot: the field is hidden from humans, so anything in it is a bot.
+  if (trap) {
+    console.warn("Portfolio lead: honeypot triggered", { email });
+    return NextResponse.json({ ok: true });
   }
 
   if (!name || !company || !phone || !EMAIL_RE.test(email)) {

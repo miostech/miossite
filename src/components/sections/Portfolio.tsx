@@ -39,6 +39,7 @@ export function Portfolio({ lang, dict }: { lang: Locale; dict: Dictionary }) {
     const company = String(data.get("company") ?? "").trim();
     const email = String(data.get("email") ?? "").trim();
     const phone = String(data.get("phone") ?? "").trim();
+    const website = String(data.get("website") ?? "").trim();
 
     if (!name || !company || !email || !phone) {
       setStatus("error");
@@ -57,7 +58,7 @@ export function Portfolio({ lang, dict }: { lang: Locale; dict: Dictionary }) {
       const res = await fetch("/api/portfolio-lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, company, email, phone, lang }),
+        body: JSON.stringify({ name, company, email, phone, website, lang }),
       });
       if (!res.ok) throw new Error("request_failed");
       try {
@@ -132,6 +133,15 @@ export function Portfolio({ lang, dict }: { lang: Locale; dict: Dictionary }) {
                   {t.gateSubtitle}
                 </p>
                 <form onSubmit={onSubmit} noValidate className="mt-6 space-y-5">
+                  {/* Honeypot: hidden from humans; bots fill it in. */}
+                  <input
+                    type="text"
+                    name="website"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    aria-hidden="true"
+                    className="absolute left-[-9999px] h-0 w-0 opacity-0"
+                  />
                   <input
                     name="name"
                     autoComplete="name"

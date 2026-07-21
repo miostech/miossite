@@ -1,35 +1,73 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import type { Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/dictionaries";
-import { site } from "@/lib/site";
 
-export function ContactForm({ dict }: { dict: Dictionary }) {
+type Status = "idle" | "loading" | "success" | "error";
+
+export function ContactForm({
+  lang,
+  dict,
+}: {
+  lang: Locale;
+  dict: Dictionary;
+}) {
   const t = dict.contact.form;
-  const [sent, setSent] = useState(false);
+  const [status, setStatus] = useState<Status>("idle");
 
-  function onSubmit(e: FormEvent<HTMLFormElement>) {
+  async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
-    const name = String(data.get("name") ?? "");
-    const email = String(data.get("email") ?? "");
-    const company = String(data.get("company") ?? "");
-    const message = String(data.get("message") ?? "");
 
-    const subject = `Mios Tech · ${name}${company ? ` (${company})` : ""}`;
-    const body = `${message}\n\n${name}\n${email}\n${company}`;
-    window.location.href = `mailto:${site.email}?subject=${encodeURIComponent(
-      subject,
-    )}&body=${encodeURIComponent(body)}`;
-    setSent(true);
+    setStatus("loading");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: String(data.get("name") ?? ""),
+          email: String(data.get("email") ?? ""),
+          company: String(data.get("company") ?? ""),
+          message: String(data.get("message") ?? ""),
+          website: String(data.get("website") ?? ""),
+          lang,
+        }),
+      });
+      if (!res.ok) throw new Error("request_failed");
+      setStatus("success");
+    } catch {
+      setStatus("error");
+    }
   }
 
   const fieldClass =
     "w-full border-b border-line bg-transparent py-3 text-lg text-ink outline-none transition-colors placeholder:text-faint focus:border-ink";
   const labelClass = "label mb-1 block";
 
+  if (status === "success") {
+    return (
+      <p className="flex items-start gap-3 text-lg leading-relaxed text-ink">
+        <span aria-hidden className="text-accent">
+          &rarr;
+        </span>
+        {t.success}
+      </p>
+    );
+  }
+
   return (
     <form onSubmit={onSubmit} className="space-y-8">
+      {/* Honeypot: hidden from humans and from assistive tech; bots fill it in. */}
+      <input
+        type="text"
+        name="website"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        className="absolute left-[-9999px] h-0 w-0 opacity-0"
+      />
+
       <div className="grid gap-8 sm:grid-cols-2">
         <div>
           <label htmlFor="name" className={labelClass}>
@@ -74,12 +112,15 @@ export function ContactForm({ dict }: { dict: Dictionary }) {
       <div className="flex flex-col gap-4 pt-2 sm:flex-row sm:items-center">
         <button
           type="submit"
-          className="inline-flex items-center justify-center gap-2 bg-ink px-8 py-3.5 text-sm font-medium text-paper transition-colors hover:bg-accent"
+          disabled={status === "loading"}
+          className="inline-flex items-center justify-center gap-2 bg-ink px-8 py-3.5 text-sm font-medium text-paper transition-colors hover:bg-accent disabled:opacity-50"
         >
-          {sent ? `${t.submit} ✓` : t.submit}
+          {status === "loading" ? t.sending : t.submit}
           <span aria-hidden>&rarr;</span>
         </button>
-        <p className="max-w-xs text-xs leading-relaxed text-faint">{t.note}</p>
+        <p className="max-w-xs text-xs leading-relaxed text-faint">
+          {status === "error" ? t.error : t.note}
+        </p>
       </div>
     </form>
   );

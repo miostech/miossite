@@ -335,7 +335,10 @@
       "company": "Empresa",
       "message": "O que você está construindo?",
       "submit": "Enviar mensagem",
-      "note": "Abre o seu cliente de e-mail. Prefere conversar? Fale por e-mail ou WhatsApp."
+      "note": "Respondemos em até um dia útil. Prefere conversar? Fale por e-mail ou WhatsApp.",
+      "sending": "Enviando...",
+      "success": "Mensagem recebida. Respondemos em até um dia útil.",
+      "error": "Não foi possível enviar. Tente novamente ou escreva para hello@miostec.com."
     },
     "channels": {
       "email": "E-mail",

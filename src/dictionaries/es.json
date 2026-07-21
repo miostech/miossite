@@ -335,7 +335,10 @@
       "company": "Empresa",
       "message": "¿Qué estás construyendo?",
       "submit": "Enviar mensaje",
-      "note": "Abre tu cliente de correo. ¿Prefieres hablar? Escríbenos por correo o WhatsApp."
+      "note": "Respondemos en un día hábil. ¿Prefieres hablar? Escríbenos por correo o WhatsApp.",
+      "sending": "Enviando...",
+      "success": "Mensaje recibido. Respondemos en un día hábil.",
+      "error": "No se pudo enviar. Inténtalo de nuevo o escribe a hello@miostec.com."
     },
     "channels": {
       "email": "Correo",
