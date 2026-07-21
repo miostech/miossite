@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Mios Tech · Software house de software, mobile e IA",
-    "description": "Mios Tech es una software house de producto e ingeniería que construye software, mobile e IA para empresas en EE. UU., Europa y Brasil.",
+    "title": "Mios Tech · Software house de producto, mobile e IA",
+    "description": "Mios Tech es una software house de producto e ingeniería que construye plataformas web, mobile y de IA para empresas en EE. UU., Europa y Brasil.",
     "ogAlt": "Mios Tech"
   },
   "nav": {
@@ -198,11 +198,11 @@
   "differentiators": {
     "eyebrow": "Enfoque",
     "title": "Trabajamos como tu equipo, no como proveedor.",
-    "subtitle": "Gente sénior, comunicación clara y un código sobre el que se puede construir.",
+    "subtitle": "Liderazgo sénior, comunicación clara y un código sobre el que se puede construir.",
     "items": [
       {
-        "title": "Solo ingenieros sénior",
-        "description": "Hablas directo con quien escribe el código. Sin intermediarios, sin delegar el trabajo hacia dentro."
+        "title": "Un punto de contacto",
+        "description": "Un PM dedicado que conoce tu producto y centraliza la comunicación. No te pasan de un departamento a otro."
       },
       {
         "title": "Seguridad y fiabilidad",
@@ -284,38 +284,38 @@
   "vision": {
     "eyebrow": "Visión",
     "title": "Sobre nosotros",
-    "intro": "Tenemos años de experiencia en todos los sectores de la tecnología, con foco siempre en la calidad y la satisfacción del cliente.",
+    "intro": "Nacimos en 2022 con una idea simple: el buen software no debería ser un privilegio de quien tiene un equipo de ingeniería en casa.",
     "storyTitle": "Nuestra historia",
     "story": [
-      "Nacimos del sueño de llevar la tecnología accesible, conectando a las personas con el mundo.",
-      "Somos una software house con sede en Lisboa, dedicada a la creación de soluciones tecnológicas para empresas de todos los sectores.",
-      "Somos especialistas en el desarrollo de aplicaciones móviles para Android e iOS y en aplicaciones web y de escritorio. Las soluciones nativas y cross-platform forman parte de nuestro perfil de habilidades. Nuestro know-how está orientado a lo que nos importa: ofrecer soluciones inteligentes y adecuadas para las personas y empresas que necesitan tecnología.",
-      "Sabemos que la creación de productos de vanguardia y seguros es un ejercicio desafiante. Por eso nos involucramos con la concepción, los wireframes y los layouts, el desarrollo y la publicación de los productos. Esto es lo que garantiza la calidad y el éxito de las aplicaciones, porque son acompañadas en todas las etapas.",
-      "Actualmente ofrecemos una gama de servicios orientados a brindar la mejor experiencia a tus usuarios, transformando empresas y llevando marcas a la era de la tecnología digital.",
-      "Aquí somos apasionados por la tecnología."
+      "Mios empezó del deseo de hacer la tecnología accesible — conectar a personas y empresas con un software que solas no podrían construir.",
+      "Hoy somos una software house con sede en Lisboa y equipos en Brasil y Estados Unidos, trabajando con empresas de sectores muy distintos entre sí.",
+      "Construimos aplicaciones móviles para iOS y Android, plataformas web y sistemas de escritorio, en soluciones nativas o cross-platform. El stack es consecuencia del problema, nunca de la moda.",
+      "Entramos temprano y nos quedamos hasta el final: concepción, wireframes, diseño, desarrollo y publicación. Eso es lo que sostiene la calidad — ninguna etapa avanza sin alguien responsable por ella.",
+      "El objetivo es siempre el mismo: la mejor experiencia posible para quien usa tu producto.",
+      "En el fondo es simple: nos gusta hacer esto."
     ],
     "principlesTitle": "Nuestros principios",
-    "principlesIntro": "Todas nuestras actividades se guían por los siguientes principios:",
+    "principlesIntro": "Cinco principios guían cómo trabajamos:",
     "principles": [
       {
         "title": "Cuidar",
-        "description": "Nos comprometemos a atender las exigencias del proyecto de tu empresa. El roadmap es nuestra prioridad: nos quedamos con el trabajo y tu empresa con el resultado."
+        "description": "El roadmap de tu empresa se vuelve nuestra prioridad. Nos quedamos con el trabajo; tú te quedas con el resultado."
       },
       {
         "title": "Trabajar en equipo",
-        "description": "Todo nuestro trabajo está organizado por gestores de proyectos. Este equipo garantiza las entregas continuas y que el desarrollo se mantenga dentro del presupuesto."
+        "description": "Cada proyecto tiene un PM dedicado que organiza equipo, plazo y presupuesto — y es tu punto de contacto de principio a fin."
       },
       {
         "title": "Reinventar",
-        "description": "Nunca dejamos de buscar nuevas tecnologías que garanticen la calidad de nuestros productos. No escatimamos esfuerzos para rehacer un proyecto cuando vemos que existe una solución mejor."
+        "description": "Probamos tecnología nueva sin apego a decisiones viejas. Cuando hay un camino mejor, lo rehacemos."
       },
       {
         "title": "Ser franco",
-        "description": "Valoramos y practicamos la transparencia en nuestras relaciones. Apostamos por una comunicación eficiente para evitar cuellos de botella perjudiciales."
+        "description": "Transparencia y comunicación directa. Preferimos la conversación difícil al principio que la sorpresa al final."
       },
       {
         "title": "Sumar",
-        "description": "Nuestro equipo se elige con cuidado, porque queremos reunir personas capacitadas que compartan el sueño de conectar futuros a través de la tecnología. A ellas siempre se les garantiza el incentivo de buscar la especialización y calificación que se adecúe a las exigencias del mercado, es decir, las de tu empresa."
+        "description": "Elegimos el equipo con cuidado e invertimos en quien entra. Cuanto más fuerte es nuestro equipo, mejor es tu producto."
       }
     ]
   },
@@ -328,7 +328,7 @@
   "contact": {
     "eyebrow": "Contacto",
     "title": "Hablemos.",
-    "subtitle": "Cuéntanos sobre tu proyecto y te respondemos en un día hábil.",
+    "subtitle": "Cuéntanos sobre tu proyecto. Respondemos en un día hábil.",
     "form": {
       "name": "Nombre completo",
       "email": "Correo corporativo",
@@ -349,7 +349,7 @@
   "blog": {
     "eyebrow": "Blog",
     "title": "Notas sobre tecnología, ingeniería y entrega.",
-    "subtitle": "Análisis con los pies en la tierra sobre IA, software, mobile y cómo los buenos equipos entregan, con fuentes confiables.",
+    "subtitle": "Análisis con los pies en la tierra sobre IA, software, mobile y cómo los buenos equipos entregan.",
     "readingTime": "min de lectura",
     "backToBlog": "Volver al blog",
     "sourcesTitle": "Fuentes",
@@ -647,7 +647,7 @@
     "applyNote": "Respondemos todas las candidaturas. Envíala a nuestro correo con el asunto “Candidatura”."
   },
   "footer": {
-    "tagline": "Una software house de producto e ingeniería que construye software, mobile e IA.",
+    "tagline": "Software house de producto e ingeniería. Plataformas web, mobile y de IA.",
     "servicesTitle": "Servicios",
     "companyTitle": "Empresa",
     "companyLinks": {

@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Mios Tech · Software house for software, mobile & AI",
-    "description": "Mios Tech is a software house for product and engineering, building software, mobile and AI for companies across the US, Europe and Brazil.",
+    "title": "Mios Tech · Software house for product, mobile & AI",
+    "description": "Mios Tech is a product and engineering software house, building web, mobile and AI platforms for companies across the US, Europe and Brazil.",
     "ogAlt": "Mios Tech"
   },
   "nav": {
@@ -198,11 +198,11 @@
   "differentiators": {
     "eyebrow": "Approach",
     "title": "We work like your team, not a vendor.",
-    "subtitle": "Senior people, clear communication, and code you can build on.",
+    "subtitle": "Senior leadership, clear communication, and code you can build on.",
     "items": [
       {
-        "title": "Senior engineers only",
-        "description": "You work directly with the people writing the code. No handoffs, no passing the work down the line."
+        "title": "One point of contact",
+        "description": "A dedicated PM who knows your product and owns the communication. You're never passed between departments."
       },
       {
         "title": "Security and reliability",
@@ -284,38 +284,38 @@
   "vision": {
     "eyebrow": "Vision",
     "title": "About us",
-    "intro": "We have years of experience across every sector of technology, always focused on quality and client satisfaction.",
+    "intro": "We started in 2022 with a simple idea: good software shouldn't be a privilege of companies with an in-house engineering team.",
     "storyTitle": "Our story",
     "story": [
-      "We were born from the dream of making technology accessible, connecting people with the world.",
-      "We're a software house headquartered in Lisbon, dedicated to building technology solutions for companies across every sector.",
-      "We specialize in mobile app development for Android and iOS, as well as web and desktop applications. Native and cross-platform solutions are part of our skill set. Our know-how is driven by what matters to us: delivering smart, fitting solutions for the people and companies that need technology.",
-      "We know that building cutting-edge, secure products is a challenging exercise. That's why we get involved with concept, wireframes and layouts, development and product launch. This is what guarantees the quality and success of the applications, because they are supported at every stage.",
-      "Today we offer a range of services centered on delivering the best experience to your users, transforming companies and bringing brands into the digital technology era.",
-      "Here, we're passionate about technology."
+      "Mios began from the desire to make technology accessible — connecting people and companies to software they couldn't build on their own.",
+      "Today we're a software house headquartered in Lisbon, with teams in Brazil and the United States, working with companies across very different industries.",
+      "We build mobile apps for iOS and Android, web platforms and desktop systems, native or cross-platform. The stack follows the problem, never the trend.",
+      "We come in early and stay to the end: concept, wireframes, design, development and release. That's what holds quality up — no stage moves forward without someone accountable for it.",
+      "The goal is always the same: the best possible experience for the people using your product.",
+      "It's simple, really: we like doing this."
     ],
     "principlesTitle": "Our principles",
-    "principlesIntro": "All of our work is guided by the following principles:",
+    "principlesIntro": "Five principles guide how we work:",
     "principles": [
       {
         "title": "Care",
-        "description": "We commit to meeting the demands of your company's project. The roadmap is our priority: we take on the work and your company keeps the result."
+        "description": "Your roadmap becomes our priority. We take the work; you take the result."
       },
       {
-        "title": "Teamwork",
-        "description": "All of our work is organized by project managers. This team ensures continuous delivery and keeps development within budget."
+        "title": "Work as a team",
+        "description": "Every project has a dedicated PM who organises team, timeline and budget — and stays your point of contact throughout."
       },
       {
         "title": "Reinvent",
-        "description": "We never stop looking for new technologies that ensure the quality of our products. We spare no effort to rebuild a project when we see a better solution."
+        "description": "We test new technology without clinging to old decisions. When there's a better path, we rebuild."
       },
       {
-        "title": "Be straightforward",
-        "description": "We value and practice transparency in our relationships. We bet on efficient communication to avoid harmful bottlenecks."
+        "title": "Be straight",
+        "description": "Transparency and direct communication. We'd rather have the hard conversation early than the surprise at the end."
       },
       {
         "title": "Add up",
-        "description": "Our team is handpicked, because we want to bring together capable people who share the dream of connecting futures through technology. They are always encouraged to pursue the specialization and qualification that fits the market's demands — that is, your company's."
+        "description": "We pick the team carefully and invest in the people who join. The stronger our team gets, the better your product gets."
       }
     ]
   },
@@ -328,7 +328,7 @@
   "contact": {
     "eyebrow": "Contact",
     "title": "Let's talk.",
-    "subtitle": "Tell us about your project and we'll get back within one business day.",
+    "subtitle": "Tell us about your project. We reply within one business day.",
     "form": {
       "name": "Full name",
       "email": "Work email",
@@ -349,7 +349,7 @@
   "blog": {
     "eyebrow": "Blog",
     "title": "Notes on technology, engineering and delivery.",
-    "subtitle": "Grounded takes on AI, software, mobile and how great teams ship, backed by reputable sources.",
+    "subtitle": "Grounded takes on AI, software, mobile and how great teams ship.",
     "readingTime": "min read",
     "backToBlog": "Back to the blog",
     "sourcesTitle": "Sources",
@@ -647,7 +647,7 @@
     "applyNote": "We reply to every application. Send it to our email with the subject “Application”."
   },
   "footer": {
-    "tagline": "A software house for product and engineering, building software, mobile and AI.",
+    "tagline": "A product and engineering software house. Web, mobile and AI platforms.",
     "servicesTitle": "Services",
     "companyTitle": "Company",
     "companyLinks": {
