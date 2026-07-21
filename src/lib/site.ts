@@ -12,7 +12,6 @@ export const site = {
 
 export const miosGroup = [
   { name: "Dine Mouse", url: "https://dinemouse.com" },
-  { name: "Dome", url: "https://www.dome.app.br" },
   { name: "Mios Academy", url: "https://miosacademy.com" },
   { name: "NuvFit", url: "https://www.nuvfit.app" },
 ];
