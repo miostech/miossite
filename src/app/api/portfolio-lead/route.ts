@@ -88,9 +88,20 @@ export async function POST(request: Request) {
           unsubscribed: false,
         }),
       });
+
+      if (!res.ok) {
+        const payload = await res.json().catch(() => ({}));
+        console.error("Portfolio lead: audience add failed", res.status, payload);
+      }
     } catch (err) {
       console.error("Portfolio lead: audience add failed", err);
     }
+  }
+
+  // The lead is always logged above, but a failed notification means nobody
+  // reads it — surface it so the form can retry instead of silently dropping.
+  if (!emailSent) {
+    return NextResponse.json({ ok: false, error: "provider_error" }, { status: 502 });
   }
 
   return NextResponse.json({ ok: true });
