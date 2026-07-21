@@ -5,7 +5,7 @@ import { Hero } from "@/components/sections/Hero";
 import { ServicesSection } from "@/components/sections/ServicesSection";
 import { Differentiators } from "@/components/sections/Differentiators";
 import { Partners } from "@/components/sections/Partners";
-import { Portfolio } from "@/components/sections/Portfolio";
+// import { Portfolio } from "@/components/sections/Portfolio";
 import { Process } from "@/components/sections/Process";
 import { Stats } from "@/components/sections/Stats";
 import { Presence } from "@/components/sections/Presence";
@@ -28,7 +28,7 @@ export default async function HomePage({
       <ServicesSection lang={lang} dict={dict} />
       <Differentiators dict={dict} />
       <Partners dict={dict} />
-      <Portfolio lang={lang} dict={dict} />
+      {/* <Portfolio lang={lang} dict={dict} /> */}
       <Stats dict={dict} />
       <About dict={dict} />
       <Process dict={dict} />
