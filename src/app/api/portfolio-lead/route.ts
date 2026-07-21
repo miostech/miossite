@@ -31,9 +31,11 @@ export async function POST(request: Request) {
 
   console.log("Portfolio lead:", { name, company, email, phone, lang });
 
+  let emailSent = true;
+
   if (apiKey && from) {
     try {
-      await fetch("https://api.resend.com/emails", {
+      const res = await fetch("https://api.resend.com/emails", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${apiKey}`,
@@ -55,7 +57,14 @@ export async function POST(request: Request) {
           ].join("\n"),
         }),
       });
+
+      if (!res.ok) {
+        emailSent = false;
+        const payload = await res.json().catch(() => ({}));
+        console.error("Portfolio lead: Resend email error", res.status, payload);
+      }
     } catch (err) {
+      emailSent = false;
       console.error("Portfolio lead: email send failed", err);
     }
   } else {
@@ -66,7 +75,7 @@ export async function POST(request: Request) {
 
   if (apiKey && audienceId) {
     try {
-      await fetch(`https://api.resend.com/audiences/${audienceId}/contacts`, {
+      const res = await fetch(`https://api.resend.com/audiences/${audienceId}/contacts`, {
         method: "POST",
         headers: {
           Authorization: `Bearer ${apiKey}`,

@@ -46,10 +46,10 @@ export function Partners({ dict }: { dict: Dictionary }) {
                       ? { transform: `scale(${partner.scale})` }
                       : undefined
                   }
-                  className="h-11 w-auto object-contain opacity-60 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 sm:h-14"
+                  className="h-11 w-auto object-contain transition-all duration-300 sm:h-14"
                 />
               ) : (
-                <span className="display whitespace-nowrap text-3xl text-faint transition-colors duration-300 hover:text-ink sm:text-4xl">
+                <span className="display whitespace-nowrap text-3xl text-ink transition-colors duration-300 sm:text-4xl">
                   {partner.name}
                 </span>
               )}
