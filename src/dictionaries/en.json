@@ -16,10 +16,10 @@
   "hero": {
     "badge": "Software house",
     "title": "We build the software that moves ambitious companies.",
-    "subtitle": "We're a software house specialized in product and engineering. We design, develop and scale web, mobile and artificial intelligence solutions, with a senior team that embeds into your operation as part of your team.",
+    "subtitle": "A product and engineering software house. We design, develop and scale web, mobile and AI platforms with a senior team that embeds into your operation.",
     "ctaPrimary": "Start a project",
     "ctaSecondary": "See what we do",
-    "trust": "Bringing innovation to 3 continents",
+    "trust": "Teams across 3 continents",
     "metaLabel": "Taking on new projects",
     "since": "Building since 2022"
   },
@@ -36,7 +36,7 @@
   "services": {
     "eyebrow": "Services",
     "title": "From first commit to scale.",
-    "subtitle": "Five ways we plug into your team and ship real products.",
+    "subtitle": "Five ways to plug into your team and build real products.",
     "learnMore": "Learn more",
     "overviewTitle": "Overview",
     "capabilitiesTitle": "What we do",
@@ -192,8 +192,8 @@
   },
   "partners": {
     "eyebrow": "Partners",
-    "title": "Trusted by teams that ship.",
-    "subtitle": "A few of the companies we've built and shipped with."
+    "title": "Companies that trust our engineering.",
+    "subtitle": "A few of the companies we work with."
   },
   "differentiators": {
     "eyebrow": "Approach",
@@ -202,7 +202,7 @@
     "items": [
       {
         "title": "Senior engineers only",
-        "description": "You work directly with the people writing the code, no handoffs, no juniors learning on your budget."
+        "description": "You work directly with the people writing the code. No handoffs, no passing the work down the line."
       },
       {
         "title": "Security and reliability",
@@ -243,16 +243,16 @@
   "stats": {
     "title": "In numbers",
     "items": [
-      { "value": "4", "label": "Countries we operate in" },
-      { "value": "70+", "label": "Partners we've shipped with" },
-      { "value": "1,600+", "label": "Products in production" },
-      { "value": "3", "label": "Continents" }
+      { "value": "2022", "label": "Founded in" },
+      { "value": "25", "label": "Engineers on the team" },
+      { "value": "3", "label": "Countries" },
+      { "value": "32+", "label": "Clients served" }
     ]
   },
   "presence": {
     "eyebrow": "Footprint",
     "title": "One team, three markets.",
-    "subtitle": "We collaborate across time zones and ship together, and we're expanding.",
+    "subtitle": "We work across time zones as one team — and we keep expanding.",
     "countries": [
       {
         "name": "United States",
@@ -276,9 +276,9 @@
     "eyebrow": "Who we are",
     "title": "About Mios",
     "paragraphs": [
-      "We're a team of engineers and designers who like hard problems and clean execution, building software that companies actually run their business on.",
+      "We're a team of engineers and designers who like hard problems and clean execution. We build the software companies actually run their business on.",
       "Mios Tech started in 2022 and now works with companies across the US, Europe and Brazil.",
-      "Whether you need a squad to accelerate or a partner to build from zero, we bring senior craft and a bias for shipping."
+      "Whether you need a squad to accelerate or a partner to build from zero, we bring senior craft and accountability for the outcome."
     ]
   },
   "vision": {

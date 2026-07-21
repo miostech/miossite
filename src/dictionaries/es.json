@@ -16,10 +16,10 @@
   "hero": {
     "badge": "Software house",
     "title": "Construimos el software que mueve a empresas ambiciosas.",
-    "subtitle": "Somos una software house especializada en producto e ingeniería. Diseñamos, desarrollamos y escalamos soluciones web, mobile y de inteligencia artificial, con un equipo sénior que se integra a tu operación como parte de tu equipo.",
+    "subtitle": "Software house de producto e ingeniería. Diseñamos, desarrollamos y escalamos plataformas web, mobile y de IA con un equipo sénior que se integra a tu operación.",
     "ctaPrimary": "Iniciar un proyecto",
     "ctaSecondary": "Ver lo que hacemos",
-    "trust": "Llevando innovación a 3 continentes",
+    "trust": "Equipos en 3 continentes",
     "metaLabel": "Aceptando nuevos proyectos",
     "since": "Construyendo desde 2022"
   },
@@ -36,7 +36,7 @@
   "services": {
     "eyebrow": "Servicios",
     "title": "Del primer commit a la escala.",
-    "subtitle": "Cinco formas de integrarnos a tu equipo y entregar productos reales.",
+    "subtitle": "Cinco formas de integrarnos a tu equipo y construir productos de verdad.",
     "learnMore": "Saber más",
     "overviewTitle": "Visión general",
     "capabilitiesTitle": "Qué hacemos",
@@ -192,8 +192,8 @@
   },
   "partners": {
     "eyebrow": "Socios",
-    "title": "La confianza de quienes entregan.",
-    "subtitle": "Algunas de las empresas con las que hemos construido y entregado."
+    "title": "Empresas que confían en nuestra ingeniería.",
+    "subtitle": "Algunas de las empresas con las que trabajamos."
   },
   "differentiators": {
     "eyebrow": "Enfoque",
@@ -202,7 +202,7 @@
     "items": [
       {
         "title": "Solo ingenieros sénior",
-        "description": "Hablas directo con quien escribe el código, sin intermediarios, sin júniors aprendiendo a tu costa."
+        "description": "Hablas directo con quien escribe el código. Sin intermediarios, sin delegar el trabajo hacia dentro."
       },
       {
         "title": "Seguridad y fiabilidad",
@@ -243,16 +243,16 @@
   "stats": {
     "title": "En números",
     "items": [
-      { "value": "4", "label": "Países donde operamos" },
-      { "value": "70+", "label": "Socios con quienes hemos entregado" },
-      { "value": "1.600+", "label": "Productos en producción" },
-      { "value": "3", "label": "Continentes" }
+      { "value": "2022", "label": "Fundada en" },
+      { "value": "25", "label": "Ingenieros en el equipo" },
+      { "value": "3", "label": "Países" },
+      { "value": "32+", "label": "Clientes atendidos" }
     ]
   },
   "presence": {
     "eyebrow": "Presencia",
     "title": "Un equipo, tres mercados.",
-    "subtitle": "Colaboramos entre zonas horarias y entregamos juntos, y estamos expandiéndonos.",
+    "subtitle": "Trabajamos entre zonas horarias como un solo equipo — y seguimos expandiéndonos.",
     "countries": [
       {
         "name": "Estados Unidos",
@@ -276,9 +276,9 @@
     "eyebrow": "Quiénes somos",
     "title": "Sobre Mios",
     "paragraphs": [
-      "Somos un equipo de ingenieros y diseñadores al que le gustan los problemas difíciles y la ejecución impecable, construyendo el software con el que las empresas realmente operan.",
+      "Somos un equipo de ingenieros y diseñadores al que le gustan los problemas difíciles y la ejecución impecable. Construimos el software con el que las empresas realmente operan.",
       "Mios Tech nació en 2022 y hoy trabaja con empresas en EE. UU., Europa y Brasil.",
-      "Ya sea un squad para acelerar o un socio para construir desde cero, aportamos craft sénior y ganas de entregar."
+      "Ya sea un squad para acelerar o un socio para construir desde cero, aportamos senioridad y compromiso con el resultado."
     ]
   },
   "vision": {
