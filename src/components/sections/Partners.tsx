@@ -46,7 +46,7 @@ export function Partners({ dict }: { dict: Dictionary }) {
                       ? { transform: `scale(${partner.scale})` }
                       : undefined
                   }
-                  className="h-11 w-auto object-contain transition-all duration-300 sm:h-14"
+                  className="h-11 w-auto max-w-full object-contain transition-all duration-300 sm:h-14"
                 />
               ) : (
                 <span className="display whitespace-nowrap text-3xl text-ink transition-colors duration-300 sm:text-4xl">

@@ -71,7 +71,7 @@ export function Header({ lang, dict }: { lang: Locale; dict: Dictionary }) {
             onClick={() => setOpen((v) => !v)}
             aria-label={open ? dict.nav.close : dict.nav.menu}
             aria-expanded={open}
-            className="flex h-9 w-9 items-center justify-center lg:hidden"
+            className="-mr-2 flex h-11 w-11 items-center justify-center lg:hidden"
           >
             <span className="relative block h-3.5 w-6">
               <span

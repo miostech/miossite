@@ -21,13 +21,15 @@ export function LanguageSwitcher({
   const ref = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    function onClick(e: MouseEvent) {
+    function onClick(e: Event) {
       if (ref.current && !ref.current.contains(e.target as Node)) {
         setOpen(false);
       }
     }
-    document.addEventListener("mousedown", onClick);
-    return () => document.removeEventListener("mousedown", onClick);
+    // pointerdown covers mouse and touch; iOS Safari does not reliably fire
+    // mousedown for taps on non-interactive elements.
+    document.addEventListener("pointerdown", onClick);
+    return () => document.removeEventListener("pointerdown", onClick);
   }, []);
 
   function switchTo(next: Locale) {
@@ -52,7 +54,7 @@ export function LanguageSwitcher({
         onClick={() => setOpen((v) => !v)}
         aria-haspopup="listbox"
         aria-expanded={open}
-        className={`font-mono text-[11px] uppercase tracking-[0.18em] transition-colors ${trigger}`}
+        className={`-mx-2 inline-flex min-h-11 items-center px-2 font-mono text-[11px] uppercase tracking-[0.18em] transition-colors lg:mx-0 lg:min-h-0 lg:px-0 ${trigger}`}
       >
         {lang}
         <span className="mx-1 opacity-40">/</span>

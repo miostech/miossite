@@ -68,7 +68,7 @@ export default async function ServiceDetailPage({
           </div>
 
           <div className="grid gap-8 pt-8 lg:grid-cols-12">
-            <h1 className="display text-5xl leading-[0.98] sm:text-7xl lg:col-span-8 lg:text-8xl">
+            <h1 className="display text-[2rem] leading-[1.05] break-words sm:text-7xl sm:leading-[0.98] lg:col-span-8 lg:text-8xl">
               {service.name}
             </h1>
             <p className="self-end text-lg leading-relaxed text-muted lg:col-span-4">

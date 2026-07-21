@@ -80,7 +80,7 @@ export default async function BlogPostPage({
               &larr; {dict.blog.backToBlog}
             </Link>
 
-            <div className="mt-10 flex items-center gap-4 border-t border-line pt-4">
+            <div className="mt-10 flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-line pt-4">
               <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-accent">
                 {dict.blog.categories[post.category]}
               </span>

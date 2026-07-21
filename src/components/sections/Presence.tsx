@@ -37,7 +37,7 @@ export function Presence({ dict }: { dict: Dictionary }) {
                     }
                     aria-expanded={isOpen}
                     disabled={!canOpen}
-                    className={`grid w-full grid-cols-[auto_1fr_auto] items-center gap-6 py-6 text-left ${
+                    className={`grid w-full grid-cols-[auto_1fr] items-center gap-x-4 gap-y-2 py-6 text-left sm:grid-cols-[auto_1fr_auto] sm:gap-6 ${
                       canOpen ? "cursor-pointer" : "cursor-default"
                     }`}
                   >
@@ -52,7 +52,7 @@ export function Presence({ dict }: { dict: Dictionary }) {
                       {country.name}
                     </span>
                     <span
-                      className={`flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.18em] ${
+                      className={`col-start-2 flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.18em] sm:col-start-auto ${
                         soon ? "text-faint" : "text-ink"
                       }`}
                     >

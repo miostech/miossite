@@ -58,7 +58,7 @@ export function CookieConsent({
           <button
             type="button"
             onClick={() => dismiss("declined")}
-            className="text-sm font-medium text-paper/70 transition-colors hover:text-paper"
+            className="inline-flex items-center px-4 py-2.5 text-sm font-medium text-paper/70 transition-colors hover:text-paper"
           >
             {c.decline}
           </button>

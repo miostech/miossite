@@ -262,12 +262,12 @@
       {
         "name": "Europe",
         "status": "Lisbon",
-        "address": "Pç do Marquês de Pombal 14\n1250-162 Lisboa"
+        "address": "Praça do Marquês de Pombal 14\n1250-162 Lisboa\nPortugal"
       },
       {
         "name": "Brazil",
         "status": "São Paulo",
-        "address": "Alameda Rio Negro 503, blc 2020\nAlphaville\n06454-000"
+        "address": "Alameda Rio Negro 503\nBloco 2020 — Alphaville\nBarueri, SP 06454-000\nBrasil"
       }
     ],
     "comingSoon": "Coming soon"
