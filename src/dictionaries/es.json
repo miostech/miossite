@@ -244,8 +244,8 @@
     "title": "En números",
     "items": [
       { "value": "2022", "label": "Fundada en" },
-      { "value": "25", "label": "Ingenieros en el equipo" },
-      { "value": "3", "label": "Países" },
+      { "value": "40+", "label": "Productos entregados" },
+      { "value": "3", "label": "Continentes" },
       { "value": "32+", "label": "Clientes atendidos" }
     ]
   },

@@ -244,8 +244,8 @@
     "title": "In numbers",
     "items": [
       { "value": "2022", "label": "Founded in" },
-      { "value": "25", "label": "Engineers on the team" },
-      { "value": "3", "label": "Countries" },
+      { "value": "40+", "label": "Products delivered" },
+      { "value": "3", "label": "Continents" },
       { "value": "32+", "label": "Clients served" }
     ]
   },
