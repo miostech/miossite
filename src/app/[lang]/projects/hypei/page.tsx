@@ -16,7 +16,7 @@ const meta = [
   { label: "Sponsor", value: "Luigi" },
   { label: "Gestão", value: "Mios" },
   { label: "Data", value: "2026-07-21" },
-  { label: "Versão", value: "v0.11 (rascunho)" },
+  { label: "Versão", value: "v0.13 (rascunho)" },
 ];
 
 const valueProps = [
@@ -52,9 +52,9 @@ const revenue = [
 
 const kpis = [
   { value: "≥ 1000", label: "Produtores ativos em 12 meses" },
-  { value: "~R$ 20M", label: "GMV/mês no run-rate (12.º mês)" },
+  { value: "~R$ 5M", label: "GMV/mês no 12.º mês (cenário base)" },
   { value: "~4%", label: "Take rate líquido (após PSP)" },
-  { value: "~R$ 9,6M", label: "Receita líquida/ano no run-rate" },
+  { value: "~R$ 2,4M", label: "Receita líquida/ano (cenário base)" },
 ];
 
 const scopeIn = [
@@ -131,7 +131,7 @@ const risks = [
   "Dependência do gateway externo / PSP (custos, condições, disponibilidade).",
   "Custo e ritmo de aquisição de produtores abaixo do esperado.",
   "Risco de crédito/chargeback ao adiantar com caixa próprio — mitigado com 30% de reserva no D+2.",
-  "Liquidez / capital de giro: o volume adiantável é limitado pela caixa; a ~R$ 20M/mês o float excede os R$ 500 mil iniciais.",
+  "Liquidez / capital de giro: o volume adiantável é limitado pela caixa; já a poucos milhões de GMV/mês o float necessário excede os R$ 500 mil iniciais.",
   "Regulatório sobre pagamentos: exposição residual mitigada pelo uso de PSP licenciado. Fixar responsabilidades no contrato com o PSP.",
 ];
 
@@ -140,6 +140,72 @@ const assumptions = [
   "Capital de giro inicial de R$ 500 mil aportado pelo sponsor (Luigi), com aportes futuros possíveis.",
   "Há procura de produtores dispostos a adotar/migrar para uma nova plataforma.",
   "A equipa Mios tem capacidade para entregar no prazo definido (6 meses).",
+];
+
+const successCriteria = [
+  {
+    title: "Paridade funcional no MVP",
+    description:
+      "Checkout, área de membros e afiliados operacionais no mês 3, com paridade face às funcionalidades núcleo da Kiwify.",
+  },
+  {
+    title: "Adoção de produtores",
+    description:
+      "≥ 1000 produtores ativos até ao 12.º mês, com ritmo de aquisição sustentável.",
+  },
+  {
+    title: "Volume transacionado",
+    description:
+      "GMV de ~R$ 5M/mês no 12.º mês (cenário base) e take rate líquido de ~4% após PSP.",
+  },
+  {
+    title: "Payout competitivo",
+    description:
+      "Liquidação D+2 / D+7 operacional e equiparada à concorrência, com antecipação por caixa própria a funcionar.",
+  },
+  {
+    title: "Risco de crédito controlado",
+    description:
+      "Perdas por chargeback/fraude contidas dentro da reserva de 30% no D+2, sem comprometer a caixa.",
+  },
+];
+
+const constraints = [
+  "Prazo fixo de 6 meses até ao lançamento (mês 6).",
+  "A hypei não opera como instituição de pagamento — depende obrigatoriamente de um PSP externo licenciado.",
+  "Capital de giro inicial limitado a R$ 500 mil, que fixa o teto do volume adiantável nesta fase.",
+  "Sem app mobile nesta fase — a plataforma é apenas web.",
+  "Reserva anti-chargeback de 30% no D+2 obrigatória (cessa o direito de arrependimento apenas no D+7 — CDC art. 49).",
+  "A Mios entra como parceira, sem custo de desenvolvimento; o orçamento restringe-se a ferramentas e subscrições.",
+];
+
+const governance = [
+  {
+    title: "Decisão executiva",
+    description:
+      "Sponsor (Luigi) — aprova âmbito, orçamento e prazo, decide trade-offs e assegura os aportes de capital de giro.",
+  },
+  {
+    title: "Gestão do projeto",
+    description:
+      "PM (Camila) coordena a equipa Mios, controla âmbito, prazo e riscos, e reporta ao sponsor.",
+  },
+  {
+    title: "Cadência de reporting",
+    description:
+      "Ponto semanal da core team, status report ao sponsor e comité de decisão quinzenal para prioridades e mudanças.",
+  },
+  {
+    title: "Controlo de mudanças",
+    description:
+      "Registo de decisões e pedidos de alteração de âmbito avaliados quanto a impacto em prazo, custo e MVP antes de aprovação.",
+  },
+];
+
+const approvals = [
+  { role: "Sponsor do Projeto", name: "Luigi" },
+  { role: "Project Manager", name: "Camila" },
+  { role: "Product Owner", name: "Oscar" },
 ];
 
 function SectionHead({ n, label }: { n: string; label: string }) {
@@ -254,10 +320,35 @@ export default async function HypeiProjectPage({
             ))}
           </div>
           <p className="mt-8 max-w-2xl text-sm leading-relaxed text-faint">
-            Meta agressiva (stretch), com ramp-up ao longo do ano. 1000 produtores ×
-            R$ 20 mil/mês = R$ 20M/mês no 12.º mês (run-rate), não desde o arranque;
-            a distribuição real é assimétrica.
+            Cenário base no 12.º mês: ~1000 produtores ativos com faturação
+            assimétrica (poucos grandes, longa cauda pequena), média ponderada de
+            ~R$ 5 mil/mês por produtor → ~R$ 5M/mês de GMV. Referência de mercado
+            (estudo FGV/Hotmart): ~R$ 4,2 mil/mês para quem tem a venda digital
+            como renda secundária e ~R$ 12 mil/mês como renda principal; como
+            plataforma nova, o mix inicial pesa para produtores mais pequenos.
+            Cenário stretch: até ~R$ 20M/mês se o mix subir para produtores
+            grandes.
           </p>
+        </div>
+      </section>
+
+      {/* Critérios de sucesso */}
+      <section className="border-t border-line py-24 sm:py-32">
+        <div className="container-x">
+          <SectionHead n="04" label="Critérios de sucesso" />
+          <div className="mt-10 grid gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-3">
+            {successCriteria.map((c, i) => (
+              <Reveal as="div" key={c.title} delay={i * 50} className="bg-paper p-8 sm:p-10">
+                <span className="font-mono text-[11px] tracking-[0.18em] text-accent">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <h3 className="display mt-3 text-xl">{c.title}</h3>
+                <p className="mt-3 text-base leading-relaxed text-muted">
+                  {c.description}
+                </p>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -266,7 +357,7 @@ export default async function HypeiProjectPage({
         <div className="container-x grid gap-12 lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-4">
             <div className="lg:sticky lg:top-28">
-              <SectionHead n="04" label="Âmbito" />
+              <SectionHead n="05" label="Âmbito" />
               <p className="mt-6 max-w-sm text-lg leading-relaxed text-muted">
                 Replicar as funcionalidades núcleo da Kiwify. Três módulos de
                 diferenciação a confirmar para o MVP.
@@ -313,7 +404,7 @@ export default async function HypeiProjectPage({
       {/* Entregáveis */}
       <section className="border-t border-line py-24 sm:py-32">
         <div className="container-x">
-          <SectionHead n="05" label="Entregáveis principais" />
+          <SectionHead n="06" label="Entregáveis principais" />
           <ul className="mt-8 grid gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-3">
             {deliverables.map((d, i) => (
               <Reveal as="li" key={d} delay={i * 50} className="bg-paper p-8">
@@ -332,7 +423,7 @@ export default async function HypeiProjectPage({
         <div className="container-x grid gap-12 lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-4">
             <div className="lg:sticky lg:top-28">
-              <SectionHead n="06" label="Pagamentos e liquidação" />
+              <SectionHead n="07" label="Pagamentos e liquidação" />
               <p className="mt-6 max-w-sm text-lg leading-relaxed text-muted">
                 Payout rápido financiado por caixa próprio, sem operar como
                 instituição de pagamento.
@@ -356,10 +447,41 @@ export default async function HypeiProjectPage({
         </div>
       </section>
 
+      {/* Restrições */}
+      <section className="border-t border-line py-24 sm:py-32">
+        <div className="container-x grid gap-12 lg:grid-cols-12 lg:gap-8">
+          <div className="lg:col-span-4">
+            <div className="lg:sticky lg:top-28">
+              <SectionHead n="08" label="Restrições" />
+              <p className="mt-6 max-w-sm text-lg leading-relaxed text-muted">
+                As fronteiras fixas que condicionam o projeto e que a equipa não
+                pode alterar nesta fase.
+              </p>
+            </div>
+          </div>
+          <div className="lg:col-span-8">
+            <ul className="border-t border-line">
+              {constraints.map((item, i) => (
+                <Reveal as="li" key={item} delay={i * 50}>
+                  <div className="grid grid-cols-[auto_1fr] gap-6 border-b border-line py-6">
+                    <span aria-hidden className="display text-2xl text-accent">
+                      ×
+                    </span>
+                    <p className="max-w-xl text-base leading-relaxed text-ink">
+                      {item}
+                    </p>
+                  </div>
+                </Reveal>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* Equipa */}
       <section className="border-t border-line py-24 sm:py-32">
         <div className="container-x">
-          <SectionHead n="07" label="Equipa do projeto" />
+          <SectionHead n="09" label="Equipa do projeto" />
           <ul className="mt-8 grid gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-4">
             {team.map((member) => (
               <Reveal key={member.name} className="bg-paper p-8">
@@ -373,10 +495,27 @@ export default async function HypeiProjectPage({
         </div>
       </section>
 
+      {/* Governação */}
+      <section className="border-t border-line py-24 sm:py-32">
+        <div className="container-x">
+          <SectionHead n="10" label="Governação" />
+          <div className="mt-10 grid gap-px border border-line bg-line sm:grid-cols-2">
+            {governance.map((g) => (
+              <Reveal key={g.title} className="bg-paper p-8 sm:p-10">
+                <h3 className="display text-2xl">{g.title}</h3>
+                <p className="mt-3 text-base leading-relaxed text-muted">
+                  {g.description}
+                </p>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Marcos */}
       <section className="border-t border-line py-24 sm:py-32">
         <div className="container-x">
-          <SectionHead n="08" label="Marcos" />
+          <SectionHead n="11" label="Marcos" />
           <div className="mt-10 grid gap-px border border-line bg-line sm:grid-cols-3">
             {milestones.map((m) => (
               <Reveal key={m.phase} className="bg-paper p-8 sm:p-10">
@@ -397,7 +536,7 @@ export default async function HypeiProjectPage({
       <section className="border-t border-line py-24 sm:py-32">
         <div className="container-x grid gap-12 lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-6">
-            <SectionHead n="09" label="Riscos" />
+            <SectionHead n="12" label="Riscos" />
             <ul className="mt-6 space-y-4">
               {risks.map((r) => (
                 <li
@@ -413,7 +552,7 @@ export default async function HypeiProjectPage({
             </ul>
           </div>
           <div className="lg:col-span-5 lg:col-start-8">
-            <SectionHead n="10" label="Pressupostos" />
+            <SectionHead n="13" label="Pressupostos" />
             <ul className="mt-6 space-y-4">
               {assumptions.map((a) => (
                 <li
@@ -427,6 +566,27 @@ export default async function HypeiProjectPage({
                 </li>
               ))}
             </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Aprovação */}
+      <section className="border-t border-line py-24 sm:py-32">
+        <div className="container-x">
+          <SectionHead n="14" label="Aprovação" />
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
+            A execução fica sujeita à validação formal do sponsor, PM e Product
+            Owner, com acordo explícito sobre propósito, âmbito, orçamento, prazo
+            e modelo de governação.
+          </p>
+          <div className="mt-12 grid gap-px border border-line bg-line sm:grid-cols-3">
+            {approvals.map((a) => (
+              <div key={a.role} className="bg-paper p-8 sm:p-10">
+                <div className="h-16 border-b border-line" />
+                <div className="mt-4 display text-xl">{a.name}</div>
+                <div className="mt-1 label">{a.role}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
