@@ -27,6 +27,7 @@ export const partners: Partner[] = [
   { name: "Konica Minolta", logo: "/partners/konica.png" },
   { name: "Red Canids", logo: "/partners/RedCanids.png" },
   { name: "JMD Urbanismo", logo: "/partners/jmdurbanismo.png", scale: 0.62 },
+  { name: "Sporting CP", logo: "/partners/sporting.png", scale: 1.15 },
 ];
 
 export type PortfolioItem = {

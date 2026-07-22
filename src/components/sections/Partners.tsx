@@ -25,15 +25,22 @@ export function Partners({ dict }: { dict: Dictionary }) {
       </div>
 
       <div className="container-x">
-        <ul className="grid grid-cols-2 border-y border-line md:grid-cols-4">
-          {partners.map((partner, i) => (
+        <ul className="grid grid-cols-2 border-y border-line md:grid-cols-5">
+          {partners.map((partner, i) => {
+            const n = partners.length;
+            // Cell dividers, computed per breakpoint so partial rows stay clean.
+            const rightBase = i % 2 !== 1 && i !== n - 1;
+            const bottomBase = Math.floor(i / 2) < Math.floor((n - 1) / 2);
+            const rightMd = i % 5 !== 4 && i !== n - 1;
+            const bottomMd = Math.floor(i / 5) < Math.floor((n - 1) / 5);
+            return (
             <li
               key={partner.name}
-              className={`flex items-center justify-center px-6 py-12 sm:py-16 ${
-                i % 2 === 0 ? "border-r border-line" : ""
-              } ${i < 2 ? "border-b border-line md:border-b-0" : ""} ${
-                i % 4 !== 3 ? "md:border-r md:border-line" : "md:border-r-0"
-              }`}
+              className={`flex items-center justify-center border-line px-6 py-12 sm:py-16 ${
+                rightBase ? "border-r " : ""
+              }${rightMd ? "md:border-r" : "md:border-r-0"} ${
+                bottomBase ? "border-b " : ""
+              }${bottomMd ? "md:border-b" : "md:border-b-0"}`}
             >
               {partner.logo ? (
                 <Image
@@ -54,7 +61,8 @@ export function Partners({ dict }: { dict: Dictionary }) {
                 </span>
               )}
             </li>
-          ))}
+            );
+          })}
         </ul>
       </div>
     </section>
