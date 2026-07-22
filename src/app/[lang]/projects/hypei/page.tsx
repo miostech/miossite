@@ -326,8 +326,6 @@ export default async function HypeiProjectPage({
             (estudo FGV/Hotmart): ~R$ 4,2 mil/mês para quem tem a venda digital
             como renda secundária e ~R$ 12 mil/mês como renda principal; como
             plataforma nova, o mix inicial pesa para produtores mais pequenos.
-            Cenário stretch: até ~R$ 20M/mês se o mix subir para produtores
-            grandes.
           </p>
         </div>
       </section>
