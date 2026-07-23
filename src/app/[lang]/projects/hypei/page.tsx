@@ -16,7 +16,7 @@ const meta = [
   { label: "Sponsor", value: "Luigi" },
   { label: "Gestão", value: "Mios" },
   { label: "Data", value: "2026-07-21" },
-  { label: "Versão", value: "v0.13 (rascunho)" },
+  { label: "Versão", value: "v0.14 (rascunho)" },
 ];
 
 const valueProps = [
@@ -55,6 +55,14 @@ const kpis = [
   { value: "~R$ 5M", label: "GMV/mês no 12.º mês (cenário base)" },
   { value: "~4%", label: "Take rate líquido (após PSP)" },
   { value: "~R$ 2,4M", label: "Receita líquida/ano (cenário base)" },
+];
+
+const scenarios = [
+  { avg: "R$ 1.000", gmvMonth: "R$ 500 mil", gmvYear: "R$ 6M", net: "R$ 240 mil" },
+  { avg: "R$ 2.000", gmvMonth: "R$ 1M", gmvYear: "R$ 12M", net: "R$ 480 mil" },
+  { avg: "R$ 5.000", gmvMonth: "R$ 2,5M", gmvYear: "R$ 30M", net: "R$ 1,2M" },
+  { avg: "R$ 10.000", gmvMonth: "R$ 5M", gmvYear: "R$ 60M", net: "R$ 2,4M", base: true },
+  { avg: "R$ 20.000", gmvMonth: "R$ 10M", gmvYear: "R$ 120M", net: "R$ 4,8M" },
 ];
 
 const scopeIn = [
@@ -327,6 +335,65 @@ export default async function HypeiProjectPage({
             como renda secundária e ~R$ 12 mil/mês como renda principal; como
             plataforma nova, o mix inicial pesa para produtores mais pequenos.
           </p>
+
+          <div className="mt-16">
+            <h3 className="label text-accent">
+              Cenários de receita · 500 produtores ativos
+            </h3>
+            <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted">
+              Sensibilidade da receita líquida anual (take rate de 4%) ao ticket
+              médio mensal por produtor. Cálculo: 500 × ticket × 12 × 4%.
+            </p>
+            <div className="mt-8 overflow-x-auto">
+              <table className="w-full min-w-[36rem] border-collapse text-left">
+                <thead>
+                  <tr className="border-y border-line">
+                    <th className="label py-4 pr-6 font-normal">
+                      Ticket médio / produtor (mês)
+                    </th>
+                    <th className="label py-4 pr-6 font-normal">
+                      GMV / mês
+                    </th>
+                    <th className="label py-4 pr-6 font-normal">
+                      GMV / ano
+                    </th>
+                    <th className="label py-4 font-normal text-accent">
+                      Receita líquida / ano (4%)
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {scenarios.map((s) => (
+                    <tr key={s.avg} className="border-b border-line-soft">
+                      <td className="py-4 pr-6 text-base text-ink">
+                        {s.avg}
+                        {s.base && (
+                          <span className="ml-2 font-mono text-[10px] tracking-[0.14em] text-accent">
+                            BASE
+                          </span>
+                        )}
+                      </td>
+                      <td className="py-4 pr-6 text-base text-muted">
+                        {s.gmvMonth}
+                      </td>
+                      <td className="py-4 pr-6 text-base text-muted">
+                        {s.gmvYear}
+                      </td>
+                      <td className="py-4 text-base font-medium text-ink">
+                        {s.net}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="mt-6 max-w-2xl text-sm leading-relaxed text-faint">
+              O cenário base do projeto (~R$ 5M/mês de GMV, ~R$ 2,4M/ano de
+              receita líquida) corresponde a 500 produtores com ticket médio de
+              ~R$ 10 mil/mês — ou, de forma equivalente, ~1000 produtores a
+              ~R$ 5 mil/mês.
+            </p>
+          </div>
         </div>
       </section>
 
