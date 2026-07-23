@@ -16,7 +16,7 @@ const meta = [
   { label: "Sponsor", value: "Luigi" },
   { label: "Gestão", value: "Mios" },
   { label: "Data", value: "2026-07-21" },
-  { label: "Versão", value: "v0.14 (rascunho)" },
+  { label: "Versão", value: "v0.15 (rascunho)" },
 ];
 
 const valueProps = [
@@ -78,10 +78,10 @@ const scopeIn = [
   "Carteira/saldo do produtor — para débito do custo de mensagens",
   "Recuperação de carrinho abandonado (done-for-you)",
   "Central de atendimento WhatsApp (inbox multiagente)",
+  "App mobile (iOS/Android) com notificações push — alertas de venda para o produtor e comunicação com o comprador.",
 ];
 
 const scopeOut = [
-  "App mobile — fica para fase posterior.",
   "Fintech / gateway de pagamento próprio. A hypei integra um PSP externo, sem licenciamento nem operação financeira própria nesta fase.",
 ];
 
@@ -92,6 +92,7 @@ const deliverables = [
   "Painel de afiliados e de coprodução",
   "Dashboard de analítica de vendas",
   "Módulo de recuperação de carrinho + central de atendimento WhatsApp",
+  "App mobile (iOS/Android) com notificações push",
 ];
 
 const team = [
@@ -130,8 +131,8 @@ const payments = [
 
 const milestones = [
   { phase: "MVP", when: "Mês 3" },
-  { phase: "Beta", when: "Mês 4" },
-  { phase: "Lançamento", when: "Mês 6" },
+  { phase: "Beta", when: "Mês 5" },
+  { phase: "Lançamento", when: "Mês 8" },
 ];
 
 const risks = [
@@ -147,7 +148,7 @@ const assumptions = [
   "Existe um PSP externo que cobre cartão, Pix e boleto, sem necessidade de licença de fintech própria.",
   "Capital de giro inicial de R$ 500 mil aportado pelo sponsor (Luigi), com aportes futuros possíveis.",
   "Há procura de produtores dispostos a adotar/migrar para uma nova plataforma.",
-  "A equipa Mios tem capacidade para entregar no prazo definido (6 meses).",
+  "A equipa Mios tem capacidade para entregar no prazo definido (8 meses).",
 ];
 
 const successCriteria = [
@@ -179,10 +180,10 @@ const successCriteria = [
 ];
 
 const constraints = [
-  "Prazo fixo de 6 meses até ao lançamento (mês 6).",
+  "Prazo fixo de 8 meses até ao lançamento (mês 8) — inclui o app mobile no âmbito.",
   "A hypei não opera como instituição de pagamento — depende obrigatoriamente de um PSP externo licenciado.",
   "Capital de giro inicial limitado a R$ 500 mil, que fixa o teto do volume adiantável nesta fase.",
-  "Sem app mobile nesta fase — a plataforma é apenas web.",
+  "App mobile (iOS/Android) sujeito às políticas e prazos de revisão das lojas (App Store / Google Play).",
   "Reserva anti-chargeback de 30% no D+2 obrigatória (cessa o direito de arrependimento apenas no D+7 — CDC art. 49).",
   "A Mios entra como parceira, sem custo de desenvolvimento; o orçamento restringe-se a ferramentas e subscrições.",
 ];
@@ -590,7 +591,8 @@ export default async function HypeiProjectPage({
             ))}
           </div>
           <p className="mt-8 text-sm leading-relaxed text-faint">
-            Prazo total de 6 meses. Sem custo de desenvolvimento (a Mios entra como
+            Prazo total de 8 meses (inclui o app mobile no âmbito, +2 meses face
+            ao plano só-web). Sem custo de desenvolvimento (a Mios entra como
             parceira); o orçamento destina-se a ferramentas/subscrições — valor a
             definir.
           </p>
