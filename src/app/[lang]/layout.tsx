@@ -7,6 +7,7 @@ import { getDictionary } from "@/i18n/dictionaries";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CookieConsent } from "@/components/CookieConsent";
+import { SiteChrome } from "@/components/SiteChrome";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -85,12 +86,18 @@ export default async function LangLayout({
     <html
       lang={lang}
       className={`${inter.variable} ${bricolage.variable} ${jetbrainsMono.variable} h-full`}
+      // Some browser extensions inject attributes (e.g. data-xt-extension-active)
+      // on <html> before hydration; ignore attribute mismatches on the root node.
+      suppressHydrationWarning
     >
       <body className="min-h-full antialiased">
-        <Header lang={lang} dict={dict} />
-        <main>{children}</main>
-        <Footer lang={lang} dict={dict} />
-        <CookieConsent lang={lang} dict={dict} />
+        <SiteChrome
+          header={<Header lang={lang} dict={dict} />}
+          footer={<Footer lang={lang} dict={dict} />}
+          cookieConsent={<CookieConsent lang={lang} dict={dict} />}
+        >
+          {children}
+        </SiteChrome>
       </body>
     </html>
   );

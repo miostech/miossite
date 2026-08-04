@@ -1,9 +1,10 @@
 "use client";
 
 import { useEffect, useState, type FormEvent } from "react";
+import Link from "next/link";
 import type { Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/dictionaries";
-import { portfolio } from "@/lib/site";
+import { portfolio, localePath } from "@/lib/site";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
 
@@ -18,19 +19,36 @@ const gradients = [
   "linear-gradient(135deg, #3b1673 0%, #6d28d9 100%)",
 ];
 
-export function Portfolio({ lang, dict }: { lang: Locale; dict: Dictionary }) {
+export function Portfolio({
+  lang,
+  dict,
+  index = "04",
+  gated = true,
+  caseStudies = false,
+}: {
+  lang: Locale;
+  dict: Dictionary;
+  index?: string;
+  gated?: boolean;
+  /** Link cards to internal case-study pages instead of the external site. */
+  caseStudies?: boolean;
+}) {
   const t = dict.portfolio;
   const [unlocked, setUnlocked] = useState(false);
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState("");
 
+  // When not gated, the grid is always visible and no lead form is shown.
+  const isOpen = !gated || unlocked;
+
   useEffect(() => {
+    if (!gated) return;
     try {
       if (localStorage.getItem(STORAGE_KEY) === "true") setUnlocked(true);
     } catch {
       /* ignore */
     }
-  }, []);
+  }, [gated]);
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -80,7 +98,7 @@ export function Portfolio({ lang, dict }: { lang: Locale; dict: Dictionary }) {
     <section className="border-t border-line py-24 sm:py-32">
       <div className="container-x">
         <SectionHeading
-          index="04"
+          index={index}
           eyebrow={t.eyebrow}
           title={t.title}
           subtitle={t.subtitle}
@@ -90,9 +108,9 @@ export function Portfolio({ lang, dict }: { lang: Locale; dict: Dictionary }) {
         <div className="relative">
           <div
             className={`grid gap-6 sm:grid-cols-2 lg:grid-cols-3 ${
-              unlocked ? "" : "pointer-events-none select-none blur-[6px]"
+              isOpen ? "" : "pointer-events-none select-none blur-[6px]"
             }`}
-            aria-hidden={!unlocked}
+            aria-hidden={!isOpen}
           >
             {portfolio.map((item, i) => (
               <Reveal key={item.name} delay={i * 80}>
@@ -110,22 +128,32 @@ export function Portfolio({ lang, dict }: { lang: Locale; dict: Dictionary }) {
                   </div>
                   <div className="flex items-center justify-between px-5 py-4">
                     <span className="text-sm text-muted">{item.category}</span>
-                    <a
-                      href={item.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      tabIndex={unlocked ? 0 : -1}
-                      className="link-underline text-sm font-medium text-ink"
-                    >
-                      {t.view} &rarr;
-                    </a>
+                    {caseStudies && item.slug ? (
+                      <Link
+                        href={localePath(lang, `apresentacao/${item.slug}`)}
+                        tabIndex={isOpen ? 0 : -1}
+                        className="link-underline text-sm font-medium text-ink"
+                      >
+                        {t.viewCase} &rarr;
+                      </Link>
+                    ) : (
+                      <a
+                        href={item.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        tabIndex={isOpen ? 0 : -1}
+                        className="link-underline text-sm font-medium text-ink"
+                      >
+                        {t.view} &rarr;
+                      </a>
+                    )}
                   </div>
                 </div>
               </Reveal>
             ))}
           </div>
 
-          {!unlocked && (
+          {!isOpen && (
             <div className="absolute inset-0 flex items-center justify-center p-4">
               <div className="w-full max-w-md border border-line bg-paper/95 p-8 shadow-2xl backdrop-blur-sm sm:p-10">
                 <h3 className="display text-2xl">{t.gateTitle}</h3>

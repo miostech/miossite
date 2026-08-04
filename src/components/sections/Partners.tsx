@@ -2,7 +2,13 @@ import Image from "next/image";
 import type { Dictionary } from "@/i18n/dictionaries";
 import { partners } from "@/lib/site";
 
-export function Partners({ dict }: { dict: Dictionary }) {
+export function Partners({
+  dict,
+  index = "03",
+}: {
+  dict: Dictionary;
+  index?: string;
+}) {
   return (
     <section className="border-t border-line py-24 sm:py-32">
       <div className="container-x">
@@ -10,7 +16,7 @@ export function Partners({ dict }: { dict: Dictionary }) {
           <div>
             <div className="mb-6 flex items-center gap-4 border-t border-line pt-4">
               <span className="font-mono text-[11px] tracking-[0.18em] text-accent">
-                03
+                {index}
               </span>
               <span className="label">{dict.partners.eyebrow}</span>
             </div>

@@ -6,16 +6,18 @@ import { ServiceIndex } from "@/components/ServiceIndex";
 export function ServicesSection({
   lang,
   dict,
+  index = "01",
 }: {
   lang: Locale;
   dict: Dictionary;
+  index?: string;
 }) {
   return (
     <section id="services" className="py-24 sm:py-32">
       <div className="container-x">
         <div className="max-w-3xl">
           <SectionHeading
-            index="01"
+            index={index}
             eyebrow={dict.services.eyebrow}
             title={dict.services.title}
             subtitle={dict.services.subtitle}

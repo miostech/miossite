@@ -1,7 +1,13 @@
 import type { Dictionary } from "@/i18n/dictionaries";
 import { Reveal } from "@/components/Reveal";
 
-export function About({ dict }: { dict: Dictionary }) {
+export function About({
+  dict,
+  index = "05",
+}: {
+  dict: Dictionary;
+  index?: string;
+}) {
   const [lead, ...rest] = dict.about.paragraphs;
 
   return (
@@ -9,7 +15,7 @@ export function About({ dict }: { dict: Dictionary }) {
       <div className="container-x">
         <div className="mb-12 flex items-center gap-4 border-t border-line pt-4">
           <span className="font-mono text-[11px] tracking-[0.18em] text-accent">
-            05
+            {index}
           </span>
           <span className="label">{dict.about.eyebrow}</span>
         </div>

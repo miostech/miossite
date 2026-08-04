@@ -5,7 +5,13 @@ import type { Dictionary } from "@/i18n/dictionaries";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Reveal } from "@/components/Reveal";
 
-export function Presence({ dict }: { dict: Dictionary }) {
+export function Presence({
+  dict,
+  index = "07",
+}: {
+  dict: Dictionary;
+  index?: string;
+}) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
@@ -13,7 +19,7 @@ export function Presence({ dict }: { dict: Dictionary }) {
       <div className="container-x">
         <div className="max-w-3xl">
           <SectionHeading
-            index="07"
+            index={index}
             eyebrow={dict.presence.eyebrow}
             title={dict.presence.title}
             subtitle={dict.presence.subtitle}

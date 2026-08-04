@@ -1,7 +1,13 @@
 import type { Dictionary } from "@/i18n/dictionaries";
 import { Reveal } from "@/components/Reveal";
 
-export function Differentiators({ dict }: { dict: Dictionary }) {
+export function Differentiators({
+  dict,
+  index = "02",
+}: {
+  dict: Dictionary;
+  index?: string;
+}) {
   return (
     <section className="border-t border-line py-24 sm:py-32">
       <div className="container-x grid gap-12 lg:grid-cols-12 lg:gap-8">
@@ -9,7 +15,7 @@ export function Differentiators({ dict }: { dict: Dictionary }) {
           <div className="lg:sticky lg:top-28">
             <div className="mb-6 flex items-center gap-4 border-t border-line pt-4">
               <span className="font-mono text-[11px] tracking-[0.18em] text-accent">
-                02
+                {index}
               </span>
               <span className="label">{dict.differentiators.eyebrow}</span>
             </div>

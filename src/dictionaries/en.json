@@ -390,9 +390,20 @@
       "note": "We only use your details to reach out about projects. No spam."
     },
     "view": "View prototype",
+    "viewCase": "View project",
     "error": "We couldn't grant access. Please try again.",
     "invalidEmail": "Enter a valid email.",
     "required": "Please fill in all fields."
+  },
+  "caseStudy": {
+    "eyebrow": "Project",
+    "back": "Back to presentation",
+    "challenge": "The challenge",
+    "solution": "The solution",
+    "result": "The result",
+    "stack": "Stack & disciplines",
+    "gallery": "Mockups",
+    "visit": "Visit site"
   },
   "cookieConsent": {
     "message": "We use cookies to improve your browsing experience, analyze traffic and personalize content. By continuing to browse, you agree to our use of cookies.",

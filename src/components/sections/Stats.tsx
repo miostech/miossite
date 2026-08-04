@@ -1,13 +1,19 @@
 import type { Dictionary } from "@/i18n/dictionaries";
 import { Reveal } from "@/components/Reveal";
 
-export function Stats({ dict }: { dict: Dictionary }) {
+export function Stats({
+  dict,
+  index = "04",
+}: {
+  dict: Dictionary;
+  index?: string;
+}) {
   return (
     <section className="bg-ink text-paper">
       <div className="container-x py-24 sm:py-32">
         <div className="mb-16 flex items-center gap-4 border-t border-inverse-line pt-4">
           <span className="font-mono text-[11px] tracking-[0.18em] text-accent">
-            04
+            {index}
           </span>
           <span className="label" style={{ color: "var(--color-inverse-muted)" }}>
             {dict.stats.title}

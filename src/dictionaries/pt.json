@@ -390,9 +390,20 @@
       "note": "Usamos seus dados apenas para entrar em contato sobre projetos. Nada de spam."
     },
     "view": "Ver protótipo",
+    "viewCase": "Ver projeto",
     "error": "Não foi possível liberar o acesso. Tente novamente.",
     "invalidEmail": "Digite um e-mail válido.",
     "required": "Preencha todos os campos."
+  },
+  "caseStudy": {
+    "eyebrow": "Projeto",
+    "back": "Voltar à apresentação",
+    "challenge": "O desafio",
+    "solution": "A solução",
+    "result": "O resultado",
+    "stack": "Stack & disciplinas",
+    "gallery": "Mockups",
+    "visit": "Visitar site"
   },
   "cookieConsent": {
     "message": "Usamos cookies para melhorar a sua experiência de navegação, analisar o tráfego e personalizar conteúdo. Ao continuar navegando, você concorda com o uso de cookies.",

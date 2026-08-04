@@ -1,13 +1,19 @@
 import type { Dictionary } from "@/i18n/dictionaries";
 import { Reveal } from "@/components/Reveal";
 
-export function Process({ dict }: { dict: Dictionary }) {
+export function Process({
+  dict,
+  index = "06",
+}: {
+  dict: Dictionary;
+  index?: string;
+}) {
   return (
     <section className="border-t border-line py-24 sm:py-32">
       <div className="container-x">
         <div className="mb-16 flex items-center gap-4 border-t border-line pt-4">
           <span className="font-mono text-[11px] tracking-[0.18em] text-accent">
-            06
+            {index}
           </span>
           <span className="label">{dict.process.eyebrow}</span>
           <h2 className="display ml-auto hidden text-right text-2xl sm:block">

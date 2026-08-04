@@ -21,20 +21,51 @@ export type Partner = {
   name: string;
   logo?: string;
   scale?: number;
+  /** Short one-line summary of the project delivered for this client. */
+  summary?: string;
 };
 
 export const partners: Partner[] = [
-  { name: "Swift", logo: "/partners/swift.png" },
-  { name: "Konica Minolta", logo: "/partners/konica.png" },
-  { name: "Red Canids", logo: "/partners/RedCanids.png" },
-  { name: "JMD Urbanismo", logo: "/partners/jmdurbanismo.png", scale: 0.62 },
-  { name: "Sporting CP", logo: "/partners/sporting.png", scale: 1.15 },
+  {
+    name: "Swift",
+    logo: "/partners/swift.png",
+    summary:
+      "IA para otimizar a escala das lojas, mais NPS, menos horas extra e menos quebras de interjornada.",
+  },
+  {
+    name: "Konica Minolta",
+    logo: "/partners/konica.png",
+    summary:
+      "Plataforma interna de gestão de vendas para as operações de Portugal e Espanha.",
+  },
+  {
+    name: "Red Canids",
+    logo: "/partners/RedCanids.png",
+    summary:
+      "Plataforma de troca de pontos e e-commerce para assinantes, movimentando mais de R$ 10 milhões por ano.",
+  },
+  {
+    name: "JMD Urbanismo",
+    logo: "/partners/jmdurbanismo.png",
+    scale: 0.62,
+    summary:
+      "Rede de sistemas internos e portal para os residentes dos condomínios JMD.",
+  },
+  {
+    name: "Sporting CP",
+    logo: "/partners/sporting.png",
+    scale: 1.15,
+    summary:
+      "Cinco plataformas internas do clube, incluindo a venda de bilhetes da UEFA Champions League.",
+  },
 ];
 
 export type PortfolioItem = {
   name: string;
   category: string;
   url: string;
+  /** Case-study slug under /{lang}/apresentacao/{slug}, when one exists. */
+  slug?: string;
 };
 
 export const portfolio: PortfolioItem[] = [
@@ -42,16 +73,19 @@ export const portfolio: PortfolioItem[] = [
     name: "Dine Mouse",
     category: "Web & Mobile · Concierge",
     url: "https://dinemouse.com",
+    slug: "dine-mouse",
   },
   {
     name: "Dome",
     category: "Plataforma · Creators",
     url: "https://www.dome.app.br",
+    slug: "dome",
   },
   {
     name: "Mios Academy",
     category: "Plataforma · Educação",
     url: "https://miosacademy.com",
+    slug: "mios-academy",
   },
 ];
 
