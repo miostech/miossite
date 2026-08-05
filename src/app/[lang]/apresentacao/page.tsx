@@ -6,6 +6,7 @@ import { DeckHeader } from "@/components/DeckHeader";
 import { Hero } from "@/components/sections/Hero";
 import { About } from "@/components/sections/About";
 import { MissionVision } from "@/components/sections/MissionVision";
+import { Team } from "@/components/sections/Team";
 import { ServicesSection } from "@/components/sections/ServicesSection";
 import { Differentiators } from "@/components/sections/Differentiators";
 import { Stats } from "@/components/sections/Stats";
@@ -75,11 +76,12 @@ export default async function ApresentacaoPage({
       <MissionVision dict={dict} index="02" />
       <ServicesSection lang={lang} dict={dict} index="03" />
       <Differentiators dict={dict} index="04" />
-      <Stats dict={dict} index="05" />
-      <Partners dict={dict} index="06" />
-      <Portfolio lang={lang} dict={dict} index="07" gated={false} caseStudies />
-      <Process dict={dict} index="08" />
-      <Presence dict={dict} index="09" />
+      <Team dict={dict} index="05" />
+      <Stats dict={dict} index="06" />
+      <Partners dict={dict} index="07" />
+      <Portfolio lang={lang} dict={dict} index="08" gated={false} caseStudies />
+      <Process dict={dict} index="09" />
+      <Presence dict={dict} index="10" />
       <CTA lang={lang} dict={dict} />
     </>
   );
