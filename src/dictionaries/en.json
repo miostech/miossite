@@ -281,6 +281,13 @@
       "Whether you need a squad to accelerate or a partner to build from zero, we bring senior craft and accountability for the outcome."
     ]
   },
+  "missionVision": {
+    "eyebrow": "Purpose",
+    "missionLabel": "Mission",
+    "mission": "Drive the digital transformation that streamlines processes and improves the experience of the people using the product. We build efficient, scalable software that grows with our clients' business.",
+    "visionLabel": "Vision",
+    "vision": "To be a reference in technology innovation — shipping cutting-edge products that transform businesses and create lasting value, across Brazil, Europe and beyond."
+  },
   "vision": {
     "eyebrow": "Vision",
     "title": "About us",

@@ -5,6 +5,7 @@ import { getDictionary } from "@/i18n/dictionaries";
 import { DeckHeader } from "@/components/DeckHeader";
 import { Hero } from "@/components/sections/Hero";
 import { About } from "@/components/sections/About";
+import { MissionVision } from "@/components/sections/MissionVision";
 import { ServicesSection } from "@/components/sections/ServicesSection";
 import { Differentiators } from "@/components/sections/Differentiators";
 import { Stats } from "@/components/sections/Stats";
@@ -71,13 +72,14 @@ export default async function ApresentacaoPage({
       <DeckHeader lang={lang} dict={dict} />
       <Hero lang={lang} dict={dict} />
       <About dict={dict} index="01" />
-      <ServicesSection lang={lang} dict={dict} index="02" />
-      <Differentiators dict={dict} index="03" />
-      <Stats dict={dict} index="04" />
-      <Partners dict={dict} index="05" />
-      <Portfolio lang={lang} dict={dict} index="06" gated={false} caseStudies />
-      <Process dict={dict} index="07" />
-      <Presence dict={dict} index="08" />
+      <MissionVision dict={dict} index="02" />
+      <ServicesSection lang={lang} dict={dict} index="03" />
+      <Differentiators dict={dict} index="04" />
+      <Stats dict={dict} index="05" />
+      <Partners dict={dict} index="06" />
+      <Portfolio lang={lang} dict={dict} index="07" gated={false} caseStudies />
+      <Process dict={dict} index="08" />
+      <Presence dict={dict} index="09" />
       <CTA lang={lang} dict={dict} />
     </>
   );

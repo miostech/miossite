@@ -281,6 +281,13 @@
       "Ya sea un squad para acelerar o un socio para construir desde cero, aportamos senioridad y compromiso con el resultado."
     ]
   },
+  "missionVision": {
+    "eyebrow": "Propósito",
+    "missionLabel": "Misión",
+    "mission": "Impulsar la transformación digital que optimiza procesos y mejora la experiencia de quien usa el producto. Construimos soluciones eficientes y escalables, que crecen con el negocio de nuestros clientes.",
+    "visionLabel": "Visión",
+    "vision": "Ser una referencia en innovación tecnológica — entregando productos de vanguardia que transforman negocios y crean valor duradero, en Brasil, Europa y más allá."
+  },
   "vision": {
     "eyebrow": "Visión",
     "title": "Sobre nosotros",
