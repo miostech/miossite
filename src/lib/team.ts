@@ -32,11 +32,6 @@ export const team: TeamMember[] = [
   },
   { name: "Kaylani França", role: "Designer UX/UI", photo: "/team/kaylani.jpg" },
   {
-    name: "Henrike Danin",
-    role: "Desenvolvedor Full Stack",
-    photo: "/team/henrike.jpg",
-  },
-  {
     name: "Gabriel Blanco",
     role: "Desenvolvedor Full Stack",
     photo: "/team/gabriel.jpg",
@@ -50,11 +45,6 @@ export const team: TeamMember[] = [
     name: "Bruno Paulon",
     role: "Desenvolvedor Front-End",
     photo: "/team/bruno.jpg",
-  },
-  {
-    name: "Samuel Clemente",
-    role: "Redes sociais & estrategista digital",
-    photo: "/team/samuel.jpg",
   },
   { name: "Luciana Nascimento", role: "Consultora", photo: "/team/luciana.jpg" },
   { name: "Felipe Mungo", role: "Consultor", photo: "/team/felipe.jpg" },
