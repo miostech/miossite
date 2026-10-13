@@ -35,8 +35,15 @@ function getLocale(request: NextRequest): Locale {
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // The admin billing area is not localized — skip the locale redirect.
-  if (pathname === "/admin" || pathname.startsWith("/admin/")) return;
+  // The admin billing area and client payment pages are not localized.
+  if (
+    pathname === "/admin" ||
+    pathname.startsWith("/admin/") ||
+    pathname === "/pay" ||
+    pathname.startsWith("/pay/")
+  ) {
+    return;
+  }
 
   const pathnameHasLocale = locales.some(
     (locale) => pathname === `/${locale}` || pathname.startsWith(`/${locale}/`),

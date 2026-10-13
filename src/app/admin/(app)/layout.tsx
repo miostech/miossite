@@ -27,6 +27,9 @@ export default async function AdminAppLayout({
               <Link href="/admin/clients" className="text-ink hover:text-accent">
                 Clientes
               </Link>
+              <Link href="/admin/charges" className="text-ink hover:text-accent">
+                Cobranças
+              </Link>
             </nav>
           </div>
           <div className="flex items-center gap-4 text-sm">

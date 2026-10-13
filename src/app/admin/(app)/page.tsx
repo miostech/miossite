@@ -20,10 +20,13 @@ export default async function AdminDashboardPage() {
           <h2 className="display text-xl">Clientes</h2>
           <p className="mt-2 text-sm text-muted">Gerir clientes e Customers.</p>
         </Link>
-        <div className="bg-paper p-8">
+        <Link
+          href="/admin/charges"
+          className="bg-paper p-8 transition-colors hover:bg-paper-2/50"
+        >
           <h2 className="display text-xl">Cobranças</h2>
-          <p className="mt-2 text-sm text-muted">Em breve (fase 4).</p>
-        </div>
+          <p className="mt-2 text-sm text-muted">Gerar e acompanhar cobranças.</p>
+        </Link>
       </div>
     </div>
   );
