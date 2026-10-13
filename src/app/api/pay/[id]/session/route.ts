@@ -29,11 +29,12 @@ export async function POST(
   }
 
   const origin = new URL(request.url).origin;
+  const recurring = row.charge.type === "recurring";
 
   try {
     const session = await stripe.checkout.sessions.create({
       ui_mode: "embedded_page",
-      mode: "payment",
+      mode: recurring ? "subscription" : "payment",
       customer: row.stripeCustomerId ?? undefined,
       line_items: [
         {
@@ -41,12 +42,19 @@ export async function POST(
             currency: row.charge.currency,
             product_data: { name: row.charge.description },
             unit_amount: row.charge.amount,
+            ...(recurring
+              ? { recurring: { interval: row.charge.interval ?? "month" } }
+              : {}),
           },
           quantity: 1,
         },
       ],
       metadata: { chargeId: row.charge.id },
-      payment_intent_data: { metadata: { chargeId: row.charge.id } },
+      // Carry the chargeId where the relevant lifecycle events can read it:
+      // the payment intent (one-off) or the subscription + its invoices.
+      ...(recurring
+        ? { subscription_data: { metadata: { chargeId: row.charge.id } } }
+        : { payment_intent_data: { metadata: { chargeId: row.charge.id } } }),
       return_url: `${origin}/pay/${row.charge.id}/return?session_id={CHECKOUT_SESSION_ID}`,
     });
 

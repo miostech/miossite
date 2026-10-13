@@ -26,6 +26,8 @@ export default async function ChargesPage() {
       amount: charges.amount,
       currency: charges.currency,
       status: charges.status,
+      type: charges.type,
+      interval: charges.interval,
       createdAt: charges.createdAt,
       clientName: clients.name,
     })
@@ -54,6 +56,7 @@ export default async function ChargesPage() {
               <tr>
                 <th className="px-5 py-3 font-medium">Cliente</th>
                 <th className="px-5 py-3 font-medium">Descrição</th>
+                <th className="px-5 py-3 font-medium">Tipo</th>
                 <th className="px-5 py-3 font-medium">Valor</th>
                 <th className="px-5 py-3 font-medium">Status</th>
                 <th className="px-5 py-3 font-medium">Link</th>
@@ -64,6 +67,11 @@ export default async function ChargesPage() {
                 <tr key={c.id} className="border-b border-line last:border-0">
                   <td className="px-5 py-3 text-ink">{c.clientName}</td>
                   <td className="px-5 py-3 text-muted">{c.description}</td>
+                  <td className="px-5 py-3 text-muted">
+                    {c.type === "recurring"
+                      ? `Recorrente · ${c.interval === "year" ? "anual" : "mensal"}`
+                      : "Avulsa"}
+                  </td>
                   <td className="px-5 py-3 text-ink">
                     {formatAmount(c.amount, c.currency)}
                   </td>

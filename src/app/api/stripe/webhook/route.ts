@@ -43,31 +43,54 @@ export async function POST(request: NextRequest) {
 }
 
 // Mark a charge paid once, without overwriting an already-paid record.
-async function markPaid(chargeId: string, paymentIntentId: string | null) {
+async function markPaid(
+  chargeId: string,
+  extra: { paymentIntentId?: string | null; subscriptionId?: string | null } = {},
+) {
   await db
     .update(charges)
     .set({
       status: "paid",
       paidAt: new Date(),
-      ...(paymentIntentId ? { stripePaymentIntentId: paymentIntentId } : {}),
+      ...(extra.paymentIntentId
+        ? { stripePaymentIntentId: extra.paymentIntentId }
+        : {}),
+      ...(extra.subscriptionId
+        ? { stripeSubscriptionId: extra.subscriptionId }
+        : {}),
     })
     .where(and(eq(charges.id, chargeId), ne(charges.status, "paid")));
 }
 
-async function setStatus(
-  chargeId: string,
-  status: "failed" | "canceled",
-) {
-  await db
-    .update(charges)
-    .set({ status })
-    .where(and(eq(charges.id, chargeId), ne(charges.status, "paid")));
+async function setStatus(chargeId: string, status: "failed" | "canceled") {
+  // A recurring charge that later fails or is canceled should move off "paid".
+  await db.update(charges).set({ status }).where(eq(charges.id, chargeId));
 }
 
-function piId(pi: string | { id: string } | null | undefined): string | null {
-  if (!pi) return null;
-  return typeof pi === "string" ? pi : pi.id;
+function idOf(
+  v: string | { id: string } | null | undefined,
+): string | null {
+  if (!v) return null;
+  return typeof v === "string" ? v : v.id;
 }
+
+// Renewal invoices don't carry our metadata, so match the charge by its
+// subscription id instead.
+async function chargeIdForSubscription(
+  subscriptionId: string | null,
+): Promise<string | null> {
+  if (!subscriptionId) return null;
+  const [row] = await db
+    .select({ id: charges.id })
+    .from(charges)
+    .where(eq(charges.stripeSubscriptionId, subscriptionId))
+    .limit(1);
+  return row?.id ?? null;
+}
+
+type InvoiceWithSub = Stripe.Invoice & {
+  subscription?: string | { id: string } | null;
+};
 
 async function handleEvent(event: Stripe.Event) {
   switch (event.type) {
@@ -79,7 +102,10 @@ async function handleEvent(event: Stripe.Event) {
         session.payment_status === "paid" ||
         session.payment_status === "no_payment_required";
       if (chargeId && paid) {
-        await markPaid(chargeId, piId(session.payment_intent));
+        await markPaid(chargeId, {
+          paymentIntentId: idOf(session.payment_intent),
+          subscriptionId: idOf(session.subscription),
+        });
         console.log("Webhook: charge paid", chargeId);
       }
       break;
@@ -95,23 +121,37 @@ async function handleEvent(event: Stripe.Event) {
       break;
     }
 
-    // Recurring (phase 6): invoices carry the chargeId in metadata when we set it.
+    // Recurring renewals: keep the charge marked paid each cycle.
     case "invoice.paid": {
-      const invoice = event.data.object as Stripe.Invoice;
-      const chargeId = invoice.metadata?.chargeId;
+      const invoice = event.data.object as InvoiceWithSub;
+      const chargeId =
+        invoice.metadata?.chargeId ??
+        (await chargeIdForSubscription(idOf(invoice.subscription)));
       if (chargeId) {
-        await markPaid(chargeId, null);
+        await markPaid(chargeId);
         console.log("Webhook: invoice paid -> charge", chargeId);
       }
       break;
     }
 
     case "invoice.payment_failed": {
-      const invoice = event.data.object as Stripe.Invoice;
-      const chargeId = invoice.metadata?.chargeId;
+      const invoice = event.data.object as InvoiceWithSub;
+      const chargeId =
+        invoice.metadata?.chargeId ??
+        (await chargeIdForSubscription(idOf(invoice.subscription)));
       if (chargeId) {
         await setStatus(chargeId, "failed");
         console.log("Webhook: invoice failed -> charge", chargeId);
+      }
+      break;
+    }
+
+    case "customer.subscription.deleted": {
+      const sub = event.data.object as Stripe.Subscription;
+      const chargeId = await chargeIdForSubscription(sub.id);
+      if (chargeId) {
+        await setStatus(chargeId, "canceled");
+        console.log("Webhook: subscription canceled -> charge", chargeId);
       }
       break;
     }

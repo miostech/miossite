@@ -84,6 +84,26 @@ export default async function NewChargePage({
               </select>
             </div>
           </div>
+          <div className="grid grid-cols-2 gap-6">
+            <div>
+              <label htmlFor="type" className="label mb-1 block">
+                Tipo
+              </label>
+              <select id="type" name="type" className={FIELD}>
+                <option value="one_off">Avulsa (uma vez)</option>
+                <option value="recurring">Recorrente (mensalidade)</option>
+              </select>
+            </div>
+            <div>
+              <label htmlFor="interval" className="label mb-1 block">
+                Intervalo (se recorrente)
+              </label>
+              <select id="interval" name="interval" className={FIELD}>
+                <option value="month">Mensal</option>
+                <option value="year">Anual</option>
+              </select>
+            </div>
+          </div>
 
           {message && (
             <p className="text-sm text-accent" role="alert">

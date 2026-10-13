@@ -14,6 +14,8 @@ export async function POST(request: NextRequest) {
   const description = String(form.get("description") ?? "").trim();
   const currency = String(form.get("currency") ?? "usd").trim().toLowerCase();
   const amountRaw = String(form.get("amount") ?? "").trim().replace(",", ".");
+  const type = form.get("type") === "recurring" ? "recurring" : "one_off";
+  const interval = form.get("interval") === "year" ? "year" : "month";
 
   const back = (error: string) =>
     NextResponse.redirect(
@@ -39,10 +41,11 @@ export async function POST(request: NextRequest) {
 
   await db.insert(charges).values({
     clientId,
-    type: "one_off",
+    type,
     description,
     amount,
     currency,
+    interval: type === "recurring" ? interval : null,
     status: "pending",
   });
 
