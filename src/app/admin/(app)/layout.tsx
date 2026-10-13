@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { redirect } from "next/navigation";
 import { getCurrentAdmin } from "@/lib/auth";
 
@@ -15,9 +16,19 @@ export default async function AdminAppLayout({
     <div className="min-h-screen bg-paper">
       <header className="border-b border-line">
         <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
-          <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-accent">
-            Mios · Cobranças
-          </span>
+          <div className="flex items-center gap-8">
+            <Link
+              href="/admin"
+              className="font-mono text-[11px] uppercase tracking-[0.18em] text-accent"
+            >
+              Mios · Cobranças
+            </Link>
+            <nav className="flex items-center gap-5 text-sm">
+              <Link href="/admin/clients" className="text-ink hover:text-accent">
+                Clientes
+              </Link>
+            </nav>
+          </div>
           <div className="flex items-center gap-4 text-sm">
             <span className="text-muted">{admin.name}</span>
             <form action="/api/admin/logout" method="post">
