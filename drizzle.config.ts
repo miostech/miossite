@@ -1,7 +1,14 @@
+import { loadEnvFile } from "node:process";
 import { defineConfig } from "drizzle-kit";
 
-// Run migrations with DATABASE_URL in the environment, e.g.:
-//   DATABASE_URL="postgres://..." npm run db:push
+// drizzle-kit does not read .env.local on its own; load it here so
+// `npm run db:push` / `db:generate` pick up DATABASE_URL.
+try {
+  loadEnvFile(".env.local");
+} catch {
+  // no .env.local (e.g. CI) — rely on the ambient environment
+}
+
 export default defineConfig({
   schema: "./src/db/schema.ts",
   out: "./drizzle",
