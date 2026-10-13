@@ -2,26 +2,47 @@
 // Create (or update) an admin for the private billing area.
 //
 // Usage:
-//   DATABASE_URL="postgres://..." node scripts/create-admin.mjs <email> "<nome>" <senha>
+//   npm run create:admin                       (pergunta tudo, senha oculta)
+//   npm run create:admin <email> "<nome>"      (pergunta só a senha)
+//   npm run create:admin <email> "<nome>" <senha>
 //
 // The password hash format matches src/lib/auth.ts (scrypt, "<saltHex>:<derivedHex>").
 
 import { randomBytes, scryptSync } from "node:crypto";
+import { loadEnvFile } from "node:process";
+import readline from "node:readline";
 import postgres from "postgres";
 
-const [email, name, password] = process.argv.slice(2);
-
-if (!email || !name || !password) {
-  console.error(
-    'Uso: node scripts/create-admin.mjs <email> "<nome>" <senha>',
-  );
-  process.exit(1);
+try {
+  loadEnvFile(".env.local");
+} catch {
+  // sem .env.local — usa o ambiente atual
 }
 
 const url = process.env.DATABASE_URL;
 if (!url) {
-  console.error("DATABASE_URL não definida no ambiente.");
+  console.error("DATABASE_URL não definida (verifique o .env.local).");
   process.exit(1);
+}
+
+function ask(question, { hidden = false } = {}) {
+  return new Promise((resolve) => {
+    const rl = readline.createInterface({
+      input: process.stdin,
+      output: process.stdout,
+    });
+    if (hidden) {
+      // Oculta o que é digitado (sem eco dos caracteres).
+      rl._writeToOutput = (s) => {
+        if (s.includes(question)) rl.output.write(question);
+      };
+    }
+    rl.question(question, (answer) => {
+      rl.close();
+      if (hidden) process.stdout.write("\n");
+      resolve(answer.trim());
+    });
+  });
 }
 
 function hashPassword(pw) {
@@ -30,11 +51,22 @@ function hashPassword(pw) {
   return `${salt}:${derived}`;
 }
 
+const [argEmail, argName, argPassword] = process.argv.slice(2);
+
+const email = argEmail ?? (await ask("E-mail: "));
+const name = argName ?? (await ask("Nome: "));
+const password = argPassword ?? (await ask("Senha: ", { hidden: true }));
+
+if (!email || !name || !password) {
+  console.error("E-mail, nome e senha são obrigatórios.");
+  process.exit(1);
+}
+
 const sql = postgres(url, { prepare: false });
 
 try {
   const passwordHash = hashPassword(password);
-  const normalizedEmail = email.trim().toLowerCase();
+  const normalizedEmail = email.toLowerCase();
 
   await sql`
     INSERT INTO admins (email, name, password_hash)
