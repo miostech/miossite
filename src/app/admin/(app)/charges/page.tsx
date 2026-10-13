@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { desc, eq } from "drizzle-orm";
 import { db, charges, clients } from "@/db";
+import { ChargeRowActions } from "@/components/ChargeRowActions";
 
 const STATUS_LABEL: Record<string, string> = {
   draft: "Rascunho",
@@ -92,13 +93,7 @@ export default async function ChargesPage() {
                     {c.status === "paid" ? (
                       <span className="text-xs text-muted">—</span>
                     ) : (
-                      <Link
-                        href={`/pay/${c.id}`}
-                        target="_blank"
-                        className="font-mono text-xs text-accent underline-offset-4 hover:underline"
-                      >
-                        /pay/{c.id.slice(0, 8)}…
-                      </Link>
+                      <ChargeRowActions chargeId={c.id} />
                     )}
                   </td>
                 </tr>

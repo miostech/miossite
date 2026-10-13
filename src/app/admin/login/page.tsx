@@ -47,11 +47,15 @@ export default async function AdminLoginPage({
             />
           </div>
 
-          {error && (
+          {error === "locked" ? (
+            <p className="text-sm text-accent" role="alert">
+              Muitas tentativas. Aguarde alguns minutos e tente novamente.
+            </p>
+          ) : error ? (
             <p className="text-sm text-accent" role="alert">
               E-mail ou senha inválidos.
             </p>
-          )}
+          ) : null}
 
           <button
             type="submit"

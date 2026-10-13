@@ -33,6 +33,16 @@ export const sessions = pgTable("sessions", {
     .notNull(),
 });
 
+// Failed login attempts, for rate limiting the admin login.
+export const loginAttempts = pgTable("login_attempts", {
+  id: uuid("id").defaultRandom().primaryKey(),
+  email: text("email").notNull(),
+  ip: text("ip"),
+  attemptedAt: timestamp("attempted_at", { withTimezone: true })
+    .defaultNow()
+    .notNull(),
+});
+
 export type Admin = typeof admins.$inferSelect;
 export type Session = typeof sessions.$inferSelect;
 
