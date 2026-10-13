@@ -11,12 +11,13 @@
     "notify:subscribers": "node scripts/notify-subscribers.mjs",
     "db:generate": "drizzle-kit generate",
     "db:push": "drizzle-kit push",
-    "db:studio": "drizzle-kit studio"
+    "db:studio": "drizzle-kit studio",
+    "create:admin": "node scripts/create-admin.mjs"
   },
   "dependencies": {
-    "@neondatabase/serverless": "^1.2.0",
     "drizzle-orm": "^0.45.4",
     "next": "16.2.10",
+    "postgres": "^3.4.9",
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "stripe": "^23.0.0"

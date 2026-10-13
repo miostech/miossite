@@ -7,6 +7,37 @@ import {
   timestamp,
 } from "drizzle-orm/pg-core";
 
+// --- Admin auth (private billing area) ---
+
+export const admins = pgTable("admins", {
+  id: uuid("id").defaultRandom().primaryKey(),
+  email: text("email").notNull().unique(),
+  name: text("name").notNull(),
+  // scrypt hash, stored as "<saltHex>:<derivedHex>".
+  passwordHash: text("password_hash").notNull(),
+  createdAt: timestamp("created_at", { withTimezone: true })
+    .defaultNow()
+    .notNull(),
+});
+
+export const sessions = pgTable("sessions", {
+  // sha256 of the random token held in the cookie (so a DB leak exposes no
+  // usable session tokens).
+  id: text("id").primaryKey(),
+  adminId: uuid("admin_id")
+    .notNull()
+    .references(() => admins.id, { onDelete: "cascade" }),
+  expiresAt: timestamp("expires_at", { withTimezone: true }).notNull(),
+  createdAt: timestamp("created_at", { withTimezone: true })
+    .defaultNow()
+    .notNull(),
+});
+
+export type Admin = typeof admins.$inferSelect;
+export type Session = typeof sessions.$inferSelect;
+
+// --- Clients & charges ---
+
 export const chargeType = pgEnum("charge_type", ["one_off", "recurring"]);
 
 export const chargeStatus = pgEnum("charge_status", [
