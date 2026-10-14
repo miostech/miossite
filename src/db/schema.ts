@@ -66,6 +66,22 @@ export const clients = pgTable("clients", {
   id: uuid("id").defaultRandom().primaryKey(),
   name: text("name").notNull(),
   email: text("email").notNull(),
+  // The client's project (free text, for our reference).
+  project: text("project"),
+
+  // Country (ISO-2) drives which tax document applies.
+  country: text("country"),
+  // Human label of the tax document, e.g. "CNPJ", "NIF", "EIN".
+  taxIdType: text("tax_id_type"),
+  taxId: text("tax_id"),
+
+  // Billing address (mirrored to the Stripe customer).
+  addressLine1: text("address_line1"),
+  addressLine2: text("address_line2"),
+  addressCity: text("address_city"),
+  addressState: text("address_state"),
+  addressPostalCode: text("address_postal_code"),
+
   // Set once we create the matching Customer in Stripe.
   stripeCustomerId: text("stripe_customer_id").unique(),
   notes: text("notes"),
