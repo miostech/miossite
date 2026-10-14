@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { eq } from "drizzle-orm";
 import { db, clients } from "@/db";
 import { ClientFiscalFields } from "@/components/ClientFiscalFields";
+import { SubmitButton } from "@/components/SubmitButton";
 
 const FIELD =
   "w-full border-b border-line bg-transparent py-3 text-lg text-ink outline-none transition-colors placeholder:text-faint focus:border-ink";
@@ -122,12 +123,7 @@ export default async function EditClientPage({
         )}
 
         <div className="flex items-center gap-4">
-          <button
-            type="submit"
-            className="inline-flex items-center bg-ink px-6 py-3.5 text-sm font-medium text-paper transition-colors hover:bg-accent"
-          >
-            Salvar
-          </button>
+          <SubmitButton pendingLabel="Salvando…">Salvar</SubmitButton>
           <Link
             href="/admin/clients"
             className="text-sm text-muted underline-offset-4 hover:underline"

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { desc } from "drizzle-orm";
 import { db, clients } from "@/db";
+import { SubmitButton } from "@/components/SubmitButton";
 
 const FIELD =
   "w-full border-b border-line bg-transparent py-3 text-lg text-ink outline-none transition-colors placeholder:text-faint focus:border-ink";
@@ -132,12 +133,7 @@ export default async function NewChargePage({
             </p>
           )}
 
-          <button
-            type="submit"
-            className="inline-flex items-center bg-ink px-6 py-3.5 text-sm font-medium text-paper transition-colors hover:bg-accent"
-          >
-            Criar cobrança
-          </button>
+          <SubmitButton pendingLabel="Criando…">Criar cobrança</SubmitButton>
         </form>
       )}
     </div>
