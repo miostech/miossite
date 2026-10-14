@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { eq } from "drizzle-orm";
 import { db, charges, clients } from "@/db";
 import { PayCheckout } from "@/components/PayCheckout";
+import { whatsappLink } from "@/lib/site";
 
 function formatAmount(amount: number, currency: string) {
   return new Intl.NumberFormat("pt-BR", {
@@ -49,6 +50,39 @@ export default async function PayPage({
           <PayCheckout chargeId={charge.id} />
         )}
       </div>
+
+      {charge.status !== "paid" && (
+        <footer className="mx-auto mt-8 flex max-w-md items-start justify-center gap-2 text-center text-xs leading-relaxed text-muted">
+          <svg
+            width="13"
+            height="13"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="mt-0.5 shrink-0"
+            aria-hidden="true"
+          >
+            <rect x="4" y="11" width="16" height="10" rx="2" />
+            <path d="M8 11V7a4 4 0 0 1 8 0v4" />
+          </svg>
+          <span>
+            Ambiente seguro. O pagamento é processado pela Stripe — a Mios não
+            tem acesso aos dados do seu cartão. Qualquer dúvida,{" "}
+            <a
+              href={whatsappLink("Olá! Tenho uma dúvida sobre um pagamento.")}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-ink underline underline-offset-2 hover:text-accent"
+            >
+              fale com a gente no WhatsApp
+            </a>
+            .
+          </span>
+        </footer>
+      )}
     </main>
   );
 }
