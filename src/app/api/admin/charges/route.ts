@@ -12,7 +12,7 @@ export async function POST(request: NextRequest) {
   const form = await request.formData();
   const clientId = String(form.get("clientId") ?? "").trim();
   const description = String(form.get("description") ?? "").trim();
-  const currency = String(form.get("currency") ?? "usd").trim().toLowerCase();
+  const currency = String(form.get("currency") ?? "brl").trim().toLowerCase();
   const amountRaw = String(form.get("amount") ?? "").trim().replace(",", ".");
   const type = form.get("type") === "recurring" ? "recurring" : "one_off";
   const interval = form.get("interval") === "year" ? "year" : "month";

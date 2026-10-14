@@ -77,9 +77,14 @@ export default async function NewChargePage({
               <label htmlFor="currency" className="label mb-1 block">
                 Moeda
               </label>
-              <select id="currency" name="currency" className={FIELD}>
-                <option value="usd">USD</option>
+              <select
+                id="currency"
+                name="currency"
+                defaultValue="brl"
+                className={FIELD}
+              >
                 <option value="brl">BRL</option>
+                <option value="usd">USD</option>
                 <option value="eur">EUR</option>
               </select>
             </div>

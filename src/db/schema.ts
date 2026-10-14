@@ -114,6 +114,8 @@ export const charges = pgTable("charges", {
   // Due date for one-off charges (YYYY-MM-DD). A pending charge past this
   // date is considered overdue. Null = no due date.
   dueDate: date("due_date"),
+  // When the last automatic overdue reminder was sent (throttles the cron).
+  lastReminderAt: timestamp("last_reminder_at", { withTimezone: true }),
 
   // Stripe references — filled as the charge moves through its lifecycle.
   stripeCheckoutSessionId: text("stripe_checkout_session_id"),
