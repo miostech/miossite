@@ -49,6 +49,25 @@ export async function POST(
   const payUrl = `${origin}/pay/${row.charge.id}`;
   const amount = formatAmount(row.charge.amount, row.charge.currency);
 
+  // Due-date context: phrase as a reminder when the charge is overdue.
+  const due = row.charge.dueDate; // "YYYY-MM-DD" or null
+  const today = new Date().toISOString().slice(0, 10);
+  const isOverdue = !!due && due < today;
+  const dueBr = due ? due.split("-").reverse().join("/") : null;
+
+  const subject = isOverdue
+    ? `Lembrete · ${row.charge.description} — ${amount} (em atraso)`
+    : `Mios · ${row.charge.description} — ${amount}`;
+
+  const dueLine = dueBr
+    ? isOverdue
+      ? `<p>Esta cobrança venceu em <strong>${dueBr}</strong>.</p>`
+      : `<p>Vencimento: <strong>${dueBr}</strong>.</p>`
+    : "";
+  const intro = isOverdue
+    ? `<p>Passando para lembrar do pagamento de <strong>${row.charge.description}</strong> (${amount}):</p>`
+    : `<p>Segue o link para pagamento de <strong>${row.charge.description}</strong> (${amount}):</p>`;
+
   try {
     const res = await fetch("https://api.resend.com/emails", {
       method: "POST",
@@ -59,13 +78,16 @@ export async function POST(
       body: JSON.stringify({
         from,
         to: row.clientEmail,
-        subject: `Mios · ${row.charge.description} — ${amount}`,
+        subject,
         html: [
           `<p>Olá, ${row.clientName},</p>`,
-          `<p>Segue o link para pagamento de <strong>${row.charge.description}</strong> (${amount}):</p>`,
+          intro,
+          dueLine,
           `<p><a href="${payUrl}">${payUrl}</a></p>`,
           `<p>Obrigado,<br>Mios</p>`,
-        ].join("\n"),
+        ]
+          .filter(Boolean)
+          .join("\n"),
       }),
     });
 

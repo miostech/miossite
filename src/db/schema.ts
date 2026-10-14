@@ -5,6 +5,7 @@ import {
   text,
   integer,
   timestamp,
+  date,
 } from "drizzle-orm/pg-core";
 
 // --- Admin auth (private billing area) ---
@@ -109,6 +110,10 @@ export const charges = pgTable("charges", {
   interval: billingInterval("interval"),
 
   status: chargeStatus("status").notNull().default("draft"),
+
+  // Due date for one-off charges (YYYY-MM-DD). A pending charge past this
+  // date is considered overdue. Null = no due date.
+  dueDate: date("due_date"),
 
   // Stripe references — filled as the charge moves through its lifecycle.
   stripeCheckoutSessionId: text("stripe_checkout_session_id"),

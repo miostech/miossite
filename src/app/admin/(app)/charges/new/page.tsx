@@ -104,6 +104,12 @@ export default async function NewChargePage({
               </select>
             </div>
           </div>
+          <div>
+            <label htmlFor="dueDate" className="label mb-1 block">
+              Vencimento (opcional, para cobrança avulsa)
+            </label>
+            <input id="dueDate" name="dueDate" type="date" className={FIELD} />
+          </div>
 
           {message && (
             <p className="text-sm text-accent" role="alert">

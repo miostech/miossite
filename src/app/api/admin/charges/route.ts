@@ -16,6 +16,11 @@ export async function POST(request: NextRequest) {
   const amountRaw = String(form.get("amount") ?? "").trim().replace(",", ".");
   const type = form.get("type") === "recurring" ? "recurring" : "one_off";
   const interval = form.get("interval") === "year" ? "year" : "month";
+  // "YYYY-MM-DD" from the date input; only kept for one-off charges.
+  const dueRaw = String(form.get("dueDate") ?? "").trim();
+  const dueDate = type === "one_off" && /^\d{4}-\d{2}-\d{2}$/.test(dueRaw)
+    ? dueRaw
+    : null;
 
   const back = (error: string) =>
     NextResponse.redirect(
@@ -46,6 +51,7 @@ export async function POST(request: NextRequest) {
     amount,
     currency,
     interval: type === "recurring" ? interval : null,
+    dueDate,
     status: "pending",
   });
 

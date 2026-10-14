@@ -2,11 +2,18 @@
 
 import { useState } from "react";
 
-export function ChargeRowActions({ chargeId }: { chargeId: string }) {
+export function ChargeRowActions({
+  chargeId,
+  overdue = false,
+}: {
+  chargeId: string;
+  overdue?: boolean;
+}) {
   const [copied, setCopied] = useState(false);
   const [sendState, setSendState] = useState<"idle" | "sending" | "sent" | "error">(
     "idle",
   );
+  const sendLabel = overdue ? "Enviar lembrete" : "Enviar e-mail";
 
   const payUrl = () =>
     typeof window !== "undefined" ? `${window.location.origin}/pay/${chargeId}` : "";
@@ -56,7 +63,7 @@ export function ChargeRowActions({ chargeId }: { chargeId: string }) {
             ? "Enviado ✓"
             : sendState === "error"
               ? "Falhou"
-              : "Enviar e-mail"}
+              : sendLabel}
       </button>
     </div>
   );
