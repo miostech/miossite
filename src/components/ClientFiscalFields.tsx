@@ -31,25 +31,50 @@ export function ClientFiscalFields() {
     setDocLabel(countryByCode(code)?.docs[0].label ?? "");
   }
 
-  // Brazil only: fill street/city/state from the CEP via ViaCEP (free, no key).
-  async function lookupCep(raw: string) {
+  // Fill address from the postal code, using the free per-country service
+  // (no API key, all CORS-enabled):
+  //   BR → ViaCEP (street + city + state)
+  //   PT → GeoAPI.pt (street + locality + district)
+  //   US → Zippopotam.us (city + state only — ZIP doesn't map to a street)
+  async function lookupPostal(raw: string) {
     const digits = raw.replace(/\D/g, "");
-    if (digits.length !== 8) return;
-    if (country && country !== "BR") return;
+    // Brazil is the only one we auto-detect when no country is chosen yet.
+    const target = country || (digits.length === 8 ? "BR" : "");
 
-    setCep("loading");
     try {
-      const res = await fetch(`https://viacep.com.br/ws/${digits}/json/`);
-      const data = await res.json();
-      if (data.erro) {
-        setCep("notfound");
-        return;
+      if (target === "BR" && digits.length === 8) {
+        setCep("loading");
+        const d = await (await fetch(`https://viacep.com.br/ws/${digits}/json/`)).json();
+        if (d.erro) return setCep("notfound");
+        if (d.logradouro) setLine1(d.logradouro);
+        if (d.localidade) setCity(d.localidade);
+        if (d.uf) setState(d.uf);
+        if (!country) onCountryChange("BR");
+        return setCep("ok");
       }
-      if (data.logradouro) setLine1(data.logradouro);
-      if (data.localidade) setCity(data.localidade);
-      if (data.uf) setState(data.uf);
-      if (!country) onCountryChange("BR");
-      setCep("ok");
+      if (target === "PT" && digits.length === 7) {
+        setCep("loading");
+        const cp = `${digits.slice(0, 4)}-${digits.slice(4)}`;
+        const d = await (await fetch(`https://json.geoapi.pt/cp/${cp}`)).json();
+        if (!d || !d.Localidade) return setCep("notfound");
+        const street = d.partes?.[0]?.["Artéria"];
+        if (street) setLine1(street);
+        setCity(d.Localidade);
+        if (d.Distrito) setState(d.Distrito);
+        return setCep("ok");
+      }
+      if (target === "US" && digits.length >= 5) {
+        setCep("loading");
+        const zip = digits.slice(0, 5);
+        const res = await fetch(`https://api.zippopotam.us/us/${zip}`);
+        if (!res.ok) return setCep("notfound");
+        const d = await res.json();
+        const place = d.places?.[0];
+        if (!place) return setCep("notfound");
+        setCity(place["place name"]);
+        setState(place["state abbreviation"]);
+        return setCep("ok");
+      }
     } catch {
       setCep("error");
     }
@@ -134,9 +159,9 @@ export function ClientFiscalFields() {
             onChange={(e) => {
               setPostalCode(e.target.value);
               setCep("idle");
-              void lookupCep(e.target.value);
+              void lookupPostal(e.target.value);
             }}
-            onBlur={(e) => void lookupCep(e.target.value)}
+            onBlur={(e) => void lookupPostal(e.target.value)}
             className={FIELD}
           />
           {cepHint && <p className="mt-1 text-xs text-muted">{cepHint}</p>}
