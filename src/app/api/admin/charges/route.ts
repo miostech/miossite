@@ -2,6 +2,7 @@ import { NextResponse, type NextRequest } from "next/server";
 import { eq } from "drizzle-orm";
 import { db, charges, clients } from "@/db";
 import { getCurrentAdmin } from "@/lib/auth";
+import { sendChargePaymentEmail } from "@/lib/charge-email";
 
 export async function POST(request: NextRequest) {
   const admin = await getCurrentAdmin();
@@ -21,6 +22,8 @@ export async function POST(request: NextRequest) {
   const dueDate = type === "one_off" && /^\d{4}-\d{2}-\d{2}$/.test(dueRaw)
     ? dueRaw
     : null;
+  // Checkbox: notify the client by e-mail on creation (default on in the form).
+  const notify = form.get("notify") === "on";
 
   const back = (error: string) =>
     NextResponse.redirect(
@@ -44,16 +47,38 @@ export async function POST(request: NextRequest) {
     .limit(1);
   if (!client) return back("invalid");
 
-  await db.insert(charges).values({
-    clientId,
-    type,
-    description,
-    amount,
-    currency,
-    interval: type === "recurring" ? interval : null,
-    dueDate,
-    status: "pending",
-  });
+  const [charge] = await db
+    .insert(charges)
+    .values({
+      clientId,
+      type,
+      description,
+      amount,
+      currency,
+      interval: type === "recurring" ? interval : null,
+      dueDate,
+      status: "pending",
+    })
+    .returning();
+
+  // Notify the client with the payment link (best-effort: a mail failure must
+  // not undo the charge). The admin can still resend from the list.
+  if (notify) {
+    const baseUrl = process.env.SITE_URL || new URL(request.url).origin;
+    const result = await sendChargePaymentEmail({
+      id: charge.id,
+      description,
+      amount,
+      currency,
+      dueDate,
+      clientName: client.name,
+      clientEmail: client.email,
+      baseUrl,
+    });
+    if (!result.ok) {
+      console.warn("Charge created but notification failed:", result.error);
+    }
+  }
 
   return NextResponse.redirect(new URL("/admin/charges", request.url), 303);
 }

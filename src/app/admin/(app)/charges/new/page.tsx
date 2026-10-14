@@ -116,6 +116,16 @@ export default async function NewChargePage({
             <input id="dueDate" name="dueDate" type="date" className={FIELD} />
           </div>
 
+          <label className="flex items-center gap-3 text-sm text-ink">
+            <input
+              type="checkbox"
+              name="notify"
+              defaultChecked
+              className="h-4 w-4 accent-ink"
+            />
+            Avisar o cliente por e-mail com o link de pagamento
+          </label>
+
           {message && (
             <p className="text-sm text-accent" role="alert">
               {message}
