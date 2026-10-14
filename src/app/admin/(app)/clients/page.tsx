@@ -28,6 +28,8 @@ export default async function ClientsPage() {
               <tr>
                 <th className="px-5 py-3 font-medium">Nome</th>
                 <th className="px-5 py-3 font-medium">E-mail</th>
+                <th className="px-5 py-3 font-medium">Projeto</th>
+                <th className="px-5 py-3 font-medium">Documento</th>
                 <th className="px-5 py-3 font-medium">Stripe</th>
                 <th className="px-5 py-3 font-medium">Criado</th>
               </tr>
@@ -35,8 +37,21 @@ export default async function ClientsPage() {
             <tbody>
               {rows.map((c) => (
                 <tr key={c.id} className="border-b border-line last:border-0">
-                  <td className="px-5 py-3 text-ink">{c.name}</td>
+                  <td className="px-5 py-3 text-ink">
+                    <Link
+                      href={`/admin/clients/${c.id}`}
+                      className="underline-offset-4 hover:underline"
+                    >
+                      {c.name}
+                    </Link>
+                  </td>
                   <td className="px-5 py-3 text-muted">{c.email}</td>
+                  <td className="px-5 py-3 text-muted">{c.project ?? "—"}</td>
+                  <td className="px-5 py-3 text-muted">
+                    {c.taxIdType && c.taxId
+                      ? `${c.taxIdType} ${c.taxId}`
+                      : "—"}
+                  </td>
                   <td className="px-5 py-3">
                     {c.stripeCustomerId ? (
                       <span className="font-mono text-xs text-muted">

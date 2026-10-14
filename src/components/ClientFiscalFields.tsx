@@ -8,15 +8,30 @@ const FIELD =
 
 type CepStatus = "idle" | "loading" | "ok" | "notfound" | "error";
 
-export function ClientFiscalFields() {
-  const [country, setCountry] = useState("");
-  const [docLabel, setDocLabel] = useState("");
+export type ClientFiscalDefaults = {
+  country?: string | null;
+  taxIdType?: string | null;
+  taxId?: string | null;
+  addressLine1?: string | null;
+  addressLine2?: string | null;
+  addressCity?: string | null;
+  addressState?: string | null;
+  addressPostalCode?: string | null;
+};
 
-  const [line1, setLine1] = useState("");
-  const [line2, setLine2] = useState("");
-  const [city, setCity] = useState("");
-  const [state, setState] = useState("");
-  const [postalCode, setPostalCode] = useState("");
+export function ClientFiscalFields({
+  defaults,
+}: {
+  defaults?: ClientFiscalDefaults;
+}) {
+  const [country, setCountry] = useState(defaults?.country ?? "");
+  const [docLabel, setDocLabel] = useState(defaults?.taxIdType ?? "");
+
+  const [line1, setLine1] = useState(defaults?.addressLine1 ?? "");
+  const [line2, setLine2] = useState(defaults?.addressLine2 ?? "");
+  const [city, setCity] = useState(defaults?.addressCity ?? "");
+  const [state, setState] = useState(defaults?.addressState ?? "");
+  const [postalCode, setPostalCode] = useState(defaults?.addressPostalCode ?? "");
   const [cep, setCep] = useState<CepStatus>("idle");
 
   const info = countryByCode(country);
@@ -139,7 +154,12 @@ export function ClientFiscalFields() {
           <label htmlFor="taxId" className="label mb-1 block">
             {effectiveLabel}
           </label>
-          <input id="taxId" name="taxId" className={FIELD} />
+          <input
+            id="taxId"
+            name="taxId"
+            defaultValue={defaults?.taxId ?? ""}
+            className={FIELD}
+          />
           {info && !multiDoc && (
             <input type="hidden" name="taxDoc" value={effectiveLabel} />
           )}
