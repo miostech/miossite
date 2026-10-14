@@ -53,42 +53,6 @@ export default async function NewClientPage({
 
         <ClientFiscalFields />
 
-        <fieldset className="space-y-6 border-t border-line pt-6">
-          <legend className="label text-muted">Endereço (opcional)</legend>
-          <div>
-            <label htmlFor="addressLine1" className="label mb-1 block">
-              Endereço
-            </label>
-            <input id="addressLine1" name="addressLine1" className={FIELD} />
-          </div>
-          <div>
-            <label htmlFor="addressLine2" className="label mb-1 block">
-              Complemento
-            </label>
-            <input id="addressLine2" name="addressLine2" className={FIELD} />
-          </div>
-          <div className="grid grid-cols-2 gap-6">
-            <div>
-              <label htmlFor="addressCity" className="label mb-1 block">
-                Cidade
-              </label>
-              <input id="addressCity" name="addressCity" className={FIELD} />
-            </div>
-            <div>
-              <label htmlFor="addressState" className="label mb-1 block">
-                Estado / Província
-              </label>
-              <input id="addressState" name="addressState" className={FIELD} />
-            </div>
-          </div>
-          <div>
-            <label htmlFor="addressPostalCode" className="label mb-1 block">
-              CEP / Código postal
-            </label>
-            <input id="addressPostalCode" name="addressPostalCode" className={FIELD} />
-          </div>
-        </fieldset>
-
         <div>
           <label htmlFor="notes" className="label mb-1 block">
             Notas (opcional)

@@ -3,7 +3,7 @@ import type Stripe from "stripe";
 import { db, clients } from "@/db";
 import { stripe } from "@/lib/stripe";
 import { getCurrentAdmin } from "@/lib/auth";
-import { countryByCode } from "@/lib/tax";
+import { resolveDoc } from "@/lib/tax";
 
 const EMAIL_RE = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
 
@@ -22,6 +22,7 @@ export async function POST(request: NextRequest) {
   const notes = str("notes");
   const project = str("project");
   const country = str("country").toUpperCase();
+  const taxDoc = str("taxDoc");
   const taxId = str("taxId");
   const addressLine1 = str("addressLine1");
   const addressLine2 = str("addressLine2");
@@ -37,8 +38,8 @@ export async function POST(request: NextRequest) {
 
   if (!name || !EMAIL_RE.test(email)) return back("invalid");
 
-  const countryInfo = country ? countryByCode(country) : null;
-  const taxIdType = taxId && countryInfo ? countryInfo.taxLabel : null;
+  const doc = country ? resolveDoc(country, taxDoc) : null;
+  const taxIdType = taxId && doc ? doc.label : null;
 
   // Only build a Stripe address if something was provided.
   const address: Stripe.AddressParam | undefined =
@@ -89,10 +90,10 @@ export async function POST(request: NextRequest) {
     // Best-effort: register the tax id in Stripe's structured field so it
     // shows on invoices. Stripe validates the format, so a mismatch must not
     // fail client creation — we still have it stored in our DB.
-    if (taxId && countryInfo?.stripeTaxType) {
+    if (taxId && doc?.stripeTaxType) {
       try {
         await stripe.customers.createTaxId(customer.id, {
-          type: countryInfo.stripeTaxType as Stripe.TaxIdCreateParams.Type,
+          type: doc.stripeTaxType as Stripe.TaxIdCreateParams.Type,
           value: taxId,
         });
       } catch (taxErr) {
