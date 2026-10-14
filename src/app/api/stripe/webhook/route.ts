@@ -88,6 +88,23 @@ async function chargeIdForSubscription(
   return row?.id ?? null;
 }
 
+// Save the Stripe invoice reference (id + hosted page) so the admin can pull
+// up the receipt later.
+async function storeInvoice(
+  chargeId: string,
+  invoiceId: string | null,
+  invoiceUrl: string | null,
+) {
+  if (!invoiceId && !invoiceUrl) return;
+  await db
+    .update(charges)
+    .set({
+      ...(invoiceId ? { stripeInvoiceId: invoiceId } : {}),
+      ...(invoiceUrl ? { stripeInvoiceUrl: invoiceUrl } : {}),
+    })
+    .where(eq(charges.id, chargeId));
+}
+
 type InvoiceWithSub = Stripe.Invoice & {
   subscription?: string | { id: string } | null;
 };
@@ -106,6 +123,16 @@ async function handleEvent(event: Stripe.Event) {
           paymentIntentId: idOf(session.payment_intent),
           subscriptionId: idOf(session.subscription),
         });
+        // One-off sessions issue an invoice; fetch its hosted page to store.
+        const invoiceId = idOf(session.invoice);
+        if (invoiceId) {
+          try {
+            const inv = await stripe.invoices.retrieve(invoiceId);
+            await storeInvoice(chargeId, inv.id, inv.hosted_invoice_url ?? null);
+          } catch (invErr) {
+            console.warn("Webhook: could not fetch invoice", invErr);
+          }
+        }
         console.log("Webhook: charge paid", chargeId);
       }
       break;
@@ -129,6 +156,7 @@ async function handleEvent(event: Stripe.Event) {
         (await chargeIdForSubscription(idOf(invoice.subscription)));
       if (chargeId) {
         await markPaid(chargeId);
+        await storeInvoice(chargeId, invoice.id, invoice.hosted_invoice_url ?? null);
         console.log("Webhook: invoice paid -> charge", chargeId);
       }
       break;

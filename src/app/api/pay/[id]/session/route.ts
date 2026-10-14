@@ -52,9 +52,14 @@ export async function POST(
       metadata: { chargeId: row.charge.id },
       // Carry the chargeId where the relevant lifecycle events can read it:
       // the payment intent (one-off) or the subscription + its invoices.
+      // One-off: ask Stripe to issue an invoice so we have a receipt to share.
+      // (Subscriptions already generate an invoice per cycle.)
       ...(recurring
         ? { subscription_data: { metadata: { chargeId: row.charge.id } } }
-        : { payment_intent_data: { metadata: { chargeId: row.charge.id } } }),
+        : {
+            payment_intent_data: { metadata: { chargeId: row.charge.id } },
+            invoice_creation: { enabled: true },
+          }),
       return_url: `${origin}/pay/${row.charge.id}/return?session_id={CHECKOUT_SESSION_ID}`,
     });
 

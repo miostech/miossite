@@ -53,6 +53,7 @@ export default async function ChargesPage({
       type: charges.type,
       interval: charges.interval,
       dueDate: charges.dueDate,
+      stripeInvoiceUrl: charges.stripeInvoiceUrl,
       createdAt: charges.createdAt,
       clientName: clients.name,
     })
@@ -172,7 +173,18 @@ export default async function ChargesPage({
                     </td>
                     <td className="px-5 py-3">
                       {c.status === "paid" ? (
-                        <span className="text-xs text-muted">—</span>
+                        c.stripeInvoiceUrl ? (
+                          <a
+                            href={c.stripeInvoiceUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-xs text-accent underline-offset-4 hover:underline"
+                          >
+                            Ver comprovante
+                          </a>
+                        ) : (
+                          <span className="text-xs text-muted">—</span>
+                        )
                       ) : (
                         <ChargeRowActions chargeId={c.id} overdue={isOverdue} />
                       )}

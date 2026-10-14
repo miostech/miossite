@@ -122,6 +122,8 @@ export const charges = pgTable("charges", {
   stripePaymentIntentId: text("stripe_payment_intent_id"),
   stripeSubscriptionId: text("stripe_subscription_id"),
   stripeInvoiceId: text("stripe_invoice_id"),
+  // Hosted invoice page (with PDF) — the receipt we can share with the client.
+  stripeInvoiceUrl: text("stripe_invoice_url"),
 
   createdAt: timestamp("created_at", { withTimezone: true })
     .defaultNow()

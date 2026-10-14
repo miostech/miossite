@@ -1,0 +1,1 @@
+ALTER TABLE "charges" ADD COLUMN "stripe_invoice_url" text;
