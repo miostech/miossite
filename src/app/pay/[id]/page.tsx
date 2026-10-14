@@ -69,7 +69,7 @@ export default async function PayPage({
             <path d="M8 11V7a4 4 0 0 1 8 0v4" />
           </svg>
           <span>
-            Ambiente seguro. O pagamento é processado pela Stripe — a Mios não
+            Ambiente seguro. O pagamento é processado pela Stripe. A Mios não
             tem acesso aos dados do seu cartão. Qualquer dúvida,{" "}
             <a
               href={whatsappLink("Olá! Tenho uma dúvida sobre um pagamento.")}
@@ -77,7 +77,7 @@ export default async function PayPage({
               rel="noopener noreferrer"
               className="text-ink underline underline-offset-2 hover:text-accent"
             >
-              fale com a gente no WhatsApp
+              fale com a gente
             </a>
             .
           </span>
